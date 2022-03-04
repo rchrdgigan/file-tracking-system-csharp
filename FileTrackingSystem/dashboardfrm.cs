@@ -12,10 +12,27 @@ namespace FileTrackingSystem
 {
     public partial class dashboardfrm : Form
     {
+        public static string _username;
 
         public dashboardfrm()
         {
             InitializeComponent();
+        }
+
+        private void dashboardfrm_Load(object sender, EventArgs e)
+        {
+            welcomeLbl.Text = "Welcome, " + loginfrm._fname + " !";
+            usernameLbl.Text = loginfrm._username;
+            roleLbl.Text = loginfrm._role;
+        }
+
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            _username = usernameLbl.Text;
+            this.Close();
+            loginfrm loginFrm = new loginfrm();
+            loginFrm.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -53,5 +70,6 @@ namespace FileTrackingSystem
             showPanel.Controls.Add(UCFarmers);
             UCFarmers.BringToFront();
         }
+
     }
 }

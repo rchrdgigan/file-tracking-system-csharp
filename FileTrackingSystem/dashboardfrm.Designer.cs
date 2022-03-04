@@ -46,7 +46,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.showPanel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.welcomeLbl = new System.Windows.Forms.Label();
+            this.usernameLbl = new System.Windows.Forms.Label();
+            this.roleLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -57,6 +59,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.roleLbl);
+            this.panel1.Controls.Add(this.usernameLbl);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.logBtn);
             this.panel1.Controls.Add(this.label3);
@@ -78,9 +82,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(49, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(31, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(103, 94);
+            this.pictureBox2.Size = new System.Drawing.Size(134, 114);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
@@ -104,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 149);
+            this.label3.Location = new System.Drawing.Point(3, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 16);
             this.label3.TabIndex = 10;
@@ -113,7 +117,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 115);
+            this.label2.Location = new System.Drawing.Point(3, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 9;
@@ -159,6 +163,7 @@
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // budgetBtn
             // 
@@ -278,22 +283,37 @@
             this.showPanel.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.showPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("showPanel.BackgroundImage")));
             this.showPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.showPanel.Controls.Add(this.label4);
+            this.showPanel.Controls.Add(this.welcomeLbl);
             this.showPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showPanel.Location = new System.Drawing.Point(203, 49);
             this.showPanel.Name = "showPanel";
             this.showPanel.Size = new System.Drawing.Size(948, 651);
             this.showPanel.TabIndex = 2;
             // 
-            // label4
+            // welcomeLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(302, 320);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(361, 33);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Welcome to Admin Panel!";
+            this.welcomeLbl.AutoSize = true;
+            this.welcomeLbl.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLbl.Location = new System.Drawing.Point(302, 320);
+            this.welcomeLbl.Name = "welcomeLbl";
+            this.welcomeLbl.Size = new System.Drawing.Size(0, 33);
+            this.welcomeLbl.TabIndex = 0;
+            // 
+            // usernameLbl
+            // 
+            this.usernameLbl.AutoSize = true;
+            this.usernameLbl.Location = new System.Drawing.Point(59, 140);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(0, 16);
+            this.usernameLbl.TabIndex = 12;
+            // 
+            // roleLbl
+            // 
+            this.roleLbl.AutoSize = true;
+            this.roleLbl.Location = new System.Drawing.Point(46, 156);
+            this.roleLbl.Name = "roleLbl";
+            this.roleLbl.Size = new System.Drawing.Size(0, 16);
+            this.roleLbl.TabIndex = 13;
             // 
             // dashboardfrm
             // 
@@ -309,6 +329,7 @@
             this.Name = "dashboardfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "dashboard";
+            this.Load += new System.EventHandler(this.dashboardfrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -340,6 +361,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel showPanel;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label welcomeLbl;
+        private System.Windows.Forms.Label roleLbl;
+        private System.Windows.Forms.Label usernameLbl;
     }
 }

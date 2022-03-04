@@ -12,3 +12,16 @@ C:\Users\admin\Documents\Visual Studio 2015\Projects\FileTrackingSystem\FileTrac
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\FileTrackingSystem\bin\Debug\FileTrackingSystem.exe.config
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\FileTrackingSystem\obj\Debug\FileTrackingSystem.exe
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\FileTrackingSystem\obj\Debug\FileTrackingSystem.pdb
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\bin\Debug\FileTrackingSystem.exe.config
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.exe
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.pdb
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\bin\Debug\FileTrackingSystem.exe
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\bin\Debug\FileTrackingSystem.pdb
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.dashboardfrm.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.loginfrm.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.Properties.Resources.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlDashboard.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlFarmers.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\bin\Debug\MySql.Data.dll
