@@ -9,3 +9,6 @@ c:\users\admin\documents\visual studio 2015\Projects\FileTrackingSystem\FileTrac
 c:\users\admin\documents\visual studio 2015\Projects\FileTrackingSystem\FileTrackingSystem\obj\Debug\FileTrackingSystem.dashboardfrm.resources
 C:\Users\admin\documents\visual studio 2015\Projects\FileTrackingSystem\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlDashboard.resources
 C:\Users\admin\Documents\Visual Studio 2015\Projects\FileTrackingSystem\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlFarmers.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\FileTrackingSystem\bin\Debug\FileTrackingSystem.exe.config
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\FileTrackingSystem\obj\Debug\FileTrackingSystem.exe
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\FileTrackingSystem\obj\Debug\FileTrackingSystem.pdb
