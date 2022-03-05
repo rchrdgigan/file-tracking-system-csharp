@@ -64,6 +64,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registrationfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrationfrm.Designer.cs">
+      <DependentUpon>registrationfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserControlDashboard.cs">
       <SubType>UserControl</SubType>
@@ -92,6 +98,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="registrationfrm.resx">
+      <DependentUpon>registrationfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlDashboard.resx">
       <DependentUpon>UserControlDashboard.cs</DependentUpon>
     </EmbeddedResource>

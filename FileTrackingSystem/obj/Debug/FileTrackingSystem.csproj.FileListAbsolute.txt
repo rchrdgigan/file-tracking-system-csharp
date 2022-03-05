@@ -25,3 +25,4 @@ C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlFarmers.resources
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.csproj.GenerateResource.Cache
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\bin\Debug\MySql.Data.dll
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.registrationfrm.resources

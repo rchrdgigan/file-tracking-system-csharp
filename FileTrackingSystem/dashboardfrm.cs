@@ -24,15 +24,30 @@ namespace FileTrackingSystem
             welcomeLbl.Text = "Welcome, " + loginfrm._fname + " !";
             usernameLbl.Text = loginfrm._username;
             roleLbl.Text = loginfrm._role;
+
+            if(roleLbl.Text == "Staff")
+            {
+                budgetBtn.Hide();
+                managementBtn.Hide();
+                logBtn.Hide();
+            }
         }
 
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
-            _username = usernameLbl.Text;
-            this.Close();
-            loginfrm loginFrm = new loginfrm();
-            loginFrm.Show();
+            string message = "Are you sure want to logout?";
+            string title = "Logout";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                _username = usernameLbl.Text;
+                this.Close();
+                loginfrm loginFrm = new loginfrm();
+                loginFrm.Show();
+            }
+            
         }
 
         private void button7_Click(object sender, EventArgs e)

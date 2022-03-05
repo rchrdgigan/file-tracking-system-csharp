@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboardfrm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.roleLbl = new System.Windows.Forms.Label();
+            this.usernameLbl = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.logBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.showPanel = new System.Windows.Forms.Panel();
             this.welcomeLbl = new System.Windows.Forms.Label();
-            this.usernameLbl = new System.Windows.Forms.Label();
-            this.roleLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -77,6 +77,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(203, 700);
             this.panel1.TabIndex = 0;
+            // 
+            // roleLbl
+            // 
+            this.roleLbl.AutoSize = true;
+            this.roleLbl.Location = new System.Drawing.Point(59, 156);
+            this.roleLbl.Name = "roleLbl";
+            this.roleLbl.Size = new System.Drawing.Size(0, 16);
+            this.roleLbl.TabIndex = 13;
+            // 
+            // usernameLbl
+            // 
+            this.usernameLbl.AutoSize = true;
+            this.usernameLbl.Location = new System.Drawing.Point(59, 140);
+            this.usernameLbl.Name = "usernameLbl";
+            this.usernameLbl.Size = new System.Drawing.Size(0, 16);
+            this.usernameLbl.TabIndex = 12;
             // 
             // pictureBox2
             // 
@@ -298,22 +314,6 @@
             this.welcomeLbl.Name = "welcomeLbl";
             this.welcomeLbl.Size = new System.Drawing.Size(0, 33);
             this.welcomeLbl.TabIndex = 0;
-            // 
-            // usernameLbl
-            // 
-            this.usernameLbl.AutoSize = true;
-            this.usernameLbl.Location = new System.Drawing.Point(59, 140);
-            this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(0, 16);
-            this.usernameLbl.TabIndex = 12;
-            // 
-            // roleLbl
-            // 
-            this.roleLbl.AutoSize = true;
-            this.roleLbl.Location = new System.Drawing.Point(46, 156);
-            this.roleLbl.Name = "roleLbl";
-            this.roleLbl.Size = new System.Drawing.Size(0, 16);
-            this.roleLbl.TabIndex = 13;
             // 
             // dashboardfrm
             // 
