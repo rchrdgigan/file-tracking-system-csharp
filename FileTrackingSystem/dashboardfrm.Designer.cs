@@ -81,7 +81,7 @@
             // roleLbl
             // 
             this.roleLbl.AutoSize = true;
-            this.roleLbl.Location = new System.Drawing.Point(59, 156);
+            this.roleLbl.Location = new System.Drawing.Point(72, 156);
             this.roleLbl.Name = "roleLbl";
             this.roleLbl.Size = new System.Drawing.Size(0, 16);
             this.roleLbl.TabIndex = 13;
@@ -89,7 +89,7 @@
             // usernameLbl
             // 
             this.usernameLbl.AutoSize = true;
-            this.usernameLbl.Location = new System.Drawing.Point(59, 140);
+            this.usernameLbl.Location = new System.Drawing.Point(72, 140);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(0, 16);
             this.usernameLbl.TabIndex = 12;
@@ -124,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 156);
+            this.label3.Location = new System.Drawing.Point(26, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 16);
             this.label3.TabIndex = 10;
@@ -133,7 +133,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 140);
+            this.label2.Location = new System.Drawing.Point(16, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 9;
@@ -163,6 +163,7 @@
             this.managementBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.managementBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.managementBtn.UseVisualStyleBackColor = true;
+            this.managementBtn.Click += new System.EventHandler(this.managementBtn_Click);
             // 
             // logoutBtn
             // 
@@ -296,9 +297,9 @@
             // 
             // showPanel
             // 
-            this.showPanel.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.showPanel.BackColor = System.Drawing.SystemColors.Info;
             this.showPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("showPanel.BackgroundImage")));
-            this.showPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.showPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.showPanel.Controls.Add(this.welcomeLbl);
             this.showPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.showPanel.Location = new System.Drawing.Point(203, 49);
@@ -309,10 +310,11 @@
             // welcomeLbl
             // 
             this.welcomeLbl.AutoSize = true;
-            this.welcomeLbl.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLbl.Location = new System.Drawing.Point(302, 320);
+            this.welcomeLbl.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.welcomeLbl.Location = new System.Drawing.Point(3, 0);
             this.welcomeLbl.Name = "welcomeLbl";
-            this.welcomeLbl.Size = new System.Drawing.Size(0, 33);
+            this.welcomeLbl.Size = new System.Drawing.Size(0, 32);
             this.welcomeLbl.TabIndex = 0;
             // 
             // dashboardfrm

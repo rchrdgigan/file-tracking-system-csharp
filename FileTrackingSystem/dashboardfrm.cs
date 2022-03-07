@@ -70,9 +70,9 @@ namespace FileTrackingSystem
             panelMark.Top = dashboardBtn.Top;
             panelMark.Height = dashboardBtn.Height;
 
-            UserControlDashboard UCDashdashboard = new UserControlDashboard();
-            showPanel.Controls.Add(UCDashdashboard);
-            UCDashdashboard.BringToFront();
+            UserControlDashboard dashboard = new UserControlDashboard();
+            showPanel.Controls.Add(dashboard);
+            dashboard.BringToFront();
         }
 
         private void farmersBtn_Click(object sender, EventArgs e)
@@ -81,10 +81,20 @@ namespace FileTrackingSystem
             panelMark.Top = farmersBtn.Top;
             panelMark.Height = farmersBtn.Height;
 
-            UserControlFarmers UCFarmers = new UserControlFarmers();
-            showPanel.Controls.Add(UCFarmers);
-            UCFarmers.BringToFront();
+            UserControlFarmers farmers = new UserControlFarmers();
+            showPanel.Controls.Add(farmers);
+            farmers.BringToFront();
         }
 
+        private void managementBtn_Click(object sender, EventArgs e)
+        {
+            panelMark.Visible = true;
+            panelMark.Top = managementBtn.Top;
+            panelMark.Height = managementBtn.Height;
+
+            UserControlManagement user_management = new UserControlManagement();
+            showPanel.Controls.Add(user_management);
+            user_management.BringToFront();
+        }
     }
 }
