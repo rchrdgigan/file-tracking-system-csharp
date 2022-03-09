@@ -28,3 +28,23 @@ C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\bin\Debug\
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.registrationfrm.resources
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlManagement.resources
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.AdminUserRegistrationfrm.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\bin\Debug\FileTrackingSystem.exe.config
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.exe
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.pdb
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\bin\Debug\FileTrackingSystem.exe
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\bin\Debug\FileTrackingSystem.pdb
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\bin\Debug\MySql.Data.dll
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.AdminUserRegistrationfrm.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.dashboardfrm.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.loginfrm.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.Properties.Resources.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.registrationfrm.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlDashboard.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlFarmers.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlManagement.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.csproj.GenerateResource.Cache
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlRSBSA.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlFisheries.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlCalamityDamage.resources
+C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlUserLogHistory.resources

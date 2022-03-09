@@ -49,59 +49,83 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminUserRegistrationfrm.cs">
+    <Compile Include="form\usermanagementfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminUserRegistrationfrm.Designer.cs">
-      <DependentUpon>AdminUserRegistrationfrm.cs</DependentUpon>
+    <Compile Include="form\usermanagementfrm.Designer.cs">
+      <DependentUpon>usermanagementfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConnectionClass.cs" />
-    <Compile Include="dashboardfrm.cs">
+    <Compile Include="class\ConnectionClass.cs" />
+    <Compile Include="form\dashboardfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dashboardfrm.Designer.cs">
+    <Compile Include="form\dashboardfrm.Designer.cs">
       <DependentUpon>dashboardfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginfrm.cs">
+    <Compile Include="form\loginfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginfrm.Designer.cs">
+    <Compile Include="form\loginfrm.Designer.cs">
       <DependentUpon>loginfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="registrationfrm.cs">
+    <Compile Include="form\registrationfrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registrationfrm.Designer.cs">
+    <Compile Include="form\registrationfrm.Designer.cs">
       <DependentUpon>registrationfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
-    <Compile Include="UserControlDashboard.cs">
+    <Compile Include="class\User.cs" />
+    <Compile Include="user-control\UserControlDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlDashboard.Designer.cs">
+    <Compile Include="user-control\UserControlDashboard.Designer.cs">
       <DependentUpon>UserControlDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlFarmers.cs">
+    <Compile Include="user-control\UserControlFarmers.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlFarmers.Designer.cs">
+    <Compile Include="user-control\UserControlFarmers.Designer.cs">
       <DependentUpon>UserControlFarmers.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlManagement.cs">
+    <Compile Include="user-control\UserControlManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlManagement.Designer.cs">
+    <Compile Include="user-control\UserControlManagement.Designer.cs">
       <DependentUpon>UserControlManagement.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminUserRegistrationfrm.resx">
-      <DependentUpon>AdminUserRegistrationfrm.cs</DependentUpon>
+    <Compile Include="user-control\UserControlRSBSA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user-control\UserControlRSBSA.Designer.cs">
+      <DependentUpon>UserControlRSBSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user-control\UserControlFisheries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user-control\UserControlFisheries.Designer.cs">
+      <DependentUpon>UserControlFisheries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user-control\UserControlCalamityDamage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user-control\UserControlCalamityDamage.Designer.cs">
+      <DependentUpon>UserControlCalamityDamage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user-control\UserControlUserLogHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user-control\UserControlUserLogHistory.Designer.cs">
+      <DependentUpon>UserControlUserLogHistory.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="form\usermanagementfrm.resx">
+      <DependentUpon>usermanagementfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dashboardfrm.resx">
+    <EmbeddedResource Include="form\dashboardfrm.resx">
       <DependentUpon>dashboardfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginfrm.resx">
+    <EmbeddedResource Include="form\loginfrm.resx">
       <DependentUpon>loginfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -113,17 +137,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="registrationfrm.resx">
+    <EmbeddedResource Include="form\registrationfrm.resx">
       <DependentUpon>registrationfrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlDashboard.resx">
+    <EmbeddedResource Include="user-control\UserControlDashboard.resx">
       <DependentUpon>UserControlDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlFarmers.resx">
+    <EmbeddedResource Include="user-control\UserControlFarmers.resx">
       <DependentUpon>UserControlFarmers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlManagement.resx">
+    <EmbeddedResource Include="user-control\UserControlManagement.resx">
       <DependentUpon>UserControlManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user-control\UserControlRSBSA.resx">
+      <DependentUpon>UserControlRSBSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user-control\UserControlFisheries.resx">
+      <DependentUpon>UserControlFisheries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user-control\UserControlCalamityDamage.resx">
+      <DependentUpon>UserControlCalamityDamage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user-control\UserControlUserLogHistory.resx">
+      <DependentUpon>UserControlUserLogHistory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
