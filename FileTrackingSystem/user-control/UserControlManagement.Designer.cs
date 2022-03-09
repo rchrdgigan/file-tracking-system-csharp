@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlManagement));
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.PictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnRefresh = new System.Windows.Forms.PictureBox();
             this.Label2 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -69,6 +71,22 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(947, 44);
             this.Panel1.TabIndex = 138;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.Teal;
+            this.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonRefresh.FlatAppearance.BorderSize = 0;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
+            this.buttonRefresh.Location = new System.Drawing.Point(1006, 153);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(61, 31);
+            this.buttonRefresh.TabIndex = 147;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.button4_Click);
             // 
             // PictureBox5
             // 
@@ -136,6 +154,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(922, 519);
             this.dataGridView1.TabIndex = 139;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // FirstName
             // 
@@ -253,6 +272,7 @@
             this.button2.Size = new System.Drawing.Size(38, 38);
             this.button2.TabIndex = 145;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -269,11 +289,19 @@
             this.button3.TabIndex = 146;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Location = new System.Drawing.Point(944, 265);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(175, 21);
+            this.textBoxUsername.TabIndex = 148;
+            // 
             // UserControlManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -283,6 +311,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Panel1);
+            this.Controls.Add(this.buttonRefresh);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserControlManagement";
@@ -321,5 +350,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Role;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreatedAt;
+        private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.TextBox textBoxUsername;
     }
 }

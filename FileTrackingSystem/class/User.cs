@@ -34,7 +34,7 @@ namespace FileTrackingSystem
         public bool userVerification()
         {
             con.Open();
-          
+
             bool check = false;
             using (var cmd = new MySqlCommand())
             {
@@ -59,7 +59,7 @@ namespace FileTrackingSystem
         }
 
         //Register function
-        public void create()
+        public void create(string roles)
         {
             try
             {
@@ -72,8 +72,8 @@ namespace FileTrackingSystem
 
                     cmd_chkuser.Parameters.Add("@uname", MySqlDbType.VarChar).Value = log_username;
                     msdtr = cmd_chkuser.ExecuteReader();
-                    
-                    if(msdtr.Read())
+
+                    if (msdtr.Read())
                     {
                         message = "User Already Exist!";
                     }
@@ -82,8 +82,18 @@ namespace FileTrackingSystem
                         con.Close();
                         con.Open();
                         DateTime today = DateTime.Today;
-                        string role = "Staff";
-                        string query = ("INSERT INTO `users_tb`(`id`, `fname`, `lname`, `email`, `contact`, `username`, `password`, `role`, `created_at`) VALUES (NULL,@fname,@lname,@email,@contact,@username,@password,@role,@today)");
+                        string role = "";
+                        string query = "";
+                        if (roles == "")
+                        {
+                            role = "Staff";
+                            query = ("INSERT INTO `users_tb`(`id`, `fname`, `lname`, `email`, `contact`, `username`, `password`, `role`, `created_at`) VALUES (NULL,@fname,@lname,@email,@contact,@username,@password,@role,@today)");
+                        }
+                        else
+                        {
+                            role = roles;
+                            query = ("INSERT INTO `users_tb`(`id`, `fname`, `lname`, `email`, `contact`, `username`, `password`, `role`, `created_at`) VALUES (NULL,@fname,@lname,@email,@contact,@username,@password,@role,@today)");
+                        }
                         MySqlCommand cmd = new MySqlCommand(query, con);
 
                         cmd.Parameters.AddWithValue("@fname", fname);
@@ -114,6 +124,27 @@ namespace FileTrackingSystem
             DataTable dt = new DataTable();
             msda.Fill(dt);
             dtable = dt;
+        }
+
+        public void delUser(string uname)
+        {
+            try
+            {
+                con.Open();
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "DELETE FROM users_tb WHERE username=@uname";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@uname", MySqlDbType.VarChar).Value = uname;
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
         }
     }
 }

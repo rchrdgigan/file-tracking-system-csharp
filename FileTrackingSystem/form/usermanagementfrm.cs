@@ -27,22 +27,46 @@ namespace FileTrackingSystem
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            string email = textBoxEmail.Text;
-
-            if (user.IsValidEmail(email) == true)
+            if (textBoxFname.Text == "" || textBoxLname.Text == "" || textBoxContact.Text == "" || textBoxEmail.Text == "" || textBoxUsername.Text == "" || textBoxPassword.Text == "")
             {
-                MessageBox.Show("Valid Email");
-
-                if (comboBoxRole.Text != "Admin" && comboBoxRole.Text != "Staff")
-                {
-                    MessageBox.Show("The role must be Admin or Staff only!");
-                }
+                MessageBox.Show("Please fill-up all entry!", "Remember", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                MessageBox.Show("Invalid Email");
+                if (user.IsValidEmail(textBoxEmail.Text) == true)
+                {
+                    if (comboBoxRole.Text != "Admin" && comboBoxRole.Text != "Staff")
+                    {
+                        MessageBox.Show("The role must be Admin or Staff only!");
+                    }
+                    else
+                    {
+                        user.fname = textBoxFname.Text;
+                        user.lname = textBoxLname.Text;
+                        user.email = textBoxEmail.Text;
+                        user.contact = textBoxContact.Text;
+                        user.log_username = textBoxUsername.Text;
+                        user.log_password = textBoxPassword.Text;
+                        string roles = comboBoxRole.Text;
+                        user.create(roles);
+                        if (user.message != "User Already Exist!")
+                        {
+                            MessageBox.Show("" + user.message, "Register Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            user.listUser();
+                            UserControlManagement._refresh.PerformClick();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("" + user.message, "Register Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Email");
+                }
             }
-
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

@@ -31,30 +31,38 @@ namespace FileTrackingSystem
 
         private void buttonCreate_Click(object sender, EventArgs e)
         {
-            if(textBoxFname.Text == "" || textBoxLname.Text == "" || textBoxEmail.Text == "" || textBoxContact.Text == "" || textBoxUsername.Text == "" || textBoxPassword.Text == "")
+            if (textBoxFname.Text == "" || textBoxLname.Text == "" || textBoxEmail.Text == "" || textBoxContact.Text == "" || textBoxUsername.Text == "" || textBoxPassword.Text == "")
             {
                 MessageBox.Show("Please fill-up all entry!", "Remember", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                user.fname = textBoxFname.Text;
-                user.lname = textBoxLname.Text;
-                user.email = textBoxEmail.Text;
-                user.contact = textBoxContact.Text;
-                user.log_username = textBoxUsername.Text;
-                user.log_password = textBoxPassword.Text;
-                user.create();
-                if(user.message != "User Already Exist!")
+                if (user.IsValidEmail(textBoxEmail.Text) == false)
                 {
-                    MessageBox.Show("" + user.message , "Register Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    lf.Show();
-                    this.Close();
+                    MessageBox.Show("Invalid Email", "Format", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    MessageBox.Show("" + user.message, "Register Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    user.fname = textBoxFname.Text;
+                    user.lname = textBoxLname.Text;
+                    user.email = textBoxEmail.Text;
+                    user.contact = textBoxContact.Text;
+                    user.log_username = textBoxUsername.Text;
+                    user.log_password = textBoxPassword.Text;
+                    string roles = "";
+                    user.create(roles);
+                    if (user.message != "User Already Exist!")
+                    {
+                        MessageBox.Show("" + user.message, "Register Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        lf.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("" + user.message, "Register Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                
+
             }
             
         }

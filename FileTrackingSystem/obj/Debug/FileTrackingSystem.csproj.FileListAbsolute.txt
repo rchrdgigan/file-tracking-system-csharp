@@ -48,3 +48,7 @@ C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingS
 C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlFisheries.resources
 C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlCalamityDamage.resources
 C:\Users\admin\Desktop\New folder (2)\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlUserLogHistory.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlRSBSA.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlFisheries.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlCalamityDamage.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlUserLogHistory.resources
