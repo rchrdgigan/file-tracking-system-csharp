@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlManagement));
             this.Panel1 = new System.Windows.Forms.Panel();
-            this.buttonRefresh = new System.Windows.Forms.Button();
             this.PictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnRefresh = new System.Windows.Forms.PictureBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.archiveBtn = new System.Windows.Forms.Button();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
@@ -71,22 +71,6 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(947, 44);
             this.Panel1.TabIndex = 138;
-            // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.BackColor = System.Drawing.Color.Teal;
-            this.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonRefresh.FlatAppearance.BorderSize = 0;
-            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
-            this.buttonRefresh.Location = new System.Drawing.Point(1006, 153);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(61, 31);
-            this.buttonRefresh.TabIndex = 147;
-            this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.UseVisualStyleBackColor = false;
-            this.buttonRefresh.Click += new System.EventHandler(this.button4_Click);
             // 
             // PictureBox5
             // 
@@ -110,6 +94,7 @@
             this.btnRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnRefresh.TabIndex = 84;
             this.btnRefresh.TabStop = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // Label2
             // 
@@ -134,6 +119,22 @@
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClose.TabIndex = 34;
             this.btnClose.TabStop = false;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.Teal;
+            this.buttonRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonRefresh.FlatAppearance.BorderSize = 0;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
+            this.buttonRefresh.Location = new System.Drawing.Point(1006, 153);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(61, 31);
+            this.buttonRefresh.TabIndex = 147;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dataGridView1
             // 
@@ -217,6 +218,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(175, 21);
             this.textBox1.TabIndex = 140;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -257,6 +259,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(175, 21);
             this.textBox2.TabIndex = 143;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button2
             // 
@@ -274,20 +277,21 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // archiveBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.CadetBlue;
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(784, 52);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(38, 38);
-            this.button3.TabIndex = 146;
-            this.button3.UseVisualStyleBackColor = false;
+            this.archiveBtn.BackColor = System.Drawing.Color.CadetBlue;
+            this.archiveBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("archiveBtn.BackgroundImage")));
+            this.archiveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.archiveBtn.FlatAppearance.BorderSize = 0;
+            this.archiveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.archiveBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.archiveBtn.ForeColor = System.Drawing.Color.White;
+            this.archiveBtn.Location = new System.Drawing.Point(784, 52);
+            this.archiveBtn.Name = "archiveBtn";
+            this.archiveBtn.Size = new System.Drawing.Size(38, 38);
+            this.archiveBtn.TabIndex = 146;
+            this.archiveBtn.UseVisualStyleBackColor = false;
+            this.archiveBtn.Click += new System.EventHandler(this.archiveBtn_Click);
             // 
             // textBoxUsername
             // 
@@ -302,7 +306,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.textBoxUsername);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.archiveBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
@@ -342,7 +346,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button archiveBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;

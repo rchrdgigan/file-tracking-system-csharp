@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboardfrm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RSBSAbtn = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.showPanel = new System.Windows.Forms.Panel();
             this.welcomeLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +87,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(203, 720);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(6, 598);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 52);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "ARCHIVE HISTORY";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
@@ -163,7 +179,7 @@
             this.logBtn.Name = "logBtn";
             this.logBtn.Size = new System.Drawing.Size(197, 52);
             this.logBtn.TabIndex = 11;
-            this.logBtn.Text = "User Log History";
+            this.logBtn.Text = "USER LOG HISTORY";
             this.logBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logBtn.UseVisualStyleBackColor = true;
@@ -207,7 +223,7 @@
             this.managementBtn.Name = "managementBtn";
             this.managementBtn.Size = new System.Drawing.Size(197, 52);
             this.managementBtn.TabIndex = 5;
-            this.managementBtn.Text = "User Management";
+            this.managementBtn.Text = "USER MANAGEMENT";
             this.managementBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.managementBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.managementBtn.UseVisualStyleBackColor = true;
@@ -220,11 +236,11 @@
             this.logoutBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
             this.logoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutBtn.Location = new System.Drawing.Point(6, 656);
+            this.logoutBtn.Location = new System.Drawing.Point(6, 668);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(197, 52);
             this.logoutBtn.TabIndex = 4;
-            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.Text = "LOGOUT";
             this.logoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logoutBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logoutBtn.UseVisualStyleBackColor = true;
@@ -241,7 +257,7 @@
             this.budgetBtn.Name = "budgetBtn";
             this.budgetBtn.Size = new System.Drawing.Size(197, 52);
             this.budgetBtn.TabIndex = 3;
-            this.budgetBtn.Text = "Calamity Damage";
+            this.budgetBtn.Text = "CALAMITY DAMAGE";
             this.budgetBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.budgetBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.budgetBtn.UseVisualStyleBackColor = true;
@@ -258,7 +274,7 @@
             this.fisheriesBtn.Name = "fisheriesBtn";
             this.fisheriesBtn.Size = new System.Drawing.Size(197, 52);
             this.fisheriesBtn.TabIndex = 2;
-            this.fisheriesBtn.Text = "Fisheries";
+            this.fisheriesBtn.Text = "FISHERIES";
             this.fisheriesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.fisheriesBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.fisheriesBtn.UseVisualStyleBackColor = true;
@@ -275,7 +291,7 @@
             this.farmersBtn.Name = "farmersBtn";
             this.farmersBtn.Size = new System.Drawing.Size(197, 52);
             this.farmersBtn.TabIndex = 1;
-            this.farmersBtn.Text = "Farmers";
+            this.farmersBtn.Text = "FARMERS";
             this.farmersBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.farmersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.farmersBtn.UseVisualStyleBackColor = true;
@@ -292,7 +308,7 @@
             this.dashboardBtn.Name = "dashboardBtn";
             this.dashboardBtn.Size = new System.Drawing.Size(197, 52);
             this.dashboardBtn.TabIndex = 0;
-            this.dashboardBtn.Text = "Dashboard";
+            this.dashboardBtn.Text = "DASHBOARD";
             this.dashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboardBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.dashboardBtn.UseVisualStyleBackColor = true;
@@ -366,22 +382,6 @@
             this.welcomeLbl.Name = "welcomeLbl";
             this.welcomeLbl.Size = new System.Drawing.Size(0, 32);
             this.welcomeLbl.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(6, 598);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 52);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Archive History";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // dashboardfrm
             // 

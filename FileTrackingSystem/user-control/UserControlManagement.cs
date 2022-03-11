@@ -22,14 +22,29 @@ namespace FileTrackingSystem
             InitializeComponent();
         }
 
-        private void UserControlManagement_Load(object sender, EventArgs e)
+        private void loadData()
         {
-            _refresh = buttonRefresh;
-
             user.listUser();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = user.dtable;
-           
+        }
+
+        private void loadSearch()
+        {
+            user.search();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = user.dtable;
+        }
+
+        private void UserControlManagement_Load(object sender, EventArgs e)
+        {
+            _refresh = buttonRefresh;
+            loadData();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,15 +53,9 @@ namespace FileTrackingSystem
             user_registration.Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            user.listUser();
-            dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.DataSource = user.dtable;
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Select data by cell
             if( e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
@@ -56,10 +65,7 @@ namespace FileTrackingSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string message = "Are you sure want to delete this user account?";
-            string title = "Deleting Data";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Are you sure want to delete this user account?", "Deleting Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
                 //To Do Delete
@@ -70,14 +76,41 @@ namespace FileTrackingSystem
                 else
                 {
                     user.delUser(textBoxUsername.Text);
-                    user.listUser();
-                    dataGridView1.AutoGenerateColumns = false;
-                    dataGridView1.DataSource = user.dtable;
+                    loadData();
                     MessageBox.Show("Account successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
 
-             
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            user.fname = textBox1.Text;
+            loadSearch();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            user.lname = textBox2.Text;
+            loadSearch();
+        }
+
+        private void archiveBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure want to archive this user account?", "Archive Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                //To Do Delete
+                if (textBoxUsername.Text == "")
+                {
+                    MessageBox.Show("Please select an specific data to archived!", "Archive Data?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    user.archive(textBoxUsername.Text);
+                    loadData();
+                    MessageBox.Show("Account successfully archived!", "Archive Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

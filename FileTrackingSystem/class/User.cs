@@ -38,7 +38,7 @@ namespace FileTrackingSystem
             bool check = false;
             using (var cmd = new MySqlCommand())
             {
-                cmd.CommandText = "SELECT * FROM users_tb WHERE username=@uname AND password=@pass";
+                cmd.CommandText = "SELECT * FROM users_tb WHERE username=@uname AND password=@pass AND status='Normal'";
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = con;
 
@@ -119,7 +119,7 @@ namespace FileTrackingSystem
 
         public void listUser()
         {
-            string query = ("SELECT * FROM users_tb");
+            string query = ("SELECT * FROM users_tb WHERE status='Normal'");
             MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             msda.Fill(dt);
@@ -134,6 +134,60 @@ namespace FileTrackingSystem
                 using (var cmd = new MySqlCommand())
                 {
                     cmd.CommandText = "DELETE FROM users_tb WHERE username=@uname";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@uname", MySqlDbType.VarChar).Value = uname;
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+        public void search()
+        {
+            try
+            {
+                string query = "";
+
+                if (fname != "" || lname != "")
+                {
+                    query = ("SELECT * FROM users_tb WHERE fname LIKE '%" + fname + "%' AND lname LIKE '%" + lname + "%' AND status='Normal'");
+                }
+                else if (fname != "")
+                {
+                    query = ("SELECT * FROM users_tb WHERE fname LIKE '%" + fname + "%' AND status='Normal'");
+                }
+                else if (lname != "")
+                {
+                    query = ("SELECT * FROM users_tb WHERE fname LIKE '%" + lname + "%' AND status='Normal'");
+                }
+                else
+                {
+                    query = ("SELECT * FROM users_tb WHERE status='Normal'");
+                }
+                MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                msda.Fill(dt);
+                dtable = dt;
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+        public void archive(string uname)
+        {
+            try
+            {
+                con.Open();
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "UPDATE `users_tb` SET `status`='Archive' WHERE username=@uname";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
                     cmd.Parameters.Add("@uname", MySqlDbType.VarChar).Value = uname;
