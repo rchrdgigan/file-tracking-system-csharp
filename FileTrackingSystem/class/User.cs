@@ -22,6 +22,7 @@ namespace FileTrackingSystem
         public string log_password { get; set; }
         public string log_role { get; set; }
         public string message { get; set; }
+        public Int32 count { get; set; }
 
         public bool IsValidEmail(string email)
         {
@@ -195,6 +196,28 @@ namespace FileTrackingSystem
                 }
                 con.Close();
             }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+        public void countUser()
+        {
+            try
+            {
+                con.Open();
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "SELECT COUNT(*) FROM users_tb WHERE status='Normal'";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    count = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+                con.Close();
+
+            }
+
             catch (Exception ex)
             {
                 message = "error" + ex.ToString();

@@ -67,7 +67,7 @@
             this.buttonCreate.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(136, 39);
-            this.buttonCreate.TabIndex = 24;
+            this.buttonCreate.TabIndex = 8;
             this.buttonCreate.Text = "Add Account";
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
@@ -90,7 +90,7 @@
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(210, 27);
-            this.textBoxUsername.TabIndex = 20;
+            this.textBoxUsername.TabIndex = 6;
             // 
             // textBoxContact
             // 
@@ -99,7 +99,7 @@
             this.textBoxContact.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.textBoxContact.Name = "textBoxContact";
             this.textBoxContact.Size = new System.Drawing.Size(209, 27);
-            this.textBoxContact.TabIndex = 32;
+            this.textBoxContact.TabIndex = 4;
             // 
             // textBoxPassword
             // 
@@ -108,7 +108,7 @@
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(210, 27);
-            this.textBoxPassword.TabIndex = 21;
+            this.textBoxPassword.TabIndex = 7;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // label5
@@ -140,7 +140,7 @@
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(425, 27);
-            this.textBoxEmail.TabIndex = 30;
+            this.textBoxEmail.TabIndex = 3;
             // 
             // label2
             // 
@@ -175,7 +175,7 @@
             this.buttonBack.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(136, 39);
-            this.buttonBack.TabIndex = 25;
+            this.buttonBack.TabIndex = 9;
             this.buttonBack.Text = "Cancel";
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
@@ -187,7 +187,7 @@
             this.textBoxLname.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.textBoxLname.Name = "textBoxLname";
             this.textBoxLname.Size = new System.Drawing.Size(210, 27);
-            this.textBoxLname.TabIndex = 28;
+            this.textBoxLname.TabIndex = 2;
             // 
             // textBoxFname
             // 
@@ -196,7 +196,7 @@
             this.textBoxFname.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
             this.textBoxFname.Name = "textBoxFname";
             this.textBoxFname.Size = new System.Drawing.Size(210, 27);
-            this.textBoxFname.TabIndex = 26;
+            this.textBoxFname.TabIndex = 1;
             // 
             // label3
             // 
@@ -281,7 +281,7 @@
             this.comboBoxRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxRole.Name = "comboBoxRole";
             this.comboBoxRole.Size = new System.Drawing.Size(210, 25);
-            this.comboBoxRole.TabIndex = 138;
+            this.comboBoxRole.TabIndex = 5;
             // 
             // label8
             // 
@@ -324,7 +324,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminUserRegistrationfrm";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.AdminUserRegistrationfrm_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();

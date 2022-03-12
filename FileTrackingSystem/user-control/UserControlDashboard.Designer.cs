@@ -55,7 +55,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.labelCountUser = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -378,7 +378,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.PaleVioletRed;
-            this.panel6.Controls.Add(this.label14);
+            this.panel6.Controls.Add(this.labelCountUser);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.label16);
             this.panel6.Controls.Add(this.pictureBox6);
@@ -388,18 +388,18 @@
             this.panel6.Size = new System.Drawing.Size(457, 156);
             this.panel6.TabIndex = 142;
             // 
-            // label14
+            // labelCountUser
             // 
-            this.label14.AutoSize = true;
-            this.label14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(416, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 44);
-            this.label14.TabIndex = 42;
-            this.label14.Text = "0";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCountUser.AutoSize = true;
+            this.labelCountUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelCountUser.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCountUser.ForeColor = System.Drawing.Color.White;
+            this.labelCountUser.Location = new System.Drawing.Point(416, 0);
+            this.labelCountUser.Name = "labelCountUser";
+            this.labelCountUser.Size = new System.Drawing.Size(41, 44);
+            this.labelCountUser.TabIndex = 42;
+            this.labelCountUser.Text = "0";
+            this.labelCountUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
             // 
@@ -449,6 +449,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserControlDashboard";
             this.Size = new System.Drawing.Size(947, 678);
+            this.Load += new System.EventHandler(this.UserControlDashboard_Load);
             this.Panel4.ResumeLayout(false);
             this.Panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -501,7 +502,7 @@
         internal System.Windows.Forms.Label label12;
         internal System.Windows.Forms.Label label13;
         internal System.Windows.Forms.Panel panel6;
-        internal System.Windows.Forms.Label label14;
+        internal System.Windows.Forms.Label labelCountUser;
         internal System.Windows.Forms.Label label15;
         internal System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox6;

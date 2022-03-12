@@ -12,9 +12,17 @@ namespace FileTrackingSystem
 {
     public partial class UserControlDashboard : UserControl
     {
+        User user = new User();
+
         public UserControlDashboard()
         {
             InitializeComponent();
+        }
+
+        private void UserControlDashboard_Load(object sender, EventArgs e)
+        {
+            user.countUser();
+            labelCountUser.Text = user.count.ToString();
         }
     }
 }

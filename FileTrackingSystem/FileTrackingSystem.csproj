@@ -77,6 +77,12 @@
       <DependentUpon>registrationfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="class\User.cs" />
+    <Compile Include="form\RSBSAregistraionfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\RSBSAregistraionfrm.Designer.cs">
+      <DependentUpon>RSBSAregistraionfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="user-control\UserControlDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </Compile>
     <EmbeddedResource Include="form\registrationfrm.resx">
       <DependentUpon>registrationfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\RSBSAregistraionfrm.resx">
+      <DependentUpon>RSBSAregistraionfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user-control\UserControlDashboard.resx">
       <DependentUpon>UserControlDashboard.cs</DependentUpon>

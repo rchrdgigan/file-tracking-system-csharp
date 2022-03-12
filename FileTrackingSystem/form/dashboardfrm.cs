@@ -13,7 +13,8 @@ namespace FileTrackingSystem
     public partial class dashboardfrm : Form
     {
         public static string _username;
-
+        public static Panel navpanel;
+        public static Panel contentpanel;
         public dashboardfrm()
         {
             InitializeComponent();
@@ -21,6 +22,8 @@ namespace FileTrackingSystem
 
         private void dashboardfrm_Load(object sender, EventArgs e)
         {
+            navpanel = panel1;
+            contentpanel = showPanel;
             welcomeLbl.Text = "Welcome, " + loginfrm._fname + " !";
             usernameLbl.Text = loginfrm._username;
             roleLbl.Text = loginfrm._role;

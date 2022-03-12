@@ -20,11 +20,6 @@ namespace FileTrackingSystem
             InitializeComponent();
         }
 
-        private void AdminUserRegistrationfrm_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             if (textBoxFname.Text == "" || textBoxLname.Text == "" || textBoxContact.Text == "" || textBoxEmail.Text == "" || textBoxUsername.Text == "" || textBoxPassword.Text == "")
@@ -55,6 +50,9 @@ namespace FileTrackingSystem
                             user.listUser();
                             UserControlManagement._refresh.PerformClick();
                             this.Close();
+                            //To activate navbar and body
+                            dashboardfrm.navpanel.Enabled = true;
+                            dashboardfrm.contentpanel.Enabled = true;
                         }
                         else
                         {
@@ -72,6 +70,9 @@ namespace FileTrackingSystem
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
+            //To activate navbar and body
+            dashboardfrm.navpanel.Enabled = true;
+            dashboardfrm.contentpanel.Enabled = true;
         }
     }
 }

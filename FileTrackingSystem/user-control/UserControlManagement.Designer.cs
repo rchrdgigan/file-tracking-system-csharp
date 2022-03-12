@@ -51,6 +51,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.archiveBtn = new System.Windows.Forms.Button();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.labelCountUser = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -61,6 +62,7 @@
             // Panel1
             // 
             this.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.Panel1.Controls.Add(this.labelCountUser);
             this.Panel1.Controls.Add(this.PictureBox5);
             this.Panel1.Controls.Add(this.btnRefresh);
             this.Panel1.Controls.Add(this.Label2);
@@ -214,9 +216,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 61);
+            this.textBox1.Location = new System.Drawing.Point(290, 59);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 21);
+            this.textBox1.Size = new System.Drawing.Size(127, 21);
             this.textBox1.TabIndex = 140;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -227,18 +229,21 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(828, 52);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(12, 54);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 38);
+            this.button1.Size = new System.Drawing.Size(123, 31);
             this.button1.TabIndex = 141;
             this.button1.Text = "CREATE USER";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 64);
+            this.label1.Location = new System.Drawing.Point(214, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 142;
@@ -247,49 +252,55 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(272, 64);
+            this.label3.Location = new System.Drawing.Point(423, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 16);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 144;
-            this.label3.Text = "Filter Lastname ";
+            this.label3.Text = "Lastname ";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(368, 61);
+            this.textBox2.Location = new System.Drawing.Point(493, 61);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 21);
+            this.textBox2.Size = new System.Drawing.Size(127, 21);
             this.textBox2.TabIndex = 143;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(740, 52);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(736, 54);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(38, 38);
+            this.button2.Size = new System.Drawing.Size(87, 31);
             this.button2.TabIndex = 145;
+            this.button2.Text = "Delete";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // archiveBtn
             // 
             this.archiveBtn.BackColor = System.Drawing.Color.CadetBlue;
-            this.archiveBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("archiveBtn.BackgroundImage")));
             this.archiveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.archiveBtn.FlatAppearance.BorderSize = 0;
             this.archiveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.archiveBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.archiveBtn.ForeColor = System.Drawing.Color.White;
-            this.archiveBtn.Location = new System.Drawing.Point(784, 52);
+            this.archiveBtn.Image = ((System.Drawing.Image)(resources.GetObject("archiveBtn.Image")));
+            this.archiveBtn.Location = new System.Drawing.Point(829, 54);
             this.archiveBtn.Name = "archiveBtn";
-            this.archiveBtn.Size = new System.Drawing.Size(38, 38);
+            this.archiveBtn.Size = new System.Drawing.Size(105, 31);
             this.archiveBtn.TabIndex = 146;
+            this.archiveBtn.Text = "Archive";
+            this.archiveBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.archiveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.archiveBtn.UseVisualStyleBackColor = false;
             this.archiveBtn.Click += new System.EventHandler(this.archiveBtn_Click);
             // 
@@ -300,18 +311,27 @@
             this.textBoxUsername.Size = new System.Drawing.Size(175, 21);
             this.textBoxUsername.TabIndex = 148;
             // 
+            // labelCountUser
+            // 
+            this.labelCountUser.AutoSize = true;
+            this.labelCountUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelCountUser.Location = new System.Drawing.Point(947, 0);
+            this.labelCountUser.Name = "labelCountUser";
+            this.labelCountUser.Size = new System.Drawing.Size(0, 16);
+            this.labelCountUser.TabIndex = 151;
+            // 
             // UserControlManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.archiveBtn);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Panel1);
@@ -356,5 +376,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CreatedAt;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.Label labelCountUser;
     }
 }

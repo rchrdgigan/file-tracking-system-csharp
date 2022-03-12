@@ -12,7 +12,6 @@ namespace FileTrackingSystem
 {
     public partial class UserControlManagement : UserControl
     {
-        ConnectionClass cc = new ConnectionClass();
         User user = new User();
 
         public static Button _refresh;
@@ -38,6 +37,8 @@ namespace FileTrackingSystem
 
         private void UserControlManagement_Load(object sender, EventArgs e)
         {
+            user.countUser();
+            labelCountUser.Text = user.count.ToString();
             _refresh = buttonRefresh;
             loadData();
         }
@@ -51,6 +52,10 @@ namespace FileTrackingSystem
         {
             AdminUserRegistrationfrm user_registration = new AdminUserRegistrationfrm();
             user_registration.Show();
+
+            //To disable navbar and body
+            dashboardfrm.navpanel.Enabled = false;
+            dashboardfrm.contentpanel.Enabled = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
