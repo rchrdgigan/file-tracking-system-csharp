@@ -83,6 +83,7 @@
     <Compile Include="form\RSBSAregistraionfrm.Designer.cs">
       <DependentUpon>RSBSAregistraionfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="class\RSBSAClass.cs" />
     <Compile Include="user-control\UserControlDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>

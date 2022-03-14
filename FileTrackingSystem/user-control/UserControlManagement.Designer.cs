@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlManagement));
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.labelCountUser = new System.Windows.Forms.Label();
             this.PictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnRefresh = new System.Windows.Forms.PictureBox();
             this.Label2 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.archiveBtn = new System.Windows.Forms.Button();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.labelCountUser = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -73,6 +73,15 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(947, 44);
             this.Panel1.TabIndex = 138;
+            // 
+            // labelCountUser
+            // 
+            this.labelCountUser.AutoSize = true;
+            this.labelCountUser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelCountUser.Location = new System.Drawing.Point(947, 0);
+            this.labelCountUser.Name = "labelCountUser";
+            this.labelCountUser.Size = new System.Drawing.Size(0, 16);
+            this.labelCountUser.TabIndex = 151;
             // 
             // PictureBox5
             // 
@@ -310,15 +319,6 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(175, 21);
             this.textBoxUsername.TabIndex = 148;
-            // 
-            // labelCountUser
-            // 
-            this.labelCountUser.AutoSize = true;
-            this.labelCountUser.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelCountUser.Location = new System.Drawing.Point(947, 0);
-            this.labelCountUser.Name = "labelCountUser";
-            this.labelCountUser.Size = new System.Drawing.Size(0, 16);
-            this.labelCountUser.TabIndex = 151;
             // 
             // UserControlManagement
             // 
