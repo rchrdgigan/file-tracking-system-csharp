@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RSBSAregistraionfrm));
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.PictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnRefresh = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.textBoxStreet = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBoxBarangay = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBoxMunicipality = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -194,8 +194,13 @@
             this.groupBoxFarmers = new System.Windows.Forms.GroupBox();
             this.groupBoxFarmerworkers = new System.Windows.Forms.GroupBox();
             this.groupBoxFisher = new System.Windows.Forms.GroupBox();
+            this.checkBoxFFFishProcessing = new System.Windows.Forms.CheckBox();
+            this.checkBoxFFFishVending = new System.Windows.Forms.CheckBox();
             this.groupBoxAgriYouth = new System.Windows.Forms.GroupBox();
+            this.comboBoxBarangay = new System.Windows.Forms.ComboBox();
+            this.checkBoxAYANFARC = new System.Windows.Forms.CheckBox();
             this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -219,7 +224,8 @@
             // 
             // Panel1
             // 
-            this.Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Panel1.Controls.Add(this.PictureBox5);
             this.Panel1.Controls.Add(this.pictureBox2);
             this.Panel1.Controls.Add(this.btnRefresh);
             this.Panel1.Controls.Add(this.label7);
@@ -228,16 +234,27 @@
             this.Panel1.Location = new System.Drawing.Point(0, 0);
             this.Panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(957, 55);
+            this.Panel1.Size = new System.Drawing.Size(957, 65);
             this.Panel1.TabIndex = 138;
+            // 
+            // PictureBox5
+            // 
+            this.PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox5.Image")));
+            this.PictureBox5.Location = new System.Drawing.Point(620, 12);
+            this.PictureBox5.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.PictureBox5.Name = "PictureBox5";
+            this.PictureBox5.Size = new System.Drawing.Size(72, 47);
+            this.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox5.TabIndex = 140;
+            this.PictureBox5.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(479, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(316, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 41);
+            this.pictureBox2.Size = new System.Drawing.Size(81, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 139;
             this.pictureBox2.TabStop = false;
@@ -259,7 +276,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label7.Location = new System.Drawing.Point(398, 36);
+            this.label7.Location = new System.Drawing.Point(403, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(204, 19);
             this.label7.TabIndex = 35;
@@ -437,14 +454,6 @@
             this.label10.TabIndex = 156;
             this.label10.Text = "BARANGAY";
             // 
-            // textBoxBarangay
-            // 
-            this.textBoxBarangay.Location = new System.Drawing.Point(619, 117);
-            this.textBoxBarangay.Name = "textBoxBarangay";
-            this.textBoxBarangay.Size = new System.Drawing.Size(299, 21);
-            this.textBoxBarangay.TabIndex = 155;
-            this.textBoxBarangay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -461,6 +470,7 @@
             this.textBoxMunicipality.Name = "textBoxMunicipality";
             this.textBoxMunicipality.Size = new System.Drawing.Size(276, 21);
             this.textBoxMunicipality.TabIndex = 157;
+            this.textBoxMunicipality.Text = "Bulan";
             this.textBoxMunicipality.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
@@ -479,6 +489,7 @@
             this.textBoxProvince.Name = "textBoxProvince";
             this.textBoxProvince.Size = new System.Drawing.Size(241, 21);
             this.textBoxProvince.TabIndex = 159;
+            this.textBoxProvince.Text = "Sorsogon";
             this.textBoxProvince.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
@@ -497,17 +508,18 @@
             this.textBoxRegion.Name = "textBoxRegion";
             this.textBoxRegion.Size = new System.Drawing.Size(299, 21);
             this.textBoxRegion.TabIndex = 161;
+            this.textBoxRegion.Text = "Region V";
             this.textBoxRegion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(387, 16);
+            this.label14.Location = new System.Drawing.Point(387, 12);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(224, 16);
+            this.label14.Size = new System.Drawing.Size(217, 16);
             this.label14.TabIndex = 163;
-            this.label14.Text = "PART 1 : PERSONAL INFORMATION";
+            this.label14.Text = "PART I: PERSONAL INFORMATION";
             // 
             // textBoxMobileNum
             // 
@@ -1233,9 +1245,9 @@
             this.label42.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(425, 591);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(151, 16);
+            this.label42.Size = new System.Drawing.Size(148, 16);
             this.label42.TabIndex = 241;
-            this.label42.Text = "PART 2 : FARM PROFILE";
+            this.label42.Text = "PART II: FARM PROFILE";
             // 
             // label43
             // 
@@ -1383,7 +1395,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(31, 852);
+            this.label46.Location = new System.Drawing.Point(31, 896);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(175, 15);
             this.label46.TabIndex = 257;
@@ -1391,7 +1403,7 @@
             // 
             // textBoxFarmingGAILY
             // 
-            this.textBoxFarmingGAILY.Location = new System.Drawing.Point(316, 849);
+            this.textBoxFarmingGAILY.Location = new System.Drawing.Point(316, 893);
             this.textBoxFarmingGAILY.Name = "textBoxFarmingGAILY";
             this.textBoxFarmingGAILY.Size = new System.Drawing.Size(228, 21);
             this.textBoxFarmingGAILY.TabIndex = 258;
@@ -1400,7 +1412,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(257, 852);
+            this.label47.Location = new System.Drawing.Point(257, 896);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(53, 16);
             this.label47.TabIndex = 259;
@@ -1409,7 +1421,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(582, 852);
+            this.label48.Location = new System.Drawing.Point(582, 896);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(77, 16);
             this.label48.TabIndex = 261;
@@ -1417,7 +1429,7 @@
             // 
             // textBoxNonFarmingGAILY
             // 
-            this.textBoxNonFarmingGAILY.Location = new System.Drawing.Point(663, 849);
+            this.textBoxNonFarmingGAILY.Location = new System.Drawing.Point(663, 893);
             this.textBoxNonFarmingGAILY.Name = "textBoxNonFarmingGAILY";
             this.textBoxNonFarmingGAILY.Size = new System.Drawing.Size(228, 21);
             this.textBoxNonFarmingGAILY.TabIndex = 260;
@@ -1498,7 +1510,7 @@
             // checkBoxFarWorOS
             // 
             this.checkBoxFarWorOS.AutoSize = true;
-            this.checkBoxFarWorOS.Location = new System.Drawing.Point(9, 148);
+            this.checkBoxFarWorOS.Location = new System.Drawing.Point(9, 173);
             this.checkBoxFarWorOS.Name = "checkBoxFarWorOS";
             this.checkBoxFarWorOS.Size = new System.Drawing.Size(147, 20);
             this.checkBoxFarWorOS.TabIndex = 268;
@@ -1507,7 +1519,7 @@
             // 
             // textBoxFarWorOS
             // 
-            this.textBoxFarWorOS.Location = new System.Drawing.Point(9, 174);
+            this.textBoxFarWorOS.Location = new System.Drawing.Point(9, 199);
             this.textBoxFarWorOS.Name = "textBoxFarWorOS";
             this.textBoxFarWorOS.Size = new System.Drawing.Size(167, 21);
             this.textBoxFarWorOS.TabIndex = 269;
@@ -1569,7 +1581,7 @@
             // checkBoxFFOS
             // 
             this.checkBoxFFOS.AutoSize = true;
-            this.checkBoxFFOS.Location = new System.Drawing.Point(10, 152);
+            this.checkBoxFFOS.Location = new System.Drawing.Point(10, 173);
             this.checkBoxFFOS.Name = "checkBoxFFOS";
             this.checkBoxFFOS.Size = new System.Drawing.Size(147, 20);
             this.checkBoxFFOS.TabIndex = 276;
@@ -1588,7 +1600,7 @@
             // 
             // textBoxFFOS
             // 
-            this.textBoxFFOS.Location = new System.Drawing.Point(9, 176);
+            this.textBoxFFOS.Location = new System.Drawing.Point(9, 199);
             this.textBoxFFOS.Name = "textBoxFFOS";
             this.textBoxFFOS.Size = new System.Drawing.Size(217, 21);
             this.textBoxFFOS.TabIndex = 277;
@@ -1630,7 +1642,7 @@
             // 
             this.checkBoxAYOS.AutoSize = true;
             this.checkBoxAYOS.Font = new System.Drawing.Font("Century Gothic", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAYOS.Location = new System.Drawing.Point(9, 156);
+            this.checkBoxAYOS.Location = new System.Drawing.Point(9, 181);
             this.checkBoxAYOS.Name = "checkBoxAYOS";
             this.checkBoxAYOS.Size = new System.Drawing.Size(129, 17);
             this.checkBoxAYOS.TabIndex = 284;
@@ -1641,7 +1653,7 @@
             // 
             this.checkBoxAYPAAA.AutoSize = true;
             this.checkBoxAYPAAA.Font = new System.Drawing.Font("Century Gothic", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxAYPAAA.Location = new System.Drawing.Point(9, 127);
+            this.checkBoxAYPAAA.Location = new System.Drawing.Point(9, 152);
             this.checkBoxAYPAAA.Name = "checkBoxAYPAAA";
             this.checkBoxAYPAAA.Size = new System.Drawing.Size(163, 30);
             this.checkBoxAYPAAA.TabIndex = 283;
@@ -1672,7 +1684,7 @@
             // 
             // textBoxAYOS
             // 
-            this.textBoxAYOS.Location = new System.Drawing.Point(9, 175);
+            this.textBoxAYOS.Location = new System.Drawing.Point(9, 200);
             this.textBoxAYOS.Name = "textBoxAYOS";
             this.textBoxAYOS.Size = new System.Drawing.Size(179, 21);
             this.textBoxAYOS.TabIndex = 285;
@@ -1685,13 +1697,14 @@
             this.buttonSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSubmit.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonSubmit.Location = new System.Drawing.Point(497, 888);
+            this.buttonSubmit.Location = new System.Drawing.Point(541, 952);
             this.buttonSubmit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(110, 27);
             this.buttonSubmit.TabIndex = 286;
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = false;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // buttonCancel
             // 
@@ -1700,7 +1713,7 @@
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonCancel.Location = new System.Drawing.Point(372, 888);
+            this.buttonCancel.Location = new System.Drawing.Point(315, 952);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(110, 27);
@@ -1790,6 +1803,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comboBoxBarangay);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textBoxFirstName);
@@ -1799,7 +1813,6 @@
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBoxBarangay);
             this.panel2.Controls.Add(this.textBoxMiddleName);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label9);
@@ -1861,9 +1874,9 @@
             this.panel2.Controls.Add(this.groupBoxFarmerworkers);
             this.panel2.Controls.Add(this.groupBoxFisher);
             this.panel2.Controls.Add(this.groupBoxAgriYouth);
-            this.panel2.Location = new System.Drawing.Point(0, 54);
+            this.panel2.Location = new System.Drawing.Point(0, 73);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(937, 942);
+            this.panel2.Size = new System.Drawing.Size(937, 1015);
             this.panel2.TabIndex = 294;
             // 
             // groupBox7
@@ -1944,7 +1957,7 @@
             this.groupBoxFarmers.Controls.Add(this.label44);
             this.groupBoxFarmers.Location = new System.Drawing.Point(27, 644);
             this.groupBoxFarmers.Name = "groupBoxFarmers";
-            this.groupBoxFarmers.Size = new System.Drawing.Size(263, 205);
+            this.groupBoxFarmers.Size = new System.Drawing.Size(263, 229);
             this.groupBoxFarmers.TabIndex = 299;
             this.groupBoxFarmers.TabStop = false;
             // 
@@ -1960,12 +1973,14 @@
             this.groupBoxFarmerworkers.Controls.Add(this.textBoxFarWorOS);
             this.groupBoxFarmerworkers.Location = new System.Drawing.Point(296, 644);
             this.groupBoxFarmerworkers.Name = "groupBoxFarmerworkers";
-            this.groupBoxFarmerworkers.Size = new System.Drawing.Size(183, 202);
+            this.groupBoxFarmerworkers.Size = new System.Drawing.Size(183, 229);
             this.groupBoxFarmerworkers.TabIndex = 300;
             this.groupBoxFarmerworkers.TabStop = false;
             // 
             // groupBoxFisher
             // 
+            this.groupBoxFisher.Controls.Add(this.checkBoxFFFishProcessing);
+            this.groupBoxFisher.Controls.Add(this.checkBoxFFFishVending);
             this.groupBoxFisher.Controls.Add(this.label52);
             this.groupBoxFisher.Controls.Add(this.label51);
             this.groupBoxFisher.Controls.Add(this.label53);
@@ -1976,12 +1991,33 @@
             this.groupBoxFisher.Controls.Add(this.textBoxFFOS);
             this.groupBoxFisher.Location = new System.Drawing.Point(485, 644);
             this.groupBoxFisher.Name = "groupBoxFisher";
-            this.groupBoxFisher.Size = new System.Drawing.Size(236, 202);
+            this.groupBoxFisher.Size = new System.Drawing.Size(236, 229);
             this.groupBoxFisher.TabIndex = 301;
             this.groupBoxFisher.TabStop = false;
             // 
+            // checkBoxFFFishProcessing
+            // 
+            this.checkBoxFFFishProcessing.AutoSize = true;
+            this.checkBoxFFFishProcessing.Location = new System.Drawing.Point(113, 96);
+            this.checkBoxFFFishProcessing.Name = "checkBoxFFFishProcessing";
+            this.checkBoxFFFishProcessing.Size = new System.Drawing.Size(103, 20);
+            this.checkBoxFFFishProcessing.TabIndex = 278;
+            this.checkBoxFFFishProcessing.Text = "Fish Processing";
+            this.checkBoxFFFishProcessing.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxFFFishVending
+            // 
+            this.checkBoxFFFishVending.AutoSize = true;
+            this.checkBoxFFFishVending.Location = new System.Drawing.Point(113, 114);
+            this.checkBoxFFFishVending.Name = "checkBoxFFFishVending";
+            this.checkBoxFFFishVending.Size = new System.Drawing.Size(93, 20);
+            this.checkBoxFFFishVending.TabIndex = 279;
+            this.checkBoxFFFishVending.Text = "Fish Vending";
+            this.checkBoxFFFishVending.UseVisualStyleBackColor = true;
+            // 
             // groupBoxAgriYouth
             // 
+            this.groupBoxAgriYouth.Controls.Add(this.checkBoxAYANFARC);
             this.groupBoxAgriYouth.Controls.Add(this.label55);
             this.groupBoxAgriYouth.Controls.Add(this.label54);
             this.groupBoxAgriYouth.Controls.Add(this.label56);
@@ -1992,15 +2028,100 @@
             this.groupBoxAgriYouth.Controls.Add(this.textBoxAYOS);
             this.groupBoxAgriYouth.Location = new System.Drawing.Point(727, 643);
             this.groupBoxAgriYouth.Name = "groupBoxAgriYouth";
-            this.groupBoxAgriYouth.Size = new System.Drawing.Size(198, 202);
+            this.groupBoxAgriYouth.Size = new System.Drawing.Size(198, 230);
             this.groupBoxAgriYouth.TabIndex = 302;
             this.groupBoxAgriYouth.TabStop = false;
+            // 
+            // comboBoxBarangay
+            // 
+            this.comboBoxBarangay.FormattingEnabled = true;
+            this.comboBoxBarangay.Items.AddRange(new object[] {
+            "A. Bonifacio (Tinurilan)",
+            "Abad Santos (Kambal)",
+            "Aguinaldo (Lipata Dako)",
+            "Antipolo",
+            "Aquino (Imelda)",
+            "Bical",
+            "Beguin",
+            "Bonga",
+            "Butag",
+            "Cadandanan",
+            "Calomagon",
+            "Calpi",
+            "Cocok-Cabitan",
+            "Daganas",
+            "Danao",
+            "Dolos",
+            "E. Quirino (Pinangomhan)",
+            "Fabrica",
+            "G. Del Pilar (Tanga)",
+            "Gate",
+            "Inararan",
+            "J. Gerona (Biton)",
+            "J.P. Laurel (Pon-od)",
+            "Jamorawon",
+            "Libertad (Calle Putol)",
+            "Lajong",
+            "Magsaysay (Bongog)",
+            "Managa-naga",
+            "Marinab",
+            "Nasuje",
+            "Montecalvario",
+            "N. Roque (Calayugan)",
+            "Namo",
+            "Obrero",
+            "Osmeña (Lipata Saday)",
+            "Otavi",
+            "Padre Diaz",
+            "Palale",
+            "Quezon (Cabarawan)",
+            "R. Gerona (Butag)",
+            "Recto",
+            "Roxas (Busay)",
+            "Sagrada",
+            "San Francisco (Polot)",
+            "San Isidro (Cabugaan)",
+            "San Juan Bag-o",
+            "San Juan Daan",
+            "San Rafael (Togbongon)",
+            "San Ramon",
+            "San Vicente",
+            "Santa Remedios",
+            "Santa Teresita (Trece)",
+            "Sigad",
+            "Somagongsong",
+            "Tarhan",
+            "Taromata",
+            "Zone 1 (Ilawod)",
+            "Zone 2 (Sabang)",
+            "Zone 3 (Central)",
+            "Zone 4 (Central Business District)",
+            "Zone 5 (Canipaan)",
+            "Zone 6 (Baybay)",
+            "Zone 7 (Iraya)",
+            "Zone 8 (Loyo)"});
+            this.comboBoxBarangay.Location = new System.Drawing.Point(620, 117);
+            this.comboBoxBarangay.Name = "comboBoxBarangay";
+            this.comboBoxBarangay.Size = new System.Drawing.Size(299, 24);
+            this.comboBoxBarangay.TabIndex = 303;
+            // 
+            // checkBoxAYANFARC
+            // 
+            this.checkBoxAYANFARC.AutoSize = true;
+            this.checkBoxAYANFARC.Font = new System.Drawing.Font("Century Gothic", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxAYANFARC.Location = new System.Drawing.Point(9, 126);
+            this.checkBoxAYANFARC.Name = "checkBoxAYANFARC";
+            this.checkBoxAYANFARC.Size = new System.Drawing.Size(166, 30);
+            this.checkBoxAYANFARC.TabIndex = 286;
+            this.checkBoxAYANFARC.Text = "attending/attended non-formal\r\nagri-fishery related course";
+            this.checkBoxAYANFARC.UseVisualStyleBackColor = true;
             // 
             // RSBSAregistraionfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 1000);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(957, 560);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2012,6 +2133,7 @@
             this.Load += new System.EventHandler(this.RSBSAregistraionfrm_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
@@ -2075,7 +2197,6 @@
         private System.Windows.Forms.TextBox textBoxStreet;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBoxBarangay;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxMunicipality;
         private System.Windows.Forms.Label label12;
@@ -2219,5 +2340,10 @@
         private System.Windows.Forms.GroupBox groupBoxFarmerworkers;
         private System.Windows.Forms.GroupBox groupBoxFisher;
         private System.Windows.Forms.GroupBox groupBoxAgriYouth;
+        internal System.Windows.Forms.PictureBox PictureBox5;
+        private System.Windows.Forms.CheckBox checkBoxFFFishProcessing;
+        private System.Windows.Forms.CheckBox checkBoxFFFishVending;
+        private System.Windows.Forms.ComboBox comboBoxBarangay;
+        private System.Windows.Forms.CheckBox checkBoxAYANFARC;
     }
 }

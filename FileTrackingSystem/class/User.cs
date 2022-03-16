@@ -23,39 +23,12 @@ namespace FileTrackingSystem
         public string message { get; set; }
         public Int32 count { get; set; }
 
+        //Validate email function
         public bool IsValidEmail(string email)
         {
             string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|" + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)" + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
             var regex = new Regex(pattern, RegexOptions.IgnoreCase);
             return regex.IsMatch(email);
-        }
-
-        //Login function
-        public bool userVerification()
-        {
-            con.Open();
-
-            bool check = false;
-            using (var cmd = new MySqlCommand())
-            {
-                cmd.CommandText = "SELECT * FROM users_tb WHERE username=@uname AND password=@pass AND status='Normal'";
-                cmd.CommandType = CommandType.Text;
-                cmd.Connection = con;
-
-                cmd.Parameters.Add("@uname", MySqlDbType.VarChar).Value = log_username;
-                cmd.Parameters.Add("@pass", MySqlDbType.VarChar).Value = log_password;
-
-                msdtr = cmd.ExecuteReader();
-
-                while (msdtr.Read())
-                {
-                    log_role = msdtr.GetString("role");
-                    fname = msdtr.GetString("fname");
-                    check = true;
-                }
-                con.Close();
-            }
-            return check;
         }
 
         //Register function
@@ -117,6 +90,35 @@ namespace FileTrackingSystem
             }
         }
 
+        //Login function
+        public bool userVerification()
+        {
+            con.Open();
+
+            bool check = false;
+            using (var cmd = new MySqlCommand())
+            {
+                cmd.CommandText = "SELECT * FROM users_tb WHERE username=@uname AND password=@pass AND status='Normal'";
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = con;
+
+                cmd.Parameters.Add("@uname", MySqlDbType.VarChar).Value = log_username;
+                cmd.Parameters.Add("@pass", MySqlDbType.VarChar).Value = log_password;
+
+                msdtr = cmd.ExecuteReader();
+
+                while (msdtr.Read())
+                {
+                    log_role = msdtr.GetString("role");
+                    fname = msdtr.GetString("fname");
+                    check = true;
+                }
+                con.Close();
+            }
+            return check;
+        }
+
+        //Display User list function
         public void listUser()
         {
             string query = ("SELECT * FROM users_tb WHERE status='Normal'");
@@ -126,6 +128,7 @@ namespace FileTrackingSystem
             dtable = dt;
         }
 
+        //Delete User function
         public void delUser(string uname)
         {
             try
@@ -147,6 +150,7 @@ namespace FileTrackingSystem
             }
         }
 
+        //Search User function
         public void search()
         {
             try
@@ -180,6 +184,7 @@ namespace FileTrackingSystem
             }
         }
 
+        //Archive User function
         public void archive(string uname)
         {
             try
@@ -201,6 +206,7 @@ namespace FileTrackingSystem
             }
         }
 
+        //Count User function
         public void countUser()
         {
             try
@@ -216,7 +222,6 @@ namespace FileTrackingSystem
                 con.Close();
 
             }
-
             catch (Exception ex)
             {
                 message = "error" + ex.ToString();
