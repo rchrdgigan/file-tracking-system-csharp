@@ -17,6 +17,8 @@ namespace FileTrackingSystem
             InitializeComponent();
         }
 
+        public static string header_category;
+
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             pictureBox1.BackColor = Color.MediumAquamarine;
@@ -65,5 +67,15 @@ namespace FileTrackingSystem
             pictureBox3.Cursor = Cursors.Default;
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            header_category = "Masterlist of Rice Farmers";
+
+            FarmerFilesForm fff = new FarmerFilesForm();
+            fff.Show();
+            //To disable navbar and body
+            dashboardfrm.navpanel.Enabled = false;
+            dashboardfrm.contentpanel.Enabled = false;
+        }
     }
 }

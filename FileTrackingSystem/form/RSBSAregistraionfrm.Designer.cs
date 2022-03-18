@@ -186,6 +186,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBoxBarangay = new System.Windows.Forms.ComboBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -197,8 +198,9 @@
             this.checkBoxFFFishProcessing = new System.Windows.Forms.CheckBox();
             this.checkBoxFFFishVending = new System.Windows.Forms.CheckBox();
             this.groupBoxAgriYouth = new System.Windows.Forms.GroupBox();
-            this.comboBoxBarangay = new System.Windows.Forms.ComboBox();
             this.checkBoxAYANFARC = new System.Windows.Forms.CheckBox();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.labelId = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -224,7 +226,9 @@
             // 
             // Panel1
             // 
-            this.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Panel1.BackColor = System.Drawing.Color.Aquamarine;
+            this.Panel1.Controls.Add(this.labelId);
+            this.Panel1.Controls.Add(this.buttonClose);
             this.Panel1.Controls.Add(this.PictureBox5);
             this.Panel1.Controls.Add(this.pictureBox2);
             this.Panel1.Controls.Add(this.btnRefresh);
@@ -524,10 +528,12 @@
             // textBoxMobileNum
             // 
             this.textBoxMobileNum.Location = new System.Drawing.Point(28, 228);
+            this.textBoxMobileNum.MaxLength = 11;
             this.textBoxMobileNum.Name = "textBoxMobileNum";
             this.textBoxMobileNum.Size = new System.Drawing.Size(224, 21);
             this.textBoxMobileNum.TabIndex = 164;
             this.textBoxMobileNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxMobileNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMobileNum_KeyPress);
             // 
             // label15
             // 
@@ -556,6 +562,7 @@
             this.textBoxLandlineNum.Size = new System.Drawing.Size(224, 21);
             this.textBoxLandlineNum.TabIndex = 166;
             this.textBoxLandlineNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxLandlineNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLandlineNum_KeyPress);
             // 
             // label17
             // 
@@ -818,6 +825,7 @@
             this.textBoxNumLHHM.Size = new System.Drawing.Size(264, 21);
             this.textBoxNumLHHM.TabIndex = 199;
             this.textBoxNumLHHM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNumLHHM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumLHHM_KeyPress);
             // 
             // label27
             // 
@@ -844,6 +852,7 @@
             this.textBoxNumMale.Size = new System.Drawing.Size(132, 21);
             this.textBoxNumMale.TabIndex = 201;
             this.textBoxNumMale.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNumMale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumMale_KeyPress);
             // 
             // label29
             // 
@@ -861,6 +870,7 @@
             this.textBoxNumFemale.Size = new System.Drawing.Size(132, 21);
             this.textBoxNumFemale.TabIndex = 203;
             this.textBoxNumFemale.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxNumFemale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumFemale_KeyPress);
             // 
             // label30
             // 
@@ -1116,6 +1126,7 @@
             this.radioButtonGovIDYes.TabStop = true;
             this.radioButtonGovIDYes.Text = "YES";
             this.radioButtonGovIDYes.UseVisualStyleBackColor = true;
+            this.radioButtonGovIDYes.CheckedChanged += new System.EventHandler(this.radioButtonGovIDYes_CheckedChanged);
             // 
             // textBoxIDType
             // 
@@ -1234,10 +1245,12 @@
             // textBoxContactNumPNCE
             // 
             this.textBoxContactNumPNCE.Location = new System.Drawing.Point(618, 556);
+            this.textBoxContactNumPNCE.MaxLength = 11;
             this.textBoxContactNumPNCE.Name = "textBoxContactNumPNCE";
             this.textBoxContactNumPNCE.Size = new System.Drawing.Size(301, 21);
             this.textBoxContactNumPNCE.TabIndex = 240;
             this.textBoxContactNumPNCE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxContactNumPNCE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxContactNumPNCE_KeyPress);
             // 
             // label42
             // 
@@ -1346,6 +1359,7 @@
             this.checkBoxFarOC.TabIndex = 251;
             this.checkBoxFarOC.Text = "Other crops,\r\nplease specify,";
             this.checkBoxFarOC.UseVisualStyleBackColor = true;
+            this.checkBoxFarOC.CheckedChanged += new System.EventHandler(this.checkBoxFarOC_CheckedChanged);
             // 
             // textBoxFarOC
             // 
@@ -1372,6 +1386,7 @@
             this.checkBoxFarOL.TabIndex = 253;
             this.checkBoxFarOL.Text = "Livestock,\r\nplease specify,";
             this.checkBoxFarOL.UseVisualStyleBackColor = true;
+            this.checkBoxFarOL.CheckedChanged += new System.EventHandler(this.checkBoxFarOL_CheckedChanged);
             // 
             // textBoxFarOP
             // 
@@ -1390,6 +1405,7 @@
             this.checkBoxFarOP.TabIndex = 255;
             this.checkBoxFarOP.Text = "Poultry,\r\nplease specify,";
             this.checkBoxFarOP.UseVisualStyleBackColor = true;
+            this.checkBoxFarOP.CheckedChanged += new System.EventHandler(this.checkBoxFarOP_CheckedChanged);
             // 
             // label46
             // 
@@ -1879,6 +1895,79 @@
             this.panel2.Size = new System.Drawing.Size(937, 1015);
             this.panel2.TabIndex = 294;
             // 
+            // comboBoxBarangay
+            // 
+            this.comboBoxBarangay.FormattingEnabled = true;
+            this.comboBoxBarangay.Items.AddRange(new object[] {
+            "A. Bonifacio (Tinurilan)",
+            "Abad Santos (Kambal)",
+            "Aguinaldo (Lipata Dako)",
+            "Antipolo",
+            "Aquino (Imelda)",
+            "Bical",
+            "Beguin",
+            "Bonga",
+            "Butag",
+            "Cadandanan",
+            "Calomagon",
+            "Calpi",
+            "Cocok-Cabitan",
+            "Daganas",
+            "Danao",
+            "Dolos",
+            "E. Quirino (Pinangomhan)",
+            "Fabrica",
+            "G. Del Pilar (Tanga)",
+            "Gate",
+            "Inararan",
+            "J. Gerona (Biton)",
+            "J.P. Laurel (Pon-od)",
+            "Jamorawon",
+            "Libertad (Calle Putol)",
+            "Lajong",
+            "Magsaysay (Bongog)",
+            "Managa-naga",
+            "Marinab",
+            "Nasuje",
+            "Montecalvario",
+            "N. Roque (Calayugan)",
+            "Namo",
+            "Obrero",
+            "Osmeña (Lipata Saday)",
+            "Otavi",
+            "Padre Diaz",
+            "Palale",
+            "Quezon (Cabarawan)",
+            "R. Gerona (Butag)",
+            "Recto",
+            "Roxas (Busay)",
+            "Sagrada",
+            "San Francisco (Polot)",
+            "San Isidro (Cabugaan)",
+            "San Juan Bag-o",
+            "San Juan Daan",
+            "San Rafael (Togbongon)",
+            "San Ramon",
+            "San Vicente",
+            "Santa Remedios",
+            "Santa Teresita (Trece)",
+            "Sigad",
+            "Somagongsong",
+            "Tarhan",
+            "Taromata",
+            "Zone 1 (Ilawod)",
+            "Zone 2 (Sabang)",
+            "Zone 3 (Central)",
+            "Zone 4 (Central Business District)",
+            "Zone 5 (Canipaan)",
+            "Zone 6 (Baybay)",
+            "Zone 7 (Iraya)",
+            "Zone 8 (Loyo)"});
+            this.comboBoxBarangay.Location = new System.Drawing.Point(620, 117);
+            this.comboBoxBarangay.Name = "comboBoxBarangay";
+            this.comboBoxBarangay.Size = new System.Drawing.Size(299, 24);
+            this.comboBoxBarangay.TabIndex = 303;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.textBoxMFASpecify);
@@ -2032,79 +2121,6 @@
             this.groupBoxAgriYouth.TabIndex = 302;
             this.groupBoxAgriYouth.TabStop = false;
             // 
-            // comboBoxBarangay
-            // 
-            this.comboBoxBarangay.FormattingEnabled = true;
-            this.comboBoxBarangay.Items.AddRange(new object[] {
-            "A. Bonifacio (Tinurilan)",
-            "Abad Santos (Kambal)",
-            "Aguinaldo (Lipata Dako)",
-            "Antipolo",
-            "Aquino (Imelda)",
-            "Bical",
-            "Beguin",
-            "Bonga",
-            "Butag",
-            "Cadandanan",
-            "Calomagon",
-            "Calpi",
-            "Cocok-Cabitan",
-            "Daganas",
-            "Danao",
-            "Dolos",
-            "E. Quirino (Pinangomhan)",
-            "Fabrica",
-            "G. Del Pilar (Tanga)",
-            "Gate",
-            "Inararan",
-            "J. Gerona (Biton)",
-            "J.P. Laurel (Pon-od)",
-            "Jamorawon",
-            "Libertad (Calle Putol)",
-            "Lajong",
-            "Magsaysay (Bongog)",
-            "Managa-naga",
-            "Marinab",
-            "Nasuje",
-            "Montecalvario",
-            "N. Roque (Calayugan)",
-            "Namo",
-            "Obrero",
-            "Osmeña (Lipata Saday)",
-            "Otavi",
-            "Padre Diaz",
-            "Palale",
-            "Quezon (Cabarawan)",
-            "R. Gerona (Butag)",
-            "Recto",
-            "Roxas (Busay)",
-            "Sagrada",
-            "San Francisco (Polot)",
-            "San Isidro (Cabugaan)",
-            "San Juan Bag-o",
-            "San Juan Daan",
-            "San Rafael (Togbongon)",
-            "San Ramon",
-            "San Vicente",
-            "Santa Remedios",
-            "Santa Teresita (Trece)",
-            "Sigad",
-            "Somagongsong",
-            "Tarhan",
-            "Taromata",
-            "Zone 1 (Ilawod)",
-            "Zone 2 (Sabang)",
-            "Zone 3 (Central)",
-            "Zone 4 (Central Business District)",
-            "Zone 5 (Canipaan)",
-            "Zone 6 (Baybay)",
-            "Zone 7 (Iraya)",
-            "Zone 8 (Loyo)"});
-            this.comboBoxBarangay.Location = new System.Drawing.Point(620, 117);
-            this.comboBoxBarangay.Name = "comboBoxBarangay";
-            this.comboBoxBarangay.Size = new System.Drawing.Size(299, 24);
-            this.comboBoxBarangay.TabIndex = 303;
-            // 
             // checkBoxAYANFARC
             // 
             this.checkBoxAYANFARC.AutoSize = true;
@@ -2116,11 +2132,38 @@
             this.checkBoxAYANFARC.Text = "attending/attended non-formal\r\nagri-fishery related course";
             this.checkBoxAYANFARC.UseVisualStyleBackColor = true;
             // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
+            this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonClose.Location = new System.Drawing.Point(12, 12);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(100, 39);
+            this.buttonClose.TabIndex = 141;
+            this.buttonClose.Text = "Go Back";
+            this.buttonClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Visible = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelId.Location = new System.Drawing.Point(957, 0);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(0, 16);
+            this.labelId.TabIndex = 142;
+            // 
             // RSBSAregistraionfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(957, 560);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.panel2);
@@ -2345,5 +2388,7 @@
         private System.Windows.Forms.CheckBox checkBoxFFFishVending;
         private System.Windows.Forms.ComboBox comboBoxBarangay;
         private System.Windows.Forms.CheckBox checkBoxAYANFARC;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Label labelId;
     }
 }

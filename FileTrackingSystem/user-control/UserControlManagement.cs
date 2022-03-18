@@ -58,16 +58,6 @@ namespace FileTrackingSystem
             dashboardfrm.contentpanel.Enabled = false;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //Select data by cell
-            if( e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                textBoxUsername.Text = row.Cells["Username"].Value.ToString();
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure want to delete this user account?", "Deleting Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -115,6 +105,16 @@ namespace FileTrackingSystem
                     loadData();
                     MessageBox.Show("Account successfully archived!", "Archive Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Select data by cell
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                textBoxUsername.Text = row.Cells["Username"].Value.ToString();
             }
         }
     }

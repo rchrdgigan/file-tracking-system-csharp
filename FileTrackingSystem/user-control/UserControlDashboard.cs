@@ -13,6 +13,7 @@ namespace FileTrackingSystem
     public partial class UserControlDashboard : UserControl
     {
         User user = new User();
+        RSBSAClass rsbsa = new RSBSAClass();
 
         public UserControlDashboard()
         {
@@ -23,6 +24,15 @@ namespace FileTrackingSystem
         {
             user.countUser();
             labelCountUser.Text = user.count.ToString();
+
+            rsbsa.countFisher();
+            labelFisher.Text = rsbsa.countFishFolk.ToString();
+
+            rsbsa.countFarmers();
+            labelFarmer.Text = rsbsa.countFarmer.ToString();
+
+            rsbsa.countFarmWorkers();
+            labelFarmWor.Text = rsbsa.countFarmWor.ToString();
         }
     }
 }

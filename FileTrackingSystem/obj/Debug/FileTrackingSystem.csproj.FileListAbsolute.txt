@@ -53,3 +53,4 @@ C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlCalamityDamage.resources
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.UserControlUserLogHistory.resources
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.RSBSAregistraionfrm.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.FarmerFilesForm.resources

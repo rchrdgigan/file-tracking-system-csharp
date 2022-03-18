@@ -40,17 +40,17 @@
             this.Label2 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelFisher = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.Panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelFarmer = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.labelFarmWor = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -199,7 +199,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.labelFisher);
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Controls.Add(this.label9);
@@ -208,18 +208,18 @@
             this.panel5.Size = new System.Drawing.Size(293, 155);
             this.panel5.TabIndex = 141;
             // 
-            // label4
+            // labelFisher
             // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(252, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 44);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "0";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelFisher.AutoSize = true;
+            this.labelFisher.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelFisher.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFisher.ForeColor = System.Drawing.Color.White;
+            this.labelFisher.Location = new System.Drawing.Point(252, 0);
+            this.labelFisher.Name = "labelFisher";
+            this.labelFisher.Size = new System.Drawing.Size(41, 44);
+            this.labelFisher.TabIndex = 41;
+            this.labelFisher.Text = "0";
+            this.labelFisher.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -282,7 +282,7 @@
             // Panel3
             // 
             this.Panel3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.Panel3.Controls.Add(this.label6);
+            this.Panel3.Controls.Add(this.labelFarmer);
             this.Panel3.Controls.Add(this.pictureBox2);
             this.Panel3.Controls.Add(this.Label5);
             this.Panel3.Controls.Add(this.Label3);
@@ -292,18 +292,18 @@
             this.Panel3.Size = new System.Drawing.Size(293, 156);
             this.Panel3.TabIndex = 140;
             // 
-            // label6
+            // labelFarmer
             // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(252, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 44);
-            this.label6.TabIndex = 42;
-            this.label6.Text = "0";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelFarmer.AutoSize = true;
+            this.labelFarmer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelFarmer.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFarmer.ForeColor = System.Drawing.Color.White;
+            this.labelFarmer.Location = new System.Drawing.Point(252, 0);
+            this.labelFarmer.Name = "labelFarmer";
+            this.labelFarmer.Size = new System.Drawing.Size(41, 44);
+            this.labelFarmer.TabIndex = 42;
+            this.labelFarmer.Text = "0";
+            this.labelFarmer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -318,7 +318,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.labelFarmWor);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label13);
@@ -328,18 +328,18 @@
             this.panel2.Size = new System.Drawing.Size(445, 156);
             this.panel2.TabIndex = 141;
             // 
-            // label11
+            // labelFarmWor
             // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(404, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 44);
-            this.label11.TabIndex = 42;
-            this.label11.Text = "0";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelFarmWor.AutoSize = true;
+            this.labelFarmWor.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelFarmWor.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFarmWor.ForeColor = System.Drawing.Color.White;
+            this.labelFarmWor.Location = new System.Drawing.Point(404, 0);
+            this.labelFarmWor.Name = "labelFarmWor";
+            this.labelFarmWor.Size = new System.Drawing.Size(41, 44);
+            this.labelFarmWor.TabIndex = 42;
+            this.labelFarmWor.Text = "0";
+            this.labelFarmWor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox4
             // 
@@ -494,10 +494,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         internal System.Windows.Forms.Label label10;
-        internal System.Windows.Forms.Label label4;
-        internal System.Windows.Forms.Label label6;
+        internal System.Windows.Forms.Label labelFisher;
+        internal System.Windows.Forms.Label labelFarmer;
         internal System.Windows.Forms.Panel panel2;
-        internal System.Windows.Forms.Label label11;
+        internal System.Windows.Forms.Label labelFarmWor;
         private System.Windows.Forms.PictureBox pictureBox4;
         internal System.Windows.Forms.Label label12;
         internal System.Windows.Forms.Label label13;
