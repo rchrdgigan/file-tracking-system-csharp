@@ -351,7 +351,7 @@ namespace FileTrackingSystem
                                                                                                                             rsbsa.ID_no = IDNum;
                                                                                                                             rsbsa.mem_farmer_association = MFA;
                                                                                                                             rsbsa.person_case_emergency = textBoxPNCE.Text;
-                                                                                                                            rsbsa.contact_num = textBoxPNCE.Text;
+                                                                                                                            rsbsa.contact_num = textBoxContactNumPNCE.Text;
                                                                                                                             rsbsa.livelihood = livelihood;
 
                                                                                                                             rsbsa.rice = rice;
@@ -606,12 +606,14 @@ namespace FileTrackingSystem
                 textBoxNameSpouse.Enabled = false;
             }
 
-            if (!string.IsNullOrEmpty(UserControlRSBSA._mother_maiden)) { textBoxNameSpouse.Text = UserControlRSBSA._spouse_name; }
+            if (!string.IsNullOrEmpty(UserControlRSBSA._mother_maiden)) { textBoxMothersMaiden.Text = UserControlRSBSA._mother_maiden; }
 
-            if (!string.IsNullOrEmpty(UserControlRSBSA._household_head) && !string.IsNullOrEmpty(UserControlRSBSA._hh_relationship))
+            if (!string.IsNullOrEmpty(UserControlRSBSA._household_head) || !string.IsNullOrEmpty(UserControlRSBSA._hh_relationship))
             {
                 textBoxNameHH.Text = UserControlRSBSA._household_head;
                 textBoxHHRelationship.Text = UserControlRSBSA._hh_relationship;
+
+                radioButtonHHNo.Checked = true;
             }
             else
             {

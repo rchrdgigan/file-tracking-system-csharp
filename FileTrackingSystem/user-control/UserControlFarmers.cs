@@ -77,5 +77,49 @@ namespace FileTrackingSystem
             dashboardfrm.navpanel.Enabled = false;
             dashboardfrm.contentpanel.Enabled = false;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            header_category = "Hybrid Users";
+
+            FarmerFilesForm fff = new FarmerFilesForm();
+            fff.Show();
+            //To disable navbar and body
+            dashboardfrm.navpanel.Enabled = false;
+            dashboardfrm.contentpanel.Enabled = false;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            header_category = "Certified Seeds User";
+
+            FarmerFilesForm fff = new FarmerFilesForm();
+            fff.Show();
+            //To disable navbar and body
+            dashboardfrm.navpanel.Enabled = false;
+            dashboardfrm.contentpanel.Enabled = false;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            header_category = "Fertilizer Users";
+
+            FarmerFilesForm fff = new FarmerFilesForm();
+            fff.Show();
+            //To disable navbar and body
+            dashboardfrm.navpanel.Enabled = false;
+            dashboardfrm.contentpanel.Enabled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            header_category = "All Category";
+
+            FarmerFilesForm fff = new FarmerFilesForm();
+            fff.Show();
+            //To disable navbar and body
+            dashboardfrm.navpanel.Enabled = false;
+            dashboardfrm.contentpanel.Enabled = false;
+        }
     }
 }

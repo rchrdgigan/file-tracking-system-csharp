@@ -48,6 +48,7 @@
             this.civill_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Livelihood = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.created_at = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateUpdated = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonCreate = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -166,7 +167,8 @@
             this.barangay,
             this.civill_status,
             this.Livelihood,
-            this.created_at});
+            this.created_at,
+            this.DateUpdated});
             this.dataGridView1.Location = new System.Drawing.Point(18, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -223,6 +225,7 @@
             this.street.HeaderText = "Street / Sitio / Subdv.";
             this.street.Name = "street";
             this.street.ReadOnly = true;
+            this.street.Width = 180;
             // 
             // barangay
             // 
@@ -251,6 +254,15 @@
             this.created_at.HeaderText = "Date Created";
             this.created_at.Name = "created_at";
             this.created_at.ReadOnly = true;
+            this.created_at.Width = 120;
+            // 
+            // DateUpdated
+            // 
+            this.DateUpdated.DataPropertyName = "updated_at";
+            this.DateUpdated.HeaderText = "Date Updated";
+            this.DateUpdated.Name = "DateUpdated";
+            this.DateUpdated.ReadOnly = true;
+            this.DateUpdated.Width = 120;
             // 
             // buttonCreate
             // 
@@ -490,5 +502,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn civill_status;
         private System.Windows.Forms.DataGridViewTextBoxColumn Livelihood;
         private System.Windows.Forms.DataGridViewTextBoxColumn created_at;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateUpdated;
     }
 }

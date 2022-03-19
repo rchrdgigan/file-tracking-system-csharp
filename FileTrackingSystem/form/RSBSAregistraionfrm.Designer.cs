@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RSBSAregistraionfrm));
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.labelId = new System.Windows.Forms.Label();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.PictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnRefresh = new System.Windows.Forms.PictureBox();
@@ -199,8 +201,6 @@
             this.checkBoxFFFishVending = new System.Windows.Forms.CheckBox();
             this.groupBoxAgriYouth = new System.Windows.Forms.GroupBox();
             this.checkBoxAYANFARC = new System.Windows.Forms.CheckBox();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.labelId = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -240,6 +240,33 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(957, 65);
             this.Panel1.TabIndex = 138;
+            // 
+            // labelId
+            // 
+            this.labelId.AutoSize = true;
+            this.labelId.Dock = System.Windows.Forms.DockStyle.Right;
+            this.labelId.Location = new System.Drawing.Point(957, 0);
+            this.labelId.Name = "labelId";
+            this.labelId.Size = new System.Drawing.Size(0, 16);
+            this.labelId.TabIndex = 142;
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
+            this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonClose.Location = new System.Drawing.Point(12, 12);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(100, 39);
+            this.buttonClose.TabIndex = 141;
+            this.buttonClose.Text = "Go Back";
+            this.buttonClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Visible = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // PictureBox5
             // 
@@ -2131,33 +2158,6 @@
             this.checkBoxAYANFARC.TabIndex = 286;
             this.checkBoxAYANFARC.Text = "attending/attended non-formal\r\nagri-fishery related course";
             this.checkBoxAYANFARC.UseVisualStyleBackColor = true;
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.buttonClose.FlatAppearance.BorderSize = 0;
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
-            this.buttonClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClose.Location = new System.Drawing.Point(12, 12);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(100, 39);
-            this.buttonClose.TabIndex = 141;
-            this.buttonClose.Text = "Go Back";
-            this.buttonClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Visible = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // labelId
-            // 
-            this.labelId.AutoSize = true;
-            this.labelId.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelId.Location = new System.Drawing.Point(957, 0);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(0, 16);
-            this.labelId.TabIndex = 142;
             // 
             // RSBSAregistraionfrm
             // 
