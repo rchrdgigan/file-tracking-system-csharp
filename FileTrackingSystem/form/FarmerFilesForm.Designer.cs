@@ -38,9 +38,9 @@
             this.comboBoxCatFil = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFilDate = new System.Windows.Forms.DateTimePicker();
             this.labelCatFil = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxFilFileName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelCat = new System.Windows.Forms.Label();
@@ -142,9 +142,9 @@
             this.panel2.Controls.Add(this.comboBoxCatFil);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.dateTimePicker2);
+            this.panel2.Controls.Add(this.dateTimePickerFilDate);
             this.panel2.Controls.Add(this.labelCatFil);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.textBoxFilFileName);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Location = new System.Drawing.Point(0, 44);
@@ -165,6 +165,7 @@
             this.comboBoxCatFil.Size = new System.Drawing.Size(166, 24);
             this.comboBoxCatFil.TabIndex = 21;
             this.comboBoxCatFil.Visible = false;
+            this.comboBoxCatFil.SelectedIndexChanged += new System.EventHandler(this.comboBoxCatFil_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -184,12 +185,14 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Date Created:";
             // 
-            // dateTimePicker2
+            // dateTimePickerFilDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(639, 9);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(202, 21);
-            this.dateTimePicker2.TabIndex = 19;
+            this.dateTimePickerFilDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerFilDate.Location = new System.Drawing.Point(639, 9);
+            this.dateTimePickerFilDate.Name = "dateTimePickerFilDate";
+            this.dateTimePickerFilDate.Size = new System.Drawing.Size(202, 21);
+            this.dateTimePickerFilDate.TabIndex = 19;
+            this.dateTimePickerFilDate.ValueChanged += new System.EventHandler(this.dateTimePickerFilDate_ValueChanged);
             // 
             // labelCatFil
             // 
@@ -201,12 +204,13 @@
             this.labelCatFil.Text = "Category :";
             this.labelCatFil.Visible = false;
             // 
-            // textBox3
+            // textBoxFilFileName
             // 
-            this.textBox3.Location = new System.Drawing.Point(392, 9);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 21);
-            this.textBox3.TabIndex = 2;
+            this.textBoxFilFileName.Location = new System.Drawing.Point(392, 9);
+            this.textBoxFilFileName.Name = "textBoxFilFileName";
+            this.textBoxFilFileName.Size = new System.Drawing.Size(148, 21);
+            this.textBoxFilFileName.TabIndex = 2;
+            this.textBoxFilFileName.TextChanged += new System.EventHandler(this.textBoxFilFileName_TextChanged);
             // 
             // groupBox1
             // 
@@ -539,10 +543,10 @@
         private System.Windows.Forms.Label labelCat;
         private System.Windows.Forms.ComboBox comboBoxCat;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFilDate;
         private System.Windows.Forms.Label labelCatFil;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxFilFileName;
         private System.Windows.Forms.ComboBox comboBoxCatFil;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileID;

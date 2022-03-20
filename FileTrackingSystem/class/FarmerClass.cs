@@ -16,6 +16,7 @@ namespace FileTrackingSystem
         public string fname_extension { get; set; }
         public string category { get; set; }
         public string message { get; set; }
+        public string date { get; set; }
 
         public void create()
         {
@@ -111,6 +112,96 @@ namespace FileTrackingSystem
                     cmd.ExecuteNonQuery();
                 }
                 con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+        public void archive(int id)
+        {
+            try
+            {
+                con.Open();
+                DateTime updated_at = DateTime.Now;
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "UPDATE `farmers_files_tb` SET `file_name`=@file_name, `fname_extension`=@fname_extension, `updated_at`=@updated_at, `status`='Archive' WHERE id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                    cmd.Parameters.AddWithValue("@file_name", file_name);
+                    cmd.Parameters.AddWithValue("@fname_extension", fname_extension);
+                    cmd.Parameters.AddWithValue("@updated_at", updated_at);
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+
+        //Search User function
+        public void search(string cat)
+        {
+            try
+            {
+                string query = "";
+                if(!string.IsNullOrEmpty(cat))
+                {
+                    if (file_name != "" || date != "")
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND created_at LIKE '%" + date + "%' AND category= '" + cat + "' AND status='Normal'");
+                    }
+                    else if (file_name != "")
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND category= '" + cat + "' AND status='Normal'");
+                    }
+                    else if (date != "")
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE created_at LIKE '%" + date + "%' AND category= '" + cat + "' AND status='Normal'");
+                    }
+                    else if (category != "")
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE category LIKE '%" + category + "%' AND category= '" + cat + "' AND status='Normal'");
+                    }
+                    else
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE status='Normal' AND category= '" + cat + "'");
+                    }
+                }
+                else
+                {
+                    if (file_name != "" || date != "" || category != "")
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND created_at LIKE '%" + date + "%' AND category LIKE '%" + category + "%' AND status='Normal'");
+                    }
+                    else if (file_name != "")
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND status='Normal'");
+                    }
+                    else if (date != "")
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE created_at LIKE '%" + date + "%' AND status='Normal'");
+                    }
+                    else if (category != "")
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE category LIKE '%" + category + "%' AND status='Normal'");
+                    }
+                    else
+                    {
+                        query = ("SELECT * FROM farmers_files_tb WHERE status='Normal'");
+                    }
+                }
+                
+                MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                msda.Fill(dt);
+                dtable = dt;
             }
             catch (Exception ex)
             {

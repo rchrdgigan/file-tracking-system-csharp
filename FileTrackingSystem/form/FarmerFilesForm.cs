@@ -30,6 +30,11 @@ namespace FileTrackingSystem
         private static string csu_path = Application.StartupPath + @"\Farmers\Certified Seeds User\";
         private static string fu_path = Application.StartupPath + @"\Farmers\Fertilizer Users\";
 
+        private static string archive_morf_path = Application.StartupPath + @"\Archive\Farmers\Masterlist of Rice Farmers\";
+        private static string archive_hu_path = Application.StartupPath + @"\Archive\Farmers\Hybrid Users\";
+        private static string archive_csu_path = Application.StartupPath + @"\Archive\Farmers\Certified Seeds User\";
+        private static string archive_fu_path = Application.StartupPath + @"\Archive\Farmers\Fertilizer Users\";
+
         public FarmerFilesForm()
         {
             InitializeComponent();
@@ -51,6 +56,12 @@ namespace FileTrackingSystem
             buttonCancel.Enabled = false;
             textBoxFileName.Clear();
             txtBoxChooseFile.Clear();
+        }
+        private void loadSearch()
+        {
+            fc.search(_category);
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = fc.dtable;
         }
 
         private void loadDataByCat()
@@ -82,24 +93,28 @@ namespace FileTrackingSystem
                 _category = morf;
                 destin_path = morf_path;
                 loadDataByCat();
+                dataGridView1.Columns["Category"].Visible = false;
             }
             else if (UserControlFarmers.header_category == hu)
             {
                 _category = hu;
                 destin_path = hu_path;
                 loadDataByCat();
+                dataGridView1.Columns["Category"].Visible = false;
             }
             else if (UserControlFarmers.header_category == csu)
             {
                 _category = csu;
                 destin_path = csu_path;
                 loadDataByCat();
+                dataGridView1.Columns["Category"].Visible = false;
             }
             else if (UserControlFarmers.header_category == fu)
             {
                 _category = fu;
                 destin_path = fu_path;
                 loadDataByCat();
+                dataGridView1.Columns["Category"].Visible = false;
             }
             else
             {
@@ -199,7 +214,7 @@ namespace FileTrackingSystem
 
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
             string data_id = row.Cells["FileID"].Value.ToString();
-            string file_del = row.Cells["FileWithExtension"].Value.ToString();
+            string file_exten = row.Cells["FileWithExtension"].Value.ToString();
             string cat = row.Cells["Category"].Value.ToString();
 
             if (columnName == "colDel")
@@ -226,7 +241,7 @@ namespace FileTrackingSystem
                     {
                         destin_path = fu_path;
                     }
-                    File.Delete(destin_path + file_del);
+                    File.Delete(destin_path + file_exten);
                     MessageBox.Show("File successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -263,7 +278,41 @@ namespace FileTrackingSystem
             }
             else if (columnName == "colArchive")
             {
-
+                DialogResult result = MessageBox.Show("Are you sure want to archive this file?", "Archive Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    if (cat == morf)
+                    {
+                        destin_path = morf_path;
+                        source_path = archive_morf_path;
+                    }
+                    else if (cat == hu)
+                    {
+                        destin_path = hu_path;
+                        source_path = archive_hu_path;
+                    }
+                    else if (cat == csu)
+                    {
+                        destin_path = csu_path;
+                        source_path = archive_csu_path;
+                    }
+                    else if (cat == fu)
+                    {
+                        destin_path = fu_path;
+                        source_path = archive_fu_path;
+                    }
+                    string fw = DateTime.Now.ToString("MM-dd-yyyy Hmmss-") + file_name;
+                    string source = source_path + fw;
+                    string fwe = Path.GetFileNameWithoutExtension(source);
+                    File.Move(destin_path + file_exten, source);
+                    fc.file_name = fwe;
+                    fc.fname_extension = fw;
+                    fc.archive(int.Parse(data_id));
+                    loadDataByCat();
+                    defaultDisplay();
+                    MessageBox.Show("File successfully archive!", ""+ source, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
             }
         }
 
@@ -295,34 +344,33 @@ namespace FileTrackingSystem
             }
             else
             {
-                MessageBox.Show("Please choose file!");
+                MessageBox.Show("Please choose updated file!");
             }
         }
 
         private void comboBoxCat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxCat.Text == "Masterlist of Rice Farmers")
+            if (comboBoxCat.Text == morf)
             {
                 _category = comboBoxCat.Text;
                 destin_path = morf_path;
             }
-            else if (comboBoxCat.Text == "Hybrid Users")
+            else if (comboBoxCat.Text == hu)
             {
                 _category = comboBoxCat.Text;
                 destin_path = hu_path;
 
             }
-            else if (comboBoxCat.Text == "Certified Seeds User")
+            else if (comboBoxCat.Text == csu)
             {
                 _category = comboBoxCat.Text;
                 destin_path = csu_path;
 
             }
-            else if (comboBoxCat.Text == "Fertilizer Users")
+            else if (comboBoxCat.Text == fu)
             {
                 _category = comboBoxCat.Text;
                 destin_path = fu_path;
-
             }
             else
             {
@@ -330,5 +378,23 @@ namespace FileTrackingSystem
             }
         }
 
+        private void textBoxFilFileName_TextChanged(object sender, EventArgs e)
+        {
+            fc.file_name = textBoxFilFileName.Text;
+            loadSearch();
+        }
+
+        private void dateTimePickerFilDate_ValueChanged(object sender, EventArgs e)
+        {
+            string dts = dateTimePickerFilDate.Value.ToString("yyyy-MM-dd");
+            fc.date = dts;
+            loadSearch();
+        }
+
+        private void comboBoxCatFil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fc.category = comboBoxCatFil.Text;
+            loadSearch();
+        }
     }
 }
