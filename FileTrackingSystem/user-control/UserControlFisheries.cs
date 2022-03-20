@@ -12,9 +12,20 @@ namespace FileTrackingSystem
 {
     public partial class UserControlFisheries : UserControl
     {
+        public static string header_category;
+
         public UserControlFisheries()
         {
             InitializeComponent();
+        }
+
+        private void openForm()
+        {
+            FisheriesFileForm fff = new FisheriesFileForm();
+            fff.Show();
+            //To disable navbar and body
+            dashboardfrm.navpanel.Enabled = false;
+            dashboardfrm.contentpanel.Enabled = false;
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
@@ -63,6 +74,36 @@ namespace FileTrackingSystem
         {
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.Cursor = Cursors.Default;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            header_category = "Capture Fishery";
+            openForm();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            header_category = "Mariculture Fishing";
+            openForm();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            header_category = "Illegal Fishing";
+            openForm();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            header_category = "Coastal Resources";
+            openForm();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            header_category = "All Category";
+            openForm();
         }
     }
 }

@@ -56,16 +56,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxFileName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colDel = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colEdit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colArchive = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colDownload = new System.Windows.Forms.DataGridViewImageColumn();
             this.FileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FileWithExtension = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpdatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDel = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colEdit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colArchive = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colDownload = new System.Windows.Forms.DataGridViewImageColumn();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -390,22 +390,58 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colDel,
+            this.colEdit,
+            this.colArchive,
+            this.colDownload,
             this.FileID,
             this.FileWithExtension,
             this.FileName,
             this.Category,
             this.CreatedAt,
-            this.UpdatedAt,
-            this.colDel,
-            this.colEdit,
-            this.colArchive,
-            this.colDownload});
+            this.UpdatedAt});
             this.dataGridView1.Location = new System.Drawing.Point(286, 36);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(798, 564);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // colDel
+            // 
+            this.colDel.HeaderText = "Delete";
+            this.colDel.Image = ((System.Drawing.Image)(resources.GetObject("colDel.Image")));
+            this.colDel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.colDel.Name = "colDel";
+            this.colDel.ReadOnly = true;
+            this.colDel.Width = 40;
+            // 
+            // colEdit
+            // 
+            this.colEdit.HeaderText = "Edit";
+            this.colEdit.Image = ((System.Drawing.Image)(resources.GetObject("colEdit.Image")));
+            this.colEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.colEdit.Name = "colEdit";
+            this.colEdit.ReadOnly = true;
+            this.colEdit.Width = 40;
+            // 
+            // colArchive
+            // 
+            this.colArchive.HeaderText = "Archive";
+            this.colArchive.Image = ((System.Drawing.Image)(resources.GetObject("colArchive.Image")));
+            this.colArchive.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.colArchive.Name = "colArchive";
+            this.colArchive.ReadOnly = true;
+            this.colArchive.Width = 40;
+            // 
+            // colDownload
+            // 
+            this.colDownload.HeaderText = "Download";
+            this.colDownload.Image = ((System.Drawing.Image)(resources.GetObject("colDownload.Image")));
+            this.colDownload.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.colDownload.Name = "colDownload";
+            this.colDownload.ReadOnly = true;
+            this.colDownload.Width = 40;
             // 
             // FileID
             // 
@@ -453,42 +489,6 @@
             this.UpdatedAt.Name = "UpdatedAt";
             this.UpdatedAt.ReadOnly = true;
             this.UpdatedAt.Width = 120;
-            // 
-            // colDel
-            // 
-            this.colDel.HeaderText = "Delete";
-            this.colDel.Image = ((System.Drawing.Image)(resources.GetObject("colDel.Image")));
-            this.colDel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.colDel.Name = "colDel";
-            this.colDel.ReadOnly = true;
-            this.colDel.Width = 40;
-            // 
-            // colEdit
-            // 
-            this.colEdit.HeaderText = "Edit";
-            this.colEdit.Image = ((System.Drawing.Image)(resources.GetObject("colEdit.Image")));
-            this.colEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.colEdit.Name = "colEdit";
-            this.colEdit.ReadOnly = true;
-            this.colEdit.Width = 40;
-            // 
-            // colArchive
-            // 
-            this.colArchive.HeaderText = "Archive";
-            this.colArchive.Image = ((System.Drawing.Image)(resources.GetObject("colArchive.Image")));
-            this.colArchive.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.colArchive.Name = "colArchive";
-            this.colArchive.ReadOnly = true;
-            this.colArchive.Width = 40;
-            // 
-            // colDownload
-            // 
-            this.colDownload.HeaderText = "Download";
-            this.colDownload.Image = ((System.Drawing.Image)(resources.GetObject("colDownload.Image")));
-            this.colDownload.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.colDownload.Name = "colDownload";
-            this.colDownload.ReadOnly = true;
-            this.colDownload.Width = 40;
             // 
             // FarmerFilesForm
             // 
@@ -549,15 +549,15 @@
         private System.Windows.Forms.TextBox textBoxFilFileName;
         private System.Windows.Forms.ComboBox comboBoxCatFil;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.DataGridViewImageColumn colDel;
+        private System.Windows.Forms.DataGridViewImageColumn colEdit;
+        private System.Windows.Forms.DataGridViewImageColumn colArchive;
+        private System.Windows.Forms.DataGridViewImageColumn colDownload;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileWithExtension;
         private System.Windows.Forms.DataGridViewTextBoxColumn FileName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreatedAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn UpdatedAt;
-        private System.Windows.Forms.DataGridViewImageColumn colDel;
-        private System.Windows.Forms.DataGridViewImageColumn colEdit;
-        private System.Windows.Forms.DataGridViewImageColumn colArchive;
-        private System.Windows.Forms.DataGridViewImageColumn colDownload;
     }
 }

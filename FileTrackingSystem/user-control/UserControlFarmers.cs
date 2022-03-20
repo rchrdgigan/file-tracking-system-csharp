@@ -19,6 +19,15 @@ namespace FileTrackingSystem
 
         public static string header_category;
 
+        private void openForm()
+        {
+            FarmerFilesForm fff = new FarmerFilesForm();
+            fff.Show();
+            //To disable navbar and body
+            dashboardfrm.navpanel.Enabled = false;
+            dashboardfrm.contentpanel.Enabled = false;
+        }
+
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             pictureBox1.BackColor = Color.MediumAquamarine;
@@ -70,56 +79,31 @@ namespace FileTrackingSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             header_category = "Masterlist of Rice Farmers";
-
-            FarmerFilesForm fff = new FarmerFilesForm();
-            fff.Show();
-            //To disable navbar and body
-            dashboardfrm.navpanel.Enabled = false;
-            dashboardfrm.contentpanel.Enabled = false;
+            openForm();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             header_category = "Hybrid Users";
-
-            FarmerFilesForm fff = new FarmerFilesForm();
-            fff.Show();
-            //To disable navbar and body
-            dashboardfrm.navpanel.Enabled = false;
-            dashboardfrm.contentpanel.Enabled = false;
+            openForm();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             header_category = "Certified Seeds User";
-
-            FarmerFilesForm fff = new FarmerFilesForm();
-            fff.Show();
-            //To disable navbar and body
-            dashboardfrm.navpanel.Enabled = false;
-            dashboardfrm.contentpanel.Enabled = false;
+            openForm();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             header_category = "Fertilizer Users";
-
-            FarmerFilesForm fff = new FarmerFilesForm();
-            fff.Show();
-            //To disable navbar and body
-            dashboardfrm.navpanel.Enabled = false;
-            dashboardfrm.contentpanel.Enabled = false;
+            openForm();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             header_category = "All Category";
-
-            FarmerFilesForm fff = new FarmerFilesForm();
-            fff.Show();
-            //To disable navbar and body
-            dashboardfrm.navpanel.Enabled = false;
-            dashboardfrm.contentpanel.Enabled = false;
+            openForm();
         }
     }
 }

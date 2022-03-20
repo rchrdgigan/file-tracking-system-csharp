@@ -54,7 +54,7 @@ namespace FileTrackingSystem
                     {
                         con.Close();
                         con.Open();
-                        DateTime today = DateTime.Today;
+                        DateTime today = DateTime.Now;
                         string role = "";
                         string query = "";
                         if (roles == "")
@@ -121,7 +121,7 @@ namespace FileTrackingSystem
         //Display User list function
         public void listUser()
         {
-            string query = ("SELECT * FROM users_tb WHERE status='Normal'");
+            string query = ("SELECT * FROM users_tb WHERE status='Normal' ORDER BY id DESC");
             MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             msda.Fill(dt);
@@ -159,19 +159,19 @@ namespace FileTrackingSystem
 
                 if (fname != "" || lname != "")
                 {
-                    query = ("SELECT * FROM users_tb WHERE fname LIKE '%" + fname + "%' AND lname LIKE '%" + lname + "%' AND status='Normal'");
+                    query = ("SELECT * FROM users_tb WHERE fname LIKE '%" + fname + "%' AND lname LIKE '%" + lname + "%' AND status='Normal' ORDER BY id DESC");
                 }
                 else if (fname != "")
                 {
-                    query = ("SELECT * FROM users_tb WHERE fname LIKE '%" + fname + "%' AND status='Normal'");
+                    query = ("SELECT * FROM users_tb WHERE fname LIKE '%" + fname + "%' AND status='Normal' ORDER BY id DESC");
                 }
                 else if (lname != "")
                 {
-                    query = ("SELECT * FROM users_tb WHERE fname LIKE '%" + lname + "%' AND status='Normal'");
+                    query = ("SELECT * FROM users_tb WHERE fname LIKE '%" + lname + "%' AND status='Normal' ORDER BY id DESC");
                 }
                 else
                 {
-                    query = ("SELECT * FROM users_tb WHERE status='Normal'");
+                    query = ("SELECT * FROM users_tb WHERE status='Normal' ORDER BY id DESC");
                 }
                 MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
                 DataTable dt = new DataTable();

@@ -89,7 +89,7 @@ namespace FileTrackingSystem
                 con.Open();
                 using (var cmd_chkuser = new MySqlCommand())
                 {
-                    DateTime today = DateTime.Today;
+                    DateTime today = DateTime.Now;
                     string query = ("INSERT INTO `rsbsa_tb`(`id`, `surname`, `fname`, `mname`, `extension`, `gender`, `purok`, `street`, `brgy`, `municipality`, `province`, `region`, `mobile_no`, `landline_no`, `birthdate`, `birth_place`, `religion`, `civil_stat`, `spouse_name`, `mother_maiden`, "
                         + "`household_head`, `hh_relationship`, `no_living_mem`, `num_male`, `num_female`, `high_formal_educ`, `pdw`, `four_ps`, `mem_indigenous_group`, `govID_type`, `ID_no`, `mem_farmer_association`, `person_case_emergency`, `contact_num`, `livelihood`,"
                         + "`rice`, `corn`, `other_crops`, `other_livestock`, `other_poultry`, `land_preparation`, `planting`, `cultivation`, `harvesting`, `others_farm`, `fish_capture`, `aquaculture`, `gleaning`, `fish_processing`, `fish_vending`, `others_fish`,"
@@ -176,7 +176,7 @@ namespace FileTrackingSystem
         //List function of RSBSA
         public void listRSBSA()
         {
-            string query = ("SELECT * FROM rsbsa_tb WHERE status='Normal'");
+            string query = ("SELECT * FROM rsbsa_tb WHERE status='Normal' ORDER BY id DESC");
             MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             msda.Fill(dt);
@@ -318,7 +318,7 @@ namespace FileTrackingSystem
             try
             {
                 con.Open();
-                DateTime today = DateTime.Today;
+                DateTime today = DateTime.Now;
                 using (var cmd = new MySqlCommand())
                 {
                     cmd.CommandText = "UPDATE `rsbsa_tb` SET `surname`=@surname,`fname`=@fname,`mname`=@mname,`extension`=@extension,`gender`=@gender,`purok`=@purok,`street`=@street,`brgy`=@brgy,`municipality`=@municipality,"
@@ -417,27 +417,27 @@ namespace FileTrackingSystem
 
                 if (fname != "" || surname != "" || mname != "" || livelihood != "")
                 {
-                    query = ("SELECT * FROM rsbsa_tb WHERE surname LIKE '%" + surname + "%' AND fname LIKE '%" + fname + "%' AND mname LIKE '%" + mname + "%' AND livelihood LIKE '%" + livelihood + "%' AND status='Normal'");
+                    query = ("SELECT * FROM rsbsa_tb WHERE surname LIKE '%" + surname + "%' AND fname LIKE '%" + fname + "%' AND mname LIKE '%" + mname + "%' AND livelihood LIKE '%" + livelihood + "%' AND status='Normal' ORDER BY id DESC");
                 }
                 else if (surname != "")
                 {
-                    query = ("SELECT * FROM rsbsa_tb WHERE surname LIKE '%" + surname + "%' AND status='Normal'");
+                    query = ("SELECT * FROM rsbsa_tb WHERE surname LIKE '%" + surname + "%' AND status='Normal' ORDER BY id DESC");
                 }
                 else if (fname != "")
                 {
-                    query = ("SELECT * FROM rsbsa_tb WHERE fname LIKE '%" + fname + "%' AND status='Normal'");
+                    query = ("SELECT * FROM rsbsa_tb WHERE fname LIKE '%" + fname + "%' AND status='Normal' ORDER BY id DESC");
                 }
                 else if (mname != "")
                 {
-                    query = ("SELECT * FROM rsbsa_tb WHERE fname LIKE '%" + mname + "%' AND status='Normal'");
+                    query = ("SELECT * FROM rsbsa_tb WHERE fname LIKE '%" + mname + "%' AND status='Normal' ORDER BY id DESC");
                 }
                 else if (livelihood != "")
                 {
-                    query = ("SELECT * FROM rsbsa_tb WHERE livelihood LIKE '%" + livelihood + "%' AND status='Normal'");
+                    query = ("SELECT * FROM rsbsa_tb WHERE livelihood LIKE '%" + livelihood + "%' AND status='Normal' ORDER BY id DESC");
                 }
                 else
                 {
-                    query = ("SELECT * FROM rsbsa_tb WHERE status='Normal'");
+                    query = ("SELECT * FROM rsbsa_tb WHERE status='Normal' ORDER BY id DESC");
                 }
                 MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
                 DataTable dt = new DataTable();

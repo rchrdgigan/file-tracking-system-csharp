@@ -50,6 +50,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="class\FarmerClass.cs" />
+    <Compile Include="class\FisheriesClass.cs" />
+    <Compile Include="form\FisheriesFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\FisheriesFileForm.Designer.cs">
+      <DependentUpon>FisheriesFileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\FarmerFilesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +140,9 @@
     <Compile Include="user-control\UserControlUserLogHistory.Designer.cs">
       <DependentUpon>UserControlUserLogHistory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="form\FisheriesFileForm.resx">
+      <DependentUpon>FisheriesFileForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\FarmerFilesForm.resx">
       <DependentUpon>FarmerFilesForm.cs</DependentUpon>
     </EmbeddedResource>

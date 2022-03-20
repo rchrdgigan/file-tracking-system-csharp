@@ -10,7 +10,6 @@ namespace FileTrackingSystem
 {
     class FarmerClass : ConnectionClass
     {
-        public MySqlDataReader msdtr;
         public DataTable dtable { get; set; }
         public string file_name { get; set; }
         public string fname_extension { get; set; }
@@ -46,23 +45,23 @@ namespace FileTrackingSystem
             string query = "";
             if (category == "Masterlist of Rice Farmers")
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE category='Masterlist of Rice Farmers' AND status='Normal'");
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Masterlist of Rice Farmers' AND status='Normal' ORDER BY id DESC");
             }
             else if (category == "Hybrid Users")
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE category='Hybrid Users' AND status='Normal'");
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Hybrid Users' AND status='Normal' ORDER BY id DESC");
             }
             else if (category == "Certified Seeds User")
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE category='Certified Seeds User' AND status='Normal'");
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Certified Seeds User' AND status='Normal' ORDER BY id DESC");
             }
             else if (category == "Fertilizer Users")
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE category='Fertilizer Users' AND status='Normal'");
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Fertilizer Users' AND status='Normal' ORDER BY id DESC");
             }
             else
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE status='Normal'");
+                query = ("SELECT * FROM farmers_files_tb WHERE status='Normal' ORDER BY id DESC");
             }
             MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();
@@ -144,8 +143,6 @@ namespace FileTrackingSystem
             }
         }
 
-
-        //Search User function
         public void search(string cat)
         {
             try
@@ -155,46 +152,46 @@ namespace FileTrackingSystem
                 {
                     if (file_name != "" || date != "")
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND created_at LIKE '%" + date + "%' AND category= '" + cat + "' AND status='Normal'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND created_at LIKE '%" + date + "%' AND category= '" + cat + "' AND status='Normal' ORDER BY id DESC");
                     }
                     else if (file_name != "")
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND category= '" + cat + "' AND status='Normal'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND category= '" + cat + "' AND status='Normal' ORDER BY id DESC");
                     }
                     else if (date != "")
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE created_at LIKE '%" + date + "%' AND category= '" + cat + "' AND status='Normal'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE created_at LIKE '%" + date + "%' AND category= '" + cat + "' AND status='Normal' ORDER BY id DESC");
                     }
                     else if (category != "")
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE category LIKE '%" + category + "%' AND category= '" + cat + "' AND status='Normal'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE category LIKE '%" + category + "%' AND category= '" + cat + "' AND status='Normal' ORDER BY id DESC");
                     }
                     else
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE status='Normal' AND category= '" + cat + "'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE status='Normal' AND category= '" + cat + "' ORDER BY id DESC");
                     }
                 }
                 else
                 {
                     if (file_name != "" || date != "" || category != "")
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND created_at LIKE '%" + date + "%' AND category LIKE '%" + category + "%' AND status='Normal'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND created_at LIKE '%" + date + "%' AND category LIKE '%" + category + "%' AND status='Normal' ORDER BY id DESC");
                     }
                     else if (file_name != "")
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND status='Normal'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE file_name LIKE '%" + file_name + "%' AND status='Normal' ORDER BY id DESC");
                     }
                     else if (date != "")
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE created_at LIKE '%" + date + "%' AND status='Normal'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE created_at LIKE '%" + date + "%' AND status='Normal' ORDER BY id DESC");
                     }
                     else if (category != "")
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE category LIKE '%" + category + "%' AND status='Normal'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE category LIKE '%" + category + "%' AND status='Normal' ORDER BY id DESC");
                     }
                     else
                     {
-                        query = ("SELECT * FROM farmers_files_tb WHERE status='Normal'");
+                        query = ("SELECT * FROM farmers_files_tb WHERE status='Normal' ORDER BY id DESC");
                     }
                 }
                 
