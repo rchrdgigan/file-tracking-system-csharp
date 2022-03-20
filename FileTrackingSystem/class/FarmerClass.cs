@@ -53,7 +53,7 @@ namespace FileTrackingSystem
             }
             else if (category == "Certified Seeds User")
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE category='Certified Seeds Use' AND status='Normal'");
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Certified Seeds User' AND status='Normal'");
             }
             else if (category == "Fertilizer Users")
             {
@@ -88,6 +88,27 @@ namespace FileTrackingSystem
                     cmd.ExecuteNonQuery();
 
                     message = "Data Successfully Updated!";
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+        public void delete(int id)
+        {
+            try
+            {
+                con.Open();
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "DELETE FROM farmers_files_tb WHERE id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
                 }
                 con.Close();
             }
