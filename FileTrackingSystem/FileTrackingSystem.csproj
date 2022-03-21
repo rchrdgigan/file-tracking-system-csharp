@@ -49,6 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalamityDamageClass.cs" />
+    <Compile Include="form\CalamityDamageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\CalamityDamageForm.Designer.cs">
+      <DependentUpon>CalamityDamageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="class\FarmerClass.cs" />
     <Compile Include="class\FisheriesClass.cs" />
     <Compile Include="form\FisheriesFileForm.cs">
@@ -82,7 +89,13 @@
     <Compile Include="form\loginfrm.Designer.cs">
       <DependentUpon>loginfrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="form\GenerateCalamityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\GenerateCalamityForm.Designer.cs">
+      <DependentUpon>GenerateCalamityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="class\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="form\registrationfrm.cs">
       <SubType>Form</SubType>
@@ -98,6 +111,7 @@
       <DependentUpon>RSBSAregistraionfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="class\RSBSAClass.cs" />
+    <Compile Include="class\TransitionsAPI.cs" />
     <Compile Include="user-control\UserControlDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +154,9 @@
     <Compile Include="user-control\UserControlUserLogHistory.Designer.cs">
       <DependentUpon>UserControlUserLogHistory.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="form\CalamityDamageForm.resx">
+      <DependentUpon>CalamityDamageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\FisheriesFileForm.resx">
       <DependentUpon>FisheriesFileForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form\loginfrm.resx">
       <DependentUpon>loginfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\GenerateCalamityForm.resx">
+      <DependentUpon>GenerateCalamityForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

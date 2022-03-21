@@ -55,3 +55,5 @@ C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.RSBSAregistraionfrm.resources
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.FarmerFilesForm.resources
 C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.FisheriesFileForm.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.CalamityDamageForm.resources
+C:\Users\admin\Desktop\file-tracking-system-csharp\FileTrackingSystem\obj\Debug\FileTrackingSystem.GenerateCalamityForm.resources

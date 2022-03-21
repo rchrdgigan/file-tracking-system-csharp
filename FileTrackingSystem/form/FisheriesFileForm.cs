@@ -89,6 +89,7 @@ namespace FileTrackingSystem
 
         private void FisheriesFileForm_Load(object sender, EventArgs e)
         {
+            TransitionsAPI.AnimateWindow(this.Handle, 100, TransitionsAPI.fadeIN);
             defaultDisplay();
             LblHeader.Text = UserControlFisheries.header_category;
             for (int i = 0; i < value.Length; i++)

@@ -42,38 +42,38 @@
             this.dateTimePickerFilDate = new System.Windows.Forms.DateTimePicker();
             this.labelCatFil = new System.Windows.Forms.Label();
             this.textBoxFilFileName = new System.Windows.Forms.TextBox();
-            this.textBoxFileName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.txtBoxChooseFile = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.BtnChooseFile = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.labelCat = new System.Windows.Forms.Label();
+            this.comboBoxCat = new System.Windows.Forms.ComboBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.LblHeader = new System.Windows.Forms.Label();
-            this.BtnBack = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.comboBoxCat = new System.Windows.Forms.ComboBox();
-            this.labelCat = new System.Windows.Forms.Label();
-            this.buttonCancel = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.colDel = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colEdit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colArchive = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colDownload = new System.Windows.Forms.DataGridViewImageColumn();
-            this.FileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FileWithExtension = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnChooseFile = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBoxChooseFile = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxFileName = new System.Windows.Forms.TextBox();
             this.UpdatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FileName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FileWithExtension = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FileID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDownload = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colArchive = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colEdit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colDel = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -236,156 +236,6 @@
             this.textBoxFilFileName.TabIndex = 2;
             this.textBoxFilFileName.TextChanged += new System.EventHandler(this.textBoxFilFileName_TextChanged);
             // 
-            // textBoxFileName
-            // 
-            this.textBoxFileName.Location = new System.Drawing.Point(29, 235);
-            this.textBoxFileName.Name = "textBoxFileName";
-            this.textBoxFileName.Size = new System.Drawing.Size(221, 21);
-            this.textBoxFileName.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 216);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "File Name :";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.Location = new System.Drawing.Point(147, 336);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(103, 45);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Save";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // txtBoxChooseFile
-            // 
-            this.txtBoxChooseFile.Enabled = false;
-            this.txtBoxChooseFile.Location = new System.Drawing.Point(29, 192);
-            this.txtBoxChooseFile.Name = "txtBoxChooseFile";
-            this.txtBoxChooseFile.Size = new System.Drawing.Size(186, 21);
-            this.txtBoxChooseFile.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Choose File :";
-            // 
-            // BtnChooseFile
-            // 
-            this.BtnChooseFile.Location = new System.Drawing.Point(214, 192);
-            this.BtnChooseFile.Name = "BtnChooseFile";
-            this.BtnChooseFile.Size = new System.Drawing.Size(36, 21);
-            this.BtnChooseFile.TabIndex = 9;
-            this.BtnChooseFile.Text = "...";
-            this.BtnChooseFile.UseVisualStyleBackColor = true;
-            this.BtnChooseFile.Click += new System.EventHandler(this.BtnChooseFile_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel3.Controls.Add(this.LblHeader);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 17);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(274, 41);
-            this.panel3.TabIndex = 11;
-            // 
-            // LblHeader
-            // 
-            this.LblHeader.AutoSize = true;
-            this.LblHeader.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHeader.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblHeader.Location = new System.Drawing.Point(5, 11);
-            this.LblHeader.Name = "LblHeader";
-            this.LblHeader.Size = new System.Drawing.Size(67, 19);
-            this.LblHeader.TabIndex = 6;
-            this.LblHeader.Text = "Header";
-            // 
-            // BtnBack
-            // 
-            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBack.FlatAppearance.BorderSize = 0;
-            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
-            this.BtnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnBack.Location = new System.Drawing.Point(0, 64);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(86, 39);
-            this.BtnBack.TabIndex = 10;
-            this.BtnBack.Text = "Back";
-            this.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnBack.UseVisualStyleBackColor = false;
-            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.White;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button11.Location = new System.Drawing.Point(29, 336);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(112, 45);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Update";
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // comboBoxCat
-            // 
-            this.comboBoxCat.FormattingEnabled = true;
-            this.comboBoxCat.Items.AddRange(new object[] {
-            "Masterlist of Rice Farmers",
-            "Hybrid Users",
-            "Certified Seeds User",
-            "Fertilizer Users"});
-            this.comboBoxCat.Location = new System.Drawing.Point(29, 283);
-            this.comboBoxCat.Name = "comboBoxCat";
-            this.comboBoxCat.Size = new System.Drawing.Size(186, 24);
-            this.comboBoxCat.TabIndex = 14;
-            this.comboBoxCat.Visible = false;
-            this.comboBoxCat.SelectedIndexChanged += new System.EventHandler(this.comboBoxCat_SelectedIndexChanged);
-            // 
-            // labelCat
-            // 
-            this.labelCat.AutoSize = true;
-            this.labelCat.Location = new System.Drawing.Point(26, 264);
-            this.labelCat.Name = "labelCat";
-            this.labelCat.Size = new System.Drawing.Size(106, 16);
-            this.labelCat.TabIndex = 15;
-            this.labelCat.Text = "Choose Category:";
-            this.labelCat.Visible = false;
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.BackColor = System.Drawing.Color.White;
-            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancel.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancel.Image")));
-            this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonCancel.Location = new System.Drawing.Point(29, 387);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(221, 45);
-            this.buttonCancel.TabIndex = 16;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCancel.UseVisualStyleBackColor = false;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -407,32 +257,201 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // colDel
+            // buttonCancel
             // 
-            this.colDel.HeaderText = "Delete";
-            this.colDel.Image = ((System.Drawing.Image)(resources.GetObject("colDel.Image")));
-            this.colDel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.colDel.Name = "colDel";
-            this.colDel.ReadOnly = true;
-            this.colDel.Width = 40;
+            this.buttonCancel.BackColor = System.Drawing.Color.White;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.Image = ((System.Drawing.Image)(resources.GetObject("buttonCancel.Image")));
+            this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonCancel.Location = new System.Drawing.Point(29, 387);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(221, 45);
+            this.buttonCancel.TabIndex = 16;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // colEdit
+            // labelCat
             // 
-            this.colEdit.HeaderText = "Edit";
-            this.colEdit.Image = ((System.Drawing.Image)(resources.GetObject("colEdit.Image")));
-            this.colEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.colEdit.Name = "colEdit";
-            this.colEdit.ReadOnly = true;
-            this.colEdit.Width = 40;
+            this.labelCat.AutoSize = true;
+            this.labelCat.Location = new System.Drawing.Point(26, 264);
+            this.labelCat.Name = "labelCat";
+            this.labelCat.Size = new System.Drawing.Size(106, 16);
+            this.labelCat.TabIndex = 15;
+            this.labelCat.Text = "Choose Category:";
+            this.labelCat.Visible = false;
             // 
-            // colArchive
+            // comboBoxCat
             // 
-            this.colArchive.HeaderText = "Archive";
-            this.colArchive.Image = ((System.Drawing.Image)(resources.GetObject("colArchive.Image")));
-            this.colArchive.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.colArchive.Name = "colArchive";
-            this.colArchive.ReadOnly = true;
-            this.colArchive.Width = 40;
+            this.comboBoxCat.FormattingEnabled = true;
+            this.comboBoxCat.Items.AddRange(new object[] {
+            "Masterlist of Rice Farmers",
+            "Hybrid Users",
+            "Certified Seeds User",
+            "Fertilizer Users"});
+            this.comboBoxCat.Location = new System.Drawing.Point(29, 283);
+            this.comboBoxCat.Name = "comboBoxCat";
+            this.comboBoxCat.Size = new System.Drawing.Size(186, 24);
+            this.comboBoxCat.TabIndex = 14;
+            this.comboBoxCat.Visible = false;
+            this.comboBoxCat.SelectedIndexChanged += new System.EventHandler(this.comboBoxCat_SelectedIndexChanged);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.White;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button11.Location = new System.Drawing.Point(29, 336);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(112, 45);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "Update";
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBack.FlatAppearance.BorderSize = 0;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Image = ((System.Drawing.Image)(resources.GetObject("BtnBack.Image")));
+            this.BtnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBack.Location = new System.Drawing.Point(0, 64);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(86, 39);
+            this.BtnBack.TabIndex = 10;
+            this.BtnBack.Text = "Back";
+            this.BtnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.Controls.Add(this.LblHeader);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(3, 17);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(274, 41);
+            this.panel3.TabIndex = 11;
+            // 
+            // LblHeader
+            // 
+            this.LblHeader.AutoSize = true;
+            this.LblHeader.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHeader.ForeColor = System.Drawing.SystemColors.Window;
+            this.LblHeader.Location = new System.Drawing.Point(5, 11);
+            this.LblHeader.Name = "LblHeader";
+            this.LblHeader.Size = new System.Drawing.Size(0, 19);
+            this.LblHeader.TabIndex = 6;
+            // 
+            // BtnChooseFile
+            // 
+            this.BtnChooseFile.Location = new System.Drawing.Point(214, 192);
+            this.BtnChooseFile.Name = "BtnChooseFile";
+            this.BtnChooseFile.Size = new System.Drawing.Size(36, 21);
+            this.BtnChooseFile.TabIndex = 9;
+            this.BtnChooseFile.Text = "...";
+            this.BtnChooseFile.UseVisualStyleBackColor = true;
+            this.BtnChooseFile.Click += new System.EventHandler(this.BtnChooseFile_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 173);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Choose File :";
+            // 
+            // txtBoxChooseFile
+            // 
+            this.txtBoxChooseFile.Enabled = false;
+            this.txtBoxChooseFile.Location = new System.Drawing.Point(29, 192);
+            this.txtBoxChooseFile.Name = "txtBoxChooseFile";
+            this.txtBoxChooseFile.Size = new System.Drawing.Size(186, 21);
+            this.txtBoxChooseFile.TabIndex = 7;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.Location = new System.Drawing.Point(147, 336);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(103, 45);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "Save";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 216);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "File Name :";
+            // 
+            // textBoxFileName
+            // 
+            this.textBoxFileName.Location = new System.Drawing.Point(29, 235);
+            this.textBoxFileName.Name = "textBoxFileName";
+            this.textBoxFileName.Size = new System.Drawing.Size(221, 21);
+            this.textBoxFileName.TabIndex = 0;
+            // 
+            // UpdatedAt
+            // 
+            this.UpdatedAt.DataPropertyName = "updated_at";
+            this.UpdatedAt.HeaderText = "Updated Date";
+            this.UpdatedAt.Name = "UpdatedAt";
+            this.UpdatedAt.ReadOnly = true;
+            this.UpdatedAt.Width = 120;
+            // 
+            // CreatedAt
+            // 
+            this.CreatedAt.DataPropertyName = "created_at";
+            this.CreatedAt.HeaderText = "Created Date";
+            this.CreatedAt.Name = "CreatedAt";
+            this.CreatedAt.ReadOnly = true;
+            this.CreatedAt.Width = 120;
+            // 
+            // Category
+            // 
+            this.Category.DataPropertyName = "category";
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // FileName
+            // 
+            this.FileName.DataPropertyName = "file_name";
+            this.FileName.HeaderText = "File Name";
+            this.FileName.Name = "FileName";
+            this.FileName.ReadOnly = true;
+            this.FileName.Width = 250;
+            // 
+            // FileWithExtension
+            // 
+            this.FileWithExtension.DataPropertyName = "fname_extension";
+            this.FileWithExtension.HeaderText = "";
+            this.FileWithExtension.Name = "FileWithExtension";
+            this.FileWithExtension.ReadOnly = true;
+            this.FileWithExtension.Visible = false;
+            // 
+            // FileID
+            // 
+            this.FileID.DataPropertyName = "id";
+            this.FileID.HeaderText = "File ID";
+            this.FileID.Name = "FileID";
+            this.FileID.ReadOnly = true;
+            this.FileID.Visible = false;
             // 
             // colDownload
             // 
@@ -443,52 +462,32 @@
             this.colDownload.ReadOnly = true;
             this.colDownload.Width = 40;
             // 
-            // FileID
+            // colArchive
             // 
-            this.FileID.DataPropertyName = "id";
-            this.FileID.HeaderText = "File ID";
-            this.FileID.Name = "FileID";
-            this.FileID.ReadOnly = true;
-            this.FileID.Visible = false;
+            this.colArchive.HeaderText = "Archive";
+            this.colArchive.Image = ((System.Drawing.Image)(resources.GetObject("colArchive.Image")));
+            this.colArchive.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.colArchive.Name = "colArchive";
+            this.colArchive.ReadOnly = true;
+            this.colArchive.Width = 40;
             // 
-            // FileWithExtension
+            // colEdit
             // 
-            this.FileWithExtension.DataPropertyName = "fname_extension";
-            this.FileWithExtension.HeaderText = "";
-            this.FileWithExtension.Name = "FileWithExtension";
-            this.FileWithExtension.ReadOnly = true;
-            this.FileWithExtension.Visible = false;
+            this.colEdit.HeaderText = "Edit";
+            this.colEdit.Image = ((System.Drawing.Image)(resources.GetObject("colEdit.Image")));
+            this.colEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.colEdit.Name = "colEdit";
+            this.colEdit.ReadOnly = true;
+            this.colEdit.Width = 40;
             // 
-            // FileName
+            // colDel
             // 
-            this.FileName.DataPropertyName = "file_name";
-            this.FileName.HeaderText = "File Name";
-            this.FileName.Name = "FileName";
-            this.FileName.ReadOnly = true;
-            this.FileName.Width = 250;
-            // 
-            // Category
-            // 
-            this.Category.DataPropertyName = "category";
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // CreatedAt
-            // 
-            this.CreatedAt.DataPropertyName = "created_at";
-            this.CreatedAt.HeaderText = "Created Date";
-            this.CreatedAt.Name = "CreatedAt";
-            this.CreatedAt.ReadOnly = true;
-            this.CreatedAt.Width = 120;
-            // 
-            // UpdatedAt
-            // 
-            this.UpdatedAt.DataPropertyName = "updated_at";
-            this.UpdatedAt.HeaderText = "Updated Date";
-            this.UpdatedAt.Name = "UpdatedAt";
-            this.UpdatedAt.ReadOnly = true;
-            this.UpdatedAt.Width = 120;
+            this.colDel.HeaderText = "Delete";
+            this.colDel.Image = ((System.Drawing.Image)(resources.GetObject("colDel.Image")));
+            this.colDel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.colDel.Name = "colDel";
+            this.colDel.ReadOnly = true;
+            this.colDel.Width = 40;
             // 
             // FisheriesFileForm
             // 
@@ -512,10 +511,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

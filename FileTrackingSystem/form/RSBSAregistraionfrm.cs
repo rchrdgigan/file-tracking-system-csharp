@@ -785,7 +785,7 @@ namespace FileTrackingSystem
 
         private void RSBSAregistraionfrm_Load(object sender, EventArgs e)
         {
-            
+            TransitionsAPI.AnimateWindow(this.Handle, 100, TransitionsAPI.fadeIN);
             this.AutoScroll = true;
             
             if (UserControlRSBSA._methods == "Create")

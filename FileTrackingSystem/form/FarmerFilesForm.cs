@@ -35,6 +35,9 @@ namespace FileTrackingSystem
         private static string archive_csu_path = Application.StartupPath + @"\Archive\Farmers\Certified Seeds User\";
         private static string archive_fu_path = Application.StartupPath + @"\Archive\Farmers\Fertilizer Users\";
 
+        private string[] value = { morf, hu, csu, fu };
+        private string[] value_path = { morf_path, hu_path, csu_path, fu_path };
+
         public FarmerFilesForm()
         {
             InitializeComponent();
@@ -86,10 +89,9 @@ namespace FileTrackingSystem
 
         private void FarmerFilesForm_Load(object sender, EventArgs e)
         {
+            TransitionsAPI.AnimateWindow(this.Handle, 100, TransitionsAPI.fadeIN);
             defaultDisplay();
             LblHeader.Text = UserControlFarmers.header_category;
-            string[] value = { morf, hu, csu, fu };
-            string[] value_path = { morf_path, hu_path, csu_path, fu_path };
 
             for (int i = 0; i < value.Length; i++)
             {
@@ -209,8 +211,6 @@ namespace FileTrackingSystem
                         fc.delete(int.Parse(data_id));
                         loadDataByCat();
                         defaultDisplay();
-                        string[] value = { morf, hu, csu, fu };
-                        string[] value_path = { morf_path, hu_path, csu_path, fu_path };
                         for (int i = 0; i < value.Length; i++)
                         {
                             if (cat == value[i])
@@ -258,8 +258,6 @@ namespace FileTrackingSystem
                     DialogResult result = MessageBox.Show("Are you sure want to archive this file?", "Archive Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
-                        string[] value = { morf, hu, csu, fu };
-                        string[] value_path = { morf_path, hu_path, csu_path, fu_path };
                         string[] value_archive_path = { archive_morf_path, archive_hu_path, archive_csu_path, archive_fu_path };
 
                         for (int i = 0; i < value.Length; i++)
