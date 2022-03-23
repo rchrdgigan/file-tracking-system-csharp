@@ -324,6 +324,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminUserRegistrationfrm";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.AdminUserRegistrationfrm_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();

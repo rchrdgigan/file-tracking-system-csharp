@@ -74,5 +74,11 @@ namespace FileTrackingSystem
             dashboardfrm.navpanel.Enabled = true;
             dashboardfrm.contentpanel.Enabled = true;
         }
+
+        private void AdminUserRegistrationfrm_Load(object sender, EventArgs e)
+        {
+            TransitionsAPI.AnimateWindow(this.Handle, 100, TransitionsAPI.fadeIN);
+
+        }
     }
 }

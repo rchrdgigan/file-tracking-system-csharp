@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalamityDamageClass.cs" />
+    <Compile Include="class\CalamityDamageClass.cs" />
     <Compile Include="form\CalamityDamageForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -12,11 +12,20 @@ namespace FileTrackingSystem
 {
     public partial class UserControlCalamityDamage : UserControl
     {
+        public static string header_category;
+
         public UserControlCalamityDamage()
         {
             InitializeComponent();
         }
-
+        private void openForm()
+        {
+            CalamityDamageForm cdf = new CalamityDamageForm();
+            cdf.Show();
+            //To disable navbar and body
+            dashboardfrm.navpanel.Enabled = false;
+            dashboardfrm.contentpanel.Enabled = false;
+        }
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             pictureBox1.BackColor = Color.LightSeaGreen;
@@ -75,6 +84,47 @@ namespace FileTrackingSystem
             pictureBox6.BackColor = Color.Transparent;
             pictureBox6.Cursor = Cursors.Default;
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //Flood
+            header_category = "Flood";
+            openForm();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            //Typhoon
+            header_category = "Typhoon";
+            openForm();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            //Drought
+            header_category = "Drought";
+            openForm();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            //Ash Fall
+            header_category = "Ash Fall";
+            openForm();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            //Salf intrusion
+            header_category = "Salf intrusion";
+            openForm();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            header_category = "All Category";
+            openForm();
         }
     }
 }
