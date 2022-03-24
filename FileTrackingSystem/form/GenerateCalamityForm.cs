@@ -22,6 +22,7 @@ namespace FileTrackingSystem
         private static string _drought = "Drought";
         private static string _ashfall = "Ash Fall";
         private static string _salfintrusion = "Salf intrusion";
+        private static string _date_from;
 
         private string[] value = { _flood, _typhon, _drought, _ashfall, _salfintrusion };
 
@@ -30,9 +31,18 @@ namespace FileTrackingSystem
             InitializeComponent();
         }
 
+        private void closeForm()
+        {
+            this.Close();
+
+            CalamityDamageForm cdf = new CalamityDamageForm();
+            cdf.Show();
+        }
+
         private void loadData()
         {
             cdc.listRSBSA();
+            MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.Rows.Clear();
             foreach (DataRow item in cdc.dtable.Rows)
@@ -41,9 +51,9 @@ namespace FileTrackingSystem
                 var fullName = item[1].ToString() + ", " + item[2].ToString() + " " + item[3].ToString() + " " + item[4].ToString();
                 dataGridView1.Rows[n].Cells[0].Value = false;
                 dataGridView1.Rows[n].Cells[1].Value = fullName;
-                dataGridView1.Rows[n].Cells[2].Value = item[8];
-                dataGridView1.Rows[n].Cells[3].Value = item[34];
-                dataGridView1.Rows[n].Cells[4].Value = item[0];
+                dataGridView1.Rows[n].Cells[2].Value = item[5].ToString();
+                dataGridView1.Rows[n].Cells[3].Value = item[6].ToString();
+                dataGridView1.Rows[n].Cells[4].Value = item[0].ToString();
             }
         }
 
@@ -71,16 +81,7 @@ namespace FileTrackingSystem
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
-
-            CalamityDamageForm cdf = new CalamityDamageForm();
-            cdf.Show();
-        }
-
-        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
-        {
-            DataGridView dataGridView1 = new DataGridView();
-
+            closeForm();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -101,14 +102,14 @@ namespace FileTrackingSystem
             {
                 if (!string.IsNullOrEmpty(comboBoxBudgetF.Text))
                 {
-                    if (!string.IsNullOrEmpty(dateTimePickerDateFrom.Text))
+                    if (!string.IsNullOrEmpty(_date_from))
                     {
                         foreach (DataGridViewRow item in dataGridView1.Rows)
                         {
                             if ((bool)item.Cells[0].Value == true)
                             {
                                 cdc.rsbsa_id = item.Cells[4].Value.ToString();
-                                cdc.date_from = dateTimePickerDateFrom.Text;
+                                cdc.date_from = _date_from;
                                 cdc.budget_from = comboBoxBudgetF.Text;
                                 cdc.type_calamity = category;
                                 cdc.amount_paid = "";
@@ -119,6 +120,7 @@ namespace FileTrackingSystem
                             }
                         }
                         MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        closeForm();
                     }
                     else
                     {
@@ -136,7 +138,7 @@ namespace FileTrackingSystem
             {
                 if (!string.IsNullOrEmpty(comboBoxBudgetF.Text))
                 {
-                    if (!string.IsNullOrEmpty(dateTimePickerDateFrom.Text))
+                    if (!string.IsNullOrEmpty(_date_from))
                     {
                         if (!string.IsNullOrEmpty(comboBoxTypesOfCalamity.Text))
                         {
@@ -145,7 +147,7 @@ namespace FileTrackingSystem
                                 if ((bool)item.Cells[0].Value == true)
                                 {
                                     cdc.rsbsa_id = item.Cells[4].Value.ToString();
-                                    cdc.date_from = dateTimePickerDateFrom.Text;
+                                    cdc.date_from = _date_from;
                                     cdc.budget_from = comboBoxBudgetF.Text;
                                     cdc.type_calamity = comboBoxTypesOfCalamity.Text;
                                     cdc.amount_paid = "";
@@ -156,6 +158,7 @@ namespace FileTrackingSystem
                                 }
                             }
                             MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            closeForm();
                         }
                         else
                         {
@@ -176,6 +179,13 @@ namespace FileTrackingSystem
             }
 
             
+        }
+
+        private void dateTimePickerDateFrom_ValueChanged(object sender, EventArgs e)
+        {
+            _date_from = dateTimePickerDateFrom.Value.ToString("yyyy-MM-dd");
+            cdc.date_from = _date_from;
+            loadData();
         }
     }
 }

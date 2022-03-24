@@ -74,7 +74,6 @@
             this.colDel = new System.Windows.Forms.DataGridViewImageColumn();
             this.colEdit = new System.Windows.Forms.DataGridViewImageColumn();
             this.colArchive = new System.Windows.Forms.DataGridViewImageColumn();
-            this.CalamityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Occupation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -82,10 +81,12 @@
             this.CTCNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CTCDateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CTCPlaceIssued = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BudjetFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CalamityType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CreatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UpdatedAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BudjetFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CalamityType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CalamityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -542,7 +543,6 @@
             this.colDel,
             this.colEdit,
             this.colArchive,
-            this.CalamityID,
             this.FullName,
             this.Occupation,
             this.Address,
@@ -550,10 +550,12 @@
             this.CTCNumber,
             this.CTCDateCreate,
             this.CTCPlaceIssued,
-            this.BudjetFrom,
-            this.CalamityType,
             this.CreatedAt,
-            this.UpdatedAt});
+            this.UpdatedAt,
+            this.BudjetFrom,
+            this.DateFrom,
+            this.CalamityType,
+            this.CalamityID});
             this.dataGridView1.Location = new System.Drawing.Point(3, 289);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -586,14 +588,6 @@
             this.colArchive.Name = "colArchive";
             this.colArchive.ReadOnly = true;
             this.colArchive.Width = 40;
-            // 
-            // CalamityID
-            // 
-            this.CalamityID.DataPropertyName = "id";
-            this.CalamityID.HeaderText = "Calamity ID";
-            this.CalamityID.Name = "CalamityID";
-            this.CalamityID.ReadOnly = true;
-            this.CalamityID.Visible = false;
             // 
             // FullName
             // 
@@ -641,22 +635,6 @@
             this.CTCPlaceIssued.ReadOnly = true;
             this.CTCPlaceIssued.Width = 160;
             // 
-            // BudjetFrom
-            // 
-            this.BudjetFrom.DataPropertyName = "budget_from";
-            this.BudjetFrom.HeaderText = "Budget From";
-            this.BudjetFrom.Name = "BudjetFrom";
-            this.BudjetFrom.ReadOnly = true;
-            this.BudjetFrom.Width = 250;
-            // 
-            // CalamityType
-            // 
-            this.CalamityType.DataPropertyName = "calamity_type";
-            this.CalamityType.HeaderText = "Calamity Types";
-            this.CalamityType.Name = "CalamityType";
-            this.CalamityType.ReadOnly = true;
-            this.CalamityType.Width = 150;
-            // 
             // CreatedAt
             // 
             this.CreatedAt.DataPropertyName = "created_at";
@@ -672,6 +650,37 @@
             this.UpdatedAt.Name = "UpdatedAt";
             this.UpdatedAt.ReadOnly = true;
             this.UpdatedAt.Width = 120;
+            // 
+            // BudjetFrom
+            // 
+            this.BudjetFrom.DataPropertyName = "budget_from";
+            this.BudjetFrom.HeaderText = "Budget From";
+            this.BudjetFrom.Name = "BudjetFrom";
+            this.BudjetFrom.ReadOnly = true;
+            this.BudjetFrom.Width = 250;
+            // 
+            // DateFrom
+            // 
+            this.DateFrom.HeaderText = "Started Calamity Damage";
+            this.DateFrom.Name = "DateFrom";
+            this.DateFrom.ReadOnly = true;
+            this.DateFrom.Width = 200;
+            // 
+            // CalamityType
+            // 
+            this.CalamityType.DataPropertyName = "calamity_type";
+            this.CalamityType.HeaderText = "Calamity Types";
+            this.CalamityType.Name = "CalamityType";
+            this.CalamityType.ReadOnly = true;
+            this.CalamityType.Width = 150;
+            // 
+            // CalamityID
+            // 
+            this.CalamityID.DataPropertyName = "id";
+            this.CalamityID.HeaderText = "Calamity ID";
+            this.CalamityID.Name = "CalamityID";
+            this.CalamityID.ReadOnly = true;
+            this.CalamityID.Visible = false;
             // 
             // CalamityDamageForm
             // 
@@ -744,10 +753,12 @@
         private System.Windows.Forms.TextBox textBoxOccupation;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.ComboBox comboBoxFillBudgetFrom;
+        private System.Windows.Forms.ComboBox comboBoxBudgetFrom;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewImageColumn colDel;
         private System.Windows.Forms.DataGridViewImageColumn colEdit;
         private System.Windows.Forms.DataGridViewImageColumn colArchive;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CalamityID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Occupation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
@@ -755,12 +766,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CTCNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn CTCDateCreate;
         private System.Windows.Forms.DataGridViewTextBoxColumn CTCPlaceIssued;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BudjetFrom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CalamityType;
         private System.Windows.Forms.DataGridViewTextBoxColumn CreatedAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn UpdatedAt;
-        private System.Windows.Forms.ComboBox comboBoxFillBudgetFrom;
-        private System.Windows.Forms.ComboBox comboBoxBudgetFrom;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BudjetFrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateFrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CalamityType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CalamityID;
     }
 }

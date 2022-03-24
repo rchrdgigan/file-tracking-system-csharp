@@ -95,7 +95,7 @@
     <Compile Include="form\GenerateCalamityForm.Designer.cs">
       <DependentUpon>GenerateCalamityForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="class\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="form\registrationfrm.cs">
       <SubType>Form</SubType>

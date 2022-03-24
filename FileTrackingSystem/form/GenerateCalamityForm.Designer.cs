@@ -80,7 +80,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(705, 477);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
             // Panel1
             // 
@@ -271,6 +270,7 @@
             this.dateTimePickerDateFrom.Name = "dateTimePickerDateFrom";
             this.dateTimePickerDateFrom.Size = new System.Drawing.Size(185, 21);
             this.dateTimePickerDateFrom.TabIndex = 154;
+            this.dateTimePickerDateFrom.ValueChanged += new System.EventHandler(this.dateTimePickerDateFrom_ValueChanged);
             // 
             // textBoxAddress
             // 
