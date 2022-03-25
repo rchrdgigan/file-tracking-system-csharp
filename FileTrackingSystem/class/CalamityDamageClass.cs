@@ -15,12 +15,15 @@ namespace FileTrackingSystem
     {
         public MySqlDataReader msdtr;
         public DataTable dtable = new DataTable();
-        public DataTable dtable2 = new DataTable();
-
         public string message { get; set; }
         public string rsbsa_id { get; set; }
+        public string full_name { get; set; }
+        public string address { get; set; }
+
+        public string occupation { get; set; }
         public string budget_from { get; set; }
         public string date_from { get; set; }
+        public string date_to { get; set; }
         public string type_calamity { get; set; }
         public string amount_paid { get; set; }
         public string ctc_no { get; set; }
@@ -32,21 +35,19 @@ namespace FileTrackingSystem
         {
             con.Open();
             DateTime today = DateTime.Now;
-            string query = "SELECT rsbsa_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy FROM calamity_damage_tb INNER JOIN rsbsa_tb ON calamity_damage_tb.rsbsa_id = rsbsa_tb.id WHERE calamity_damage_tb.date_from ='" + date_from + "'";
+            string query = "";
+            if (!string.IsNullOrEmpty(occupation))
+            {
+                query = "SELECT * FROM `rsbsa_tb` WHERE livelihood='"+ occupation + "' AND status='Normal'";
+            }
+            else
+            {
+                query = "SELECT * FROM `rsbsa_tb` WHERE status='Normal'";
+            }
             MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             msda.Fill(dt);
-            dtable2 = dt;
-            foreach (DataRow item in dtable2.Rows)
-            {
-                con.Close();
-                con.Open();
-                string qry = "SELECT * FROM `rsbsa_tb` WHERE id <>'{3,4}'";
-                MySqlDataAdapter msda1 = new MySqlDataAdapter(qry, con);
-                DataTable dt1 = new DataTable();
-                msda1.Fill(dt1);
-                dtable = dt1;
-            }
+            dtable = dt;
             con.Close();
         }
     
@@ -85,8 +86,16 @@ namespace FileTrackingSystem
             try
             {
                 con.Open();
+                string query = "";
                 DateTime today = DateTime.Now;
-                string query = "SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.date_from BETWEEN '" + date_from + "' AND '" + today + "' AND calamity_damage_tb.type_calamity='"+ cat + "' ORDER BY calamity_damage_tb.id DESC";
+                if (!string.IsNullOrEmpty(cat))
+                {
+                    query = "SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.type_calamity='" + cat + "' ORDER BY calamity_damage_tb.id DESC";
+                }
+                else
+                {
+                    query = "SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.rsbsa_id = rsbsa_tb.id ORDER BY calamity_damage_tb.id DESC";
+                }
                 MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 msda.Fill(dt);
@@ -98,5 +107,108 @@ namespace FileTrackingSystem
                 message = "error" + ex.ToString();
             }
         }
+
+        public void search(string cat)
+        {
+            try
+            {
+                string query = "";
+                if (!string.IsNullOrEmpty(cat))
+                {
+                    if (full_name != "" || budget_from != "" || type_calamity != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id,rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE CONCAT(rsbsa_tb.fname,' ',rsbsa_tb.mname,' ',rsbsa_tb.surname,' ',rsbsa_tb.extension) LIKE '%" + full_name + "%' AND calamity_damage_tb.budget_from ='" + budget_from + "' AND calamity_damage_tb.type_calamity='" + cat + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else if (date_from != "" || date_to != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.created_at BETWEEN '" + date_from + "' AND '" + date_to + "' AND calamity_damage_tb.type_calamity='" + cat + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else if (full_name != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id,rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE CONCAT(rsbsa_tb.fname,' ',rsbsa_tb.mname,' ',rsbsa_tb.surname,' ',rsbsa_tb.extension) LIKE '%"+ full_name + "%' AND calamity_damage_tb.type_calamity='" + cat + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else if (budget_from != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.budget_from LIKE '%" + budget_from + "%' AND calamity_damage_tb.type_calamity='" + cat + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else if (address != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE rsbsa_tb.brgy = '" + address + "' AND calamity_damage_tb.type_calamity='" + cat + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.type_calamity='" + cat + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                }
+                else
+                {
+                    if (full_name != "" || budget_from != "" || type_calamity != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE CONCAT(rsbsa_tb.fname,' ',rsbsa_tb.mname,' ',rsbsa_tb.surname,' ',rsbsa_tb.extension) LIKE '%" + full_name + "%' AND calamity_damage_tb.budget_from LIKE '%" + budget_from + "%' AND calamity_damage_tb.type_calamity='" + type_calamity + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else if (date_from != "" || date_to != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.created_at BETWEEN '" + date_from + "' AND '" + date_to + "' AND calamity_damage_tb.type_calamity='" + type_calamity + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else if (full_name != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE CONCAT(rsbsa_tb.fname,' ',rsbsa_tb.mname,' ',rsbsa_tb.surname,' ',rsbsa_tb.extension) LIKE '%" + full_name + "%' AND calamity_damage_tb.type_calamity='" + type_calamity + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else if (budget_from != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.budget_from LIKE '%" + budget_from + "%' AND calamity_damage_tb.type_calamity='" + type_calamity + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else if (type_calamity != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.type_calamity='" + type_calamity + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else if (address != "")
+                    {
+                        query = ("SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE rsbsa_tb.brgy = '" + address + "' AND calamity_damage_tb.type_calamity='" + type_calamity + "' ORDER BY calamity_damage_tb.id DESC");
+                    }
+                    else
+                    {
+                        query = "SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id BY calamity_damage_tb.id DESC";
+                    }
+                }
+                MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                msda.Fill(dt);
+                dtable = dt;
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+        public void searchGen()
+        {
+            try
+            {
+                string query = "";
+                if (!string.IsNullOrEmpty(full_name))
+                {
+                    query = ("SELECT * FROM `rsbsa_tb` WHERE CONCAT(fname,' ',mname,' ',surname,' ',extension) LIKE '%" + full_name + "%' AND status='Normal'");
+                }
+                else if (!string.IsNullOrEmpty(address))
+                {
+                    query = ("SELECT * FROM `rsbsa_tb` WHERE CONCAT(fname,' ',mname,' ',surname,' ',extension) LIKE '%" + address + "%' AND status='Normal'");
+                }
+                else
+                {
+                    query = "SELECT * FROM `rsbsa_tb` WHERE status='Normal'";
+                }
+                MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                msda.Fill(dt);
+                dtable = dt;
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
     }
 }

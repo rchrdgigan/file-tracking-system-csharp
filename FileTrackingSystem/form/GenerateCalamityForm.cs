@@ -23,6 +23,7 @@ namespace FileTrackingSystem
         private static string _ashfall = "Ash Fall";
         private static string _salfintrusion = "Salf intrusion";
         private static string _date_from;
+        private static string _occupation;
 
         private string[] value = { _flood, _typhon, _drought, _ashfall, _salfintrusion };
 
@@ -39,26 +40,76 @@ namespace FileTrackingSystem
             cdf.Show();
         }
 
-        private void loadData()
+        private void loadSearch()
         {
-            cdc.listRSBSA();
-            MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            cdc.searchGen();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.Rows.Clear();
             foreach (DataRow item in cdc.dtable.Rows)
             {
                 int n = dataGridView1.Rows.Add();
                 var fullName = item[1].ToString() + ", " + item[2].ToString() + " " + item[3].ToString() + " " + item[4].ToString();
+
                 dataGridView1.Rows[n].Cells[0].Value = false;
                 dataGridView1.Rows[n].Cells[1].Value = fullName;
-                dataGridView1.Rows[n].Cells[2].Value = item[5].ToString();
-                dataGridView1.Rows[n].Cells[3].Value = item[6].ToString();
+                dataGridView1.Rows[n].Cells[2].Value = item[34].ToString();
+                dataGridView1.Rows[n].Cells[3].Value = item[8].ToString();
                 dataGridView1.Rows[n].Cells[4].Value = item[0].ToString();
             }
         }
 
+        private void loadData()
+        {
+            cdc.listRSBSA();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.Rows.Clear();
+            foreach (DataRow item in cdc.dtable.Rows)
+            {
+                int n = dataGridView1.Rows.Add();
+                var fullName = item[1].ToString() + ", " + item[2].ToString() + " " + item[3].ToString() + " " + item[4].ToString();
+               
+                dataGridView1.Rows[n].Cells[0].Value = false;
+                dataGridView1.Rows[n].Cells[1].Value = fullName;
+                dataGridView1.Rows[n].Cells[2].Value = item[34].ToString();
+                dataGridView1.Rows[n].Cells[3].Value = item[8].ToString();
+                dataGridView1.Rows[n].Cells[4].Value = item[0].ToString();
+            }
+        }
+
+        //Add checkbox to header
+        CheckBox HeaderCheckbox = null;
+        bool isHeaderCheckboxClicked = false;
+        private void AddHeaderCheckBox()
+        {
+            HeaderCheckbox = new CheckBox();
+
+            HeaderCheckbox.Size = new Size(15, 15);
+
+            //Add Checkbox to datagridview
+            this.dataGridView1.Controls.Add(HeaderCheckbox);
+        }
+
+        private void HeaderCheckBoxClick(CheckBox HCheckBox)
+        {
+            isHeaderCheckboxClicked = true;
+
+            foreach (DataGridViewRow Row in dataGridView1.Rows)
+                ((DataGridViewCheckBoxCell)Row.Cells["Selection"]).Value = HCheckBox.Checked;
+            dataGridView1.RefreshEdit();
+            //TotalCheckedCheckBoxes = HCheckBox.Checked ? TotalCheckBoxes : 0;
+            isHeaderCheckboxClicked = false;
+        }
+
+        private void HeaderCheckBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            HeaderCheckBoxClick((CheckBox)sender);
+        }
+
+
         private void GenerateCalamityForm_Load(object sender, EventArgs e)
         {
+            AddHeaderCheckBox();
+            HeaderCheckbox.MouseClick += new MouseEventHandler(HeaderCheckBox_MouseClick);
             loadData();
             TransitionsAPI.AnimateWindow(this.Handle, 100, TransitionsAPI.fadeIN);
 
@@ -100,37 +151,44 @@ namespace FileTrackingSystem
         {
             if (!string.IsNullOrEmpty(category))
             {
-                if (!string.IsNullOrEmpty(comboBoxBudgetF.Text))
+                if (!string.IsNullOrEmpty(_date_from))
                 {
-                    if (!string.IsNullOrEmpty(_date_from))
+                    if (!string.IsNullOrEmpty(comboBoxBudgetF.Text))
                     {
-                        foreach (DataGridViewRow item in dataGridView1.Rows)
+                        if (!string.IsNullOrEmpty(_occupation))
                         {
-                            if ((bool)item.Cells[0].Value == true)
+                            foreach (DataGridViewRow item in dataGridView1.Rows)
                             {
-                                cdc.rsbsa_id = item.Cells[4].Value.ToString();
-                                cdc.date_from = _date_from;
-                                cdc.budget_from = comboBoxBudgetF.Text;
-                                cdc.type_calamity = category;
-                                cdc.amount_paid = "";
-                                cdc.ctc_no = "";
-                                cdc.ctc_date_issued = "";
-                                cdc.ctc_place_issued = "";
-                                cdc.generateCalamityList();
+                                if ((bool)item.Cells[0].Value == true)
+                                {
+                                    cdc.rsbsa_id = item.Cells[4].Value.ToString();
+                                    cdc.date_from = _date_from;
+                                    cdc.budget_from = comboBoxBudgetF.Text;
+                                    cdc.type_calamity = category;
+                                    cdc.amount_paid = "";
+                                    cdc.ctc_no = "";
+                                    cdc.ctc_date_issued = "";
+                                    cdc.ctc_place_issued = "";
+                                    cdc.generateCalamityList();
+                                }
                             }
+                            MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            closeForm();
                         }
-                        MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        closeForm();
+                        else
+                        {
+                            MessageBox.Show("Select Budget From is required!", "Required Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Calamity Start From is required!", "Required Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Select Budget From is required!", "Required Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    
+
                 }
                 else
                 {
-                    MessageBox.Show("Select Budget From is required!" , "Required Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Calamity Start From is required!", "Required Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
@@ -185,7 +243,25 @@ namespace FileTrackingSystem
         {
             _date_from = dateTimePickerDateFrom.Value.ToString("yyyy-MM-dd");
             cdc.date_from = _date_from;
+        }
+
+        private void comboBoxOccupation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _occupation = comboBoxOccupation.Text;
+            cdc.occupation = _occupation;
             loadData();
+        }
+
+        private void textBoxFullName_TextChanged(object sender, EventArgs e)
+        {
+            cdc.full_name = textBoxFullName.Text;
+            loadSearch();
+        }
+
+        private void comboBoxAddress_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cdc.address = comboBoxAddress.Text;
+            loadSearch();
         }
     }
 }

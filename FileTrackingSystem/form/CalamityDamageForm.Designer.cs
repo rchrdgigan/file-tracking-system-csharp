@@ -179,16 +179,21 @@
             // 
             // comboBoxFillBudgetFrom
             // 
+            this.comboBoxFillBudgetFrom.AutoCompleteCustomSource.AddRange(new string[] {
+            "Local Government Unit",
+            "Department of Agriculture",
+            "Bureau of Fisheries and Aquatic Resources"});
+            this.comboBoxFillBudgetFrom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxFillBudgetFrom.FormattingEnabled = true;
             this.comboBoxFillBudgetFrom.Items.AddRange(new object[] {
-            "Masterlist of Rice Farmers",
-            "Hybrid Users",
-            "Certified Seeds User",
-            "Fertilizer Users"});
+            "Local Government Unit",
+            "Department of Agriculture",
+            "Bureau of Fisheries and Aquatic Resources"});
             this.comboBoxFillBudgetFrom.Location = new System.Drawing.Point(133, 259);
             this.comboBoxFillBudgetFrom.Name = "comboBoxFillBudgetFrom";
             this.comboBoxFillBudgetFrom.Size = new System.Drawing.Size(239, 24);
             this.comboBoxFillBudgetFrom.TabIndex = 36;
+            this.comboBoxFillBudgetFrom.SelectedIndexChanged += new System.EventHandler(this.comboBoxFillBudgetFrom_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -206,20 +211,30 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(202, 21);
             this.dateTimePicker2.TabIndex = 22;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // comboBoxCatFil
             // 
+            this.comboBoxCatFil.AutoCompleteCustomSource.AddRange(new string[] {
+            "Flood",
+            "Typhoon",
+            "Drought",
+            "Ash Fall",
+            "Salf intrusion"});
+            this.comboBoxCatFil.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxCatFil.FormattingEnabled = true;
             this.comboBoxCatFil.Items.AddRange(new object[] {
-            "Masterlist of Rice Farmers",
-            "Hybrid Users",
-            "Certified Seeds User",
-            "Fertilizer Users"});
+            "Flood",
+            "Typhoon",
+            "Drought",
+            "Ash Fall",
+            "Salf intrusion"});
             this.comboBoxCatFil.Location = new System.Drawing.Point(500, 259);
             this.comboBoxCatFil.Name = "comboBoxCatFil";
             this.comboBoxCatFil.Size = new System.Drawing.Size(203, 24);
             this.comboBoxCatFil.TabIndex = 21;
             this.comboBoxCatFil.Visible = false;
+            this.comboBoxCatFil.SelectedIndexChanged += new System.EventHandler(this.comboBoxCatFil_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -255,6 +270,7 @@
             this.dateTimePickerFilDate.Name = "dateTimePickerFilDate";
             this.dateTimePickerFilDate.Size = new System.Drawing.Size(202, 21);
             this.dateTimePickerFilDate.TabIndex = 19;
+            this.dateTimePickerFilDate.ValueChanged += new System.EventHandler(this.dateTimePickerFilDate_ValueChanged);
             // 
             // labelCatFil
             // 
@@ -272,6 +288,7 @@
             this.textBoxFilFullName.Name = "textBoxFilFullName";
             this.textBoxFilFullName.Size = new System.Drawing.Size(255, 21);
             this.textBoxFilFullName.TabIndex = 2;
+            this.textBoxFilFullName.TextChanged += new System.EventHandler(this.textBoxFilFullName_TextChanged);
             // 
             // groupBox1
             // 
@@ -307,7 +324,16 @@
             // 
             // comboBoxBudgetFrom
             // 
+            this.comboBoxBudgetFrom.AutoCompleteCustomSource.AddRange(new string[] {
+            "Local Government Unit",
+            "Department of Agriculture",
+            "Bureau of Fisheries and Aquatic Resources"});
+            this.comboBoxBudgetFrom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxBudgetFrom.FormattingEnabled = true;
+            this.comboBoxBudgetFrom.Items.AddRange(new object[] {
+            "Local Government Unit",
+            "Department of Agriculture",
+            "Bureau of Fisheries and Aquatic Resources"});
             this.comboBoxBudgetFrom.Location = new System.Drawing.Point(625, 136);
             this.comboBoxBudgetFrom.Name = "comboBoxBudgetFrom";
             this.comboBoxBudgetFrom.Size = new System.Drawing.Size(220, 24);
@@ -324,7 +350,20 @@
             // 
             // comboBoxCalamity
             // 
+            this.comboBoxCalamity.AutoCompleteCustomSource.AddRange(new string[] {
+            "Flood",
+            "Typhoon",
+            "Drought",
+            "Ash Fall",
+            "Salf intrusion"});
+            this.comboBoxCalamity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxCalamity.FormattingEnabled = true;
+            this.comboBoxCalamity.Items.AddRange(new object[] {
+            "Flood",
+            "Typhoon",
+            "Drought",
+            "Ash Fall",
+            "Salf intrusion"});
             this.comboBoxCalamity.Location = new System.Drawing.Point(625, 181);
             this.comboBoxCalamity.Name = "comboBoxCalamity";
             this.comboBoxCalamity.Size = new System.Drawing.Size(220, 24);

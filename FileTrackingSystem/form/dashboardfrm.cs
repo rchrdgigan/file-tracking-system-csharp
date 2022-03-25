@@ -17,7 +17,8 @@ namespace FileTrackingSystem
         public static Panel navpanel;
         public static Panel contentpanel;
         public static Button rsbsa_refesh;
-        
+        public static Button managementBtn_refesh;
+
         public dashboardfrm()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace FileTrackingSystem
             navpanel = panel1;
             contentpanel = showPanel;
             rsbsa_refesh = RSBSAbtn;
+            managementBtn_refesh = managementBtn;
             welcomeLbl.Text = "Welcome, " + loginfrm._fname + " !";
             usernameLbl.Text = loginfrm._username;
             roleLbl.Text = loginfrm._role;

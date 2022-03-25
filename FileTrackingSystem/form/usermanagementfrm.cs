@@ -48,11 +48,11 @@ namespace FileTrackingSystem
                         {
                             MessageBox.Show("" + user.message, "Register Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             user.listUser();
-                            UserControlManagement._refresh.PerformClick();
                             this.Close();
                             //To activate navbar and body
                             dashboardfrm.navpanel.Enabled = true;
                             dashboardfrm.contentpanel.Enabled = true;
+                            dashboardfrm.managementBtn_refesh.PerformClick();
                         }
                         else
                         {

@@ -28,6 +28,31 @@ namespace FileTrackingSystem
             InitializeComponent();
         }
 
+        private void loadSearch()
+        {
+            cdc.search(_category);
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.Rows.Clear();
+            foreach (DataRow item in cdc.dtable.Rows)
+            {
+                int n = dataGridView1.Rows.Add();
+                var fullName = item[1].ToString() + ", " + item[2].ToString() + " " + item[3].ToString() + " " + item[4].ToString();
+                dataGridView1.Rows[n].Cells[3].Value = fullName;
+                dataGridView1.Rows[n].Cells[4].Value = item[5];
+                dataGridView1.Rows[n].Cells[5].Value = item[6];
+                dataGridView1.Rows[n].Cells[6].Value = item[7];
+                dataGridView1.Rows[n].Cells[7].Value = item[8];
+                dataGridView1.Rows[n].Cells[8].Value = item[9];
+                dataGridView1.Rows[n].Cells[9].Value = item[10];
+                dataGridView1.Rows[n].Cells[10].Value = item[11];
+                dataGridView1.Rows[n].Cells[11].Value = item[12];
+                dataGridView1.Rows[n].Cells[12].Value = item[13];
+                dataGridView1.Rows[n].Cells[13].Value = item[14];
+                dataGridView1.Rows[n].Cells[14].Value = item[15];
+                dataGridView1.Rows[n].Cells[15].Value = item[0];
+            }
+        }
+
         private void loadDataCat()
         {
             cdc.calamityList(_category);
@@ -118,7 +143,6 @@ namespace FileTrackingSystem
                 }
                 else if (UserControlCalamityDamage.header_category == "All Category")
                 {
-                    loadData();
                     _category = "";
                     comboBoxCatFil.Visible = true;
                     labelCatFil.Visible = true;
@@ -134,6 +158,38 @@ namespace FileTrackingSystem
 
             GenerateCalamityForm gcf = new GenerateCalamityForm();
             gcf.Show();
+        }
+
+        private void comboBoxFillBudgetFrom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cdc.budget_from = comboBoxFillBudgetFrom.Text;
+            loadSearch();
+        }
+
+        private void comboBoxCatFil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cdc.type_calamity = comboBoxCatFil.Text;
+            loadSearch();
+        }
+
+        private void textBoxFilFullName_TextChanged(object sender, EventArgs e)
+        {
+            cdc.full_name = textBoxFilFullName.Text;
+            loadSearch();
+        }
+
+        private void dateTimePickerFilDate_ValueChanged(object sender, EventArgs e)
+        {
+            string dts = dateTimePickerFilDate.Value.ToString("yyyy-MM-dd");
+            cdc.date_from = dts;
+            loadSearch();
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            string dts = dateTimePicker2.Value.ToString("yyyy-MM-dd");
+            cdc.date_to = dts;
+            loadSearch();
         }
     }
 }

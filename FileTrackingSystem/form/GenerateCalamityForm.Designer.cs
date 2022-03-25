@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GenerateCalamityForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Selection = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Occupation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rsbsa_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.LblHeader = new System.Windows.Forms.Label();
             this.PictureBox5 = new System.Windows.Forms.PictureBox();
@@ -47,14 +52,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePickerDateFrom = new System.Windows.Forms.DateTimePicker();
-            this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.Selection = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Occupation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rsbsa_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBoxOccupation = new System.Windows.Forms.ComboBox();
+            this.comboBoxAddress = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
@@ -73,13 +73,49 @@
             this.Occupation,
             this.Address,
             this.rsbsa_id});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 138);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 138);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(705, 477);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // Selection
+            // 
+            this.Selection.HeaderText = "Selection";
+            this.Selection.Name = "Selection";
+            this.Selection.ReadOnly = true;
+            this.Selection.Width = 60;
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "Full Name";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Width = 200;
+            // 
+            // Occupation
+            // 
+            this.Occupation.DataPropertyName = "livelihood";
+            this.Occupation.HeaderText = "Occupation";
+            this.Occupation.Name = "Occupation";
+            this.Occupation.ReadOnly = true;
+            this.Occupation.Width = 200;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "brgy";
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Width = 200;
+            // 
+            // rsbsa_id
+            // 
+            this.rsbsa_id.HeaderText = "ID";
+            this.rsbsa_id.Name = "rsbsa_id";
+            this.rsbsa_id.ReadOnly = true;
             // 
             // Panel1
             // 
@@ -155,6 +191,13 @@
             // 
             // comboBoxTypesOfCalamity
             // 
+            this.comboBoxTypesOfCalamity.AutoCompleteCustomSource.AddRange(new string[] {
+            "Flood",
+            "Typhoon",
+            "Drought",
+            "Ash Fall",
+            "Salf intrusion"});
+            this.comboBoxTypesOfCalamity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxTypesOfCalamity.FormattingEnabled = true;
             this.comboBoxTypesOfCalamity.Items.AddRange(new object[] {
             "Flood",
@@ -162,7 +205,7 @@
             "Drought",
             "Ash Fall",
             "Salf intrusion"});
-            this.comboBoxTypesOfCalamity.Location = new System.Drawing.Point(397, 67);
+            this.comboBoxTypesOfCalamity.Location = new System.Drawing.Point(535, 67);
             this.comboBoxTypesOfCalamity.Name = "comboBoxTypesOfCalamity";
             this.comboBoxTypesOfCalamity.Size = new System.Drawing.Size(185, 24);
             this.comboBoxTypesOfCalamity.TabIndex = 145;
@@ -170,12 +213,17 @@
             // 
             // comboBoxBudgetF
             // 
+            this.comboBoxBudgetF.AutoCompleteCustomSource.AddRange(new string[] {
+            "Local Government Unit",
+            "Department of Agriculture",
+            "Bureau of Fisheries and Aquatic Resources"});
+            this.comboBoxBudgetF.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBoxBudgetF.FormattingEnabled = true;
             this.comboBoxBudgetF.Items.AddRange(new object[] {
             "Local Government Unit",
             "Department of Agriculture",
             "Bureau of Fisheries and Aquatic Resources"});
-            this.comboBoxBudgetF.Location = new System.Drawing.Point(12, 67);
+            this.comboBoxBudgetF.Location = new System.Drawing.Point(152, 67);
             this.comboBoxBudgetF.Name = "comboBoxBudgetF";
             this.comboBoxBudgetF.Size = new System.Drawing.Size(185, 24);
             this.comboBoxBudgetF.TabIndex = 144;
@@ -183,7 +231,7 @@
             // labelTypesOfCalamity
             // 
             this.labelTypesOfCalamity.AutoSize = true;
-            this.labelTypesOfCalamity.Location = new System.Drawing.Point(394, 49);
+            this.labelTypesOfCalamity.Location = new System.Drawing.Point(532, 49);
             this.labelTypesOfCalamity.Name = "labelTypesOfCalamity";
             this.labelTypesOfCalamity.Size = new System.Drawing.Size(105, 16);
             this.labelTypesOfCalamity.TabIndex = 143;
@@ -193,20 +241,20 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 49);
+            this.label11.Location = new System.Drawing.Point(149, 49);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 16);
+            this.label11.Size = new System.Drawing.Size(78, 16);
             this.label11.TabIndex = 142;
-            this.label11.Text = "Budget From";
+            this.label11.Text = "Budget From:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(394, 94);
+            this.label1.Location = new System.Drawing.Point(340, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 16);
+            this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 146;
-            this.label1.Text = "Filter By Occupation :";
+            this.label1.Text = "Occupation :";
             // 
             // label3
             // 
@@ -223,6 +271,7 @@
             this.textBoxFullName.Name = "textBoxFullName";
             this.textBoxFullName.Size = new System.Drawing.Size(185, 21);
             this.textBoxFullName.TabIndex = 148;
+            this.textBoxFullName.TextChanged += new System.EventHandler(this.textBoxFullName_TextChanged);
             // 
             // buttonCancel
             // 
@@ -257,7 +306,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(203, 48);
+            this.label8.Location = new System.Drawing.Point(9, 48);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 16);
             this.label8.TabIndex = 155;
@@ -266,18 +315,11 @@
             // dateTimePickerDateFrom
             // 
             this.dateTimePickerDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDateFrom.Location = new System.Drawing.Point(206, 66);
+            this.dateTimePickerDateFrom.Location = new System.Drawing.Point(12, 66);
             this.dateTimePickerDateFrom.Name = "dateTimePickerDateFrom";
-            this.dateTimePickerDateFrom.Size = new System.Drawing.Size(185, 21);
+            this.dateTimePickerDateFrom.Size = new System.Drawing.Size(134, 21);
             this.dateTimePickerDateFrom.TabIndex = 154;
             this.dateTimePickerDateFrom.ValueChanged += new System.EventHandler(this.dateTimePickerDateFrom_ValueChanged);
-            // 
-            // textBoxAddress
-            // 
-            this.textBoxAddress.Location = new System.Drawing.Point(206, 113);
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(185, 21);
-            this.textBoxAddress.TabIndex = 157;
             // 
             // label4
             // 
@@ -288,62 +330,173 @@
             this.label4.TabIndex = 156;
             this.label4.Text = "Filter By Address :";
             // 
-            // comboBox2
+            // comboBoxOccupation
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxOccupation.AutoCompleteCustomSource.AddRange(new string[] {
             "FARMER",
             "FARMWORKER/LABORER",
             "FISHERFOLK",
             "AGRI YOUTH"});
-            this.comboBox2.Location = new System.Drawing.Point(397, 113);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(185, 24);
-            this.comboBox2.TabIndex = 158;
+            this.comboBoxOccupation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxOccupation.FormattingEnabled = true;
+            this.comboBoxOccupation.Items.AddRange(new object[] {
+            "FARMER",
+            "FARMWORKER/LABORER",
+            "FISHERFOLK",
+            "AGRI YOUTH"});
+            this.comboBoxOccupation.Location = new System.Drawing.Point(343, 67);
+            this.comboBoxOccupation.Name = "comboBoxOccupation";
+            this.comboBoxOccupation.Size = new System.Drawing.Size(186, 24);
+            this.comboBoxOccupation.TabIndex = 158;
+            this.comboBoxOccupation.SelectedIndexChanged += new System.EventHandler(this.comboBoxOccupation_SelectedIndexChanged);
             // 
-            // Selection
+            // comboBoxAddress
             // 
-            this.Selection.HeaderText = "Selection";
-            this.Selection.Name = "Selection";
-            this.Selection.ReadOnly = true;
-            this.Selection.Width = 60;
-            // 
-            // FullName
-            // 
-            this.FullName.HeaderText = "Full Name";
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            this.FullName.Width = 200;
-            // 
-            // Occupation
-            // 
-            this.Occupation.DataPropertyName = "livelihood";
-            this.Occupation.HeaderText = "Occupation";
-            this.Occupation.Name = "Occupation";
-            this.Occupation.ReadOnly = true;
-            this.Occupation.Width = 200;
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "brgy";
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Width = 200;
-            // 
-            // rsbsa_id
-            // 
-            this.rsbsa_id.HeaderText = "ID";
-            this.rsbsa_id.Name = "rsbsa_id";
-            this.rsbsa_id.ReadOnly = true;
+            this.comboBoxAddress.AutoCompleteCustomSource.AddRange(new string[] {
+            "A. Bonifacio (Tinurilan)",
+            "Abad Santos (Kambal)",
+            "Aguinaldo (Lipata Dako)",
+            "Antipolo",
+            "Aquino (Imelda)",
+            "Bical",
+            "Beguin",
+            "Bonga",
+            "Butag",
+            "Cadandanan",
+            "Calomagon",
+            "Calpi",
+            "Cocok-Cabitan",
+            "Daganas",
+            "Danao",
+            "Dolos",
+            "E. Quirino (Pinangomhan)",
+            "Fabrica",
+            "G. Del Pilar (Tanga)",
+            "Gate",
+            "Inararan",
+            "J. Gerona (Biton)",
+            "J.P. Laurel (Pon-od)",
+            "Jamorawon",
+            "Libertad (Calle Putol)",
+            "Lajong",
+            "Magsaysay (Bongog)",
+            "Managa-naga",
+            "Marinab",
+            "Nasuje",
+            "Montecalvario",
+            "N. Roque (Calayugan)",
+            "Namo",
+            "Obrero",
+            "Osmeña (Lipata Saday)",
+            "Otavi",
+            "Padre Diaz",
+            "Palale",
+            "Quezon (Cabarawan)",
+            "R. Gerona (Butag)",
+            "Recto",
+            "Roxas (Busay)",
+            "Sagrada",
+            "San Francisco (Polot)",
+            "San Isidro (Cabugaan)",
+            "San Juan Bag-o",
+            "San Juan Daan",
+            "San Rafael (Togbongon)",
+            "San Ramon",
+            "San Vicente",
+            "Santa Remedios",
+            "Santa Teresita (Trece)",
+            "Sigad",
+            "Somagongsong",
+            "Tarhan",
+            "Taromata",
+            "Zone 1 (Ilawod)",
+            "Zone 2 (Sabang)",
+            "Zone 3 (Central)",
+            "Zone 4 (Central Business District)",
+            "Zone 5 (Canipaan)",
+            "Zone 6 (Baybay)",
+            "Zone 7 (Iraya)",
+            "Zone 8 (Loyo)"});
+            this.comboBoxAddress.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxAddress.FormattingEnabled = true;
+            this.comboBoxAddress.Items.AddRange(new object[] {
+            "A. Bonifacio (Tinurilan)",
+            "Abad Santos (Kambal)",
+            "Aguinaldo (Lipata Dako)",
+            "Antipolo",
+            "Aquino (Imelda)",
+            "Bical",
+            "Beguin",
+            "Bonga",
+            "Butag",
+            "Cadandanan",
+            "Calomagon",
+            "Calpi",
+            "Cocok-Cabitan",
+            "Daganas",
+            "Danao",
+            "Dolos",
+            "E. Quirino (Pinangomhan)",
+            "Fabrica",
+            "G. Del Pilar (Tanga)",
+            "Gate",
+            "Inararan",
+            "J. Gerona (Biton)",
+            "J.P. Laurel (Pon-od)",
+            "Jamorawon",
+            "Libertad (Calle Putol)",
+            "Lajong",
+            "Magsaysay (Bongog)",
+            "Managa-naga",
+            "Marinab",
+            "Nasuje",
+            "Montecalvario",
+            "N. Roque (Calayugan)",
+            "Namo",
+            "Obrero",
+            "Osmeña (Lipata Saday)",
+            "Otavi",
+            "Padre Diaz",
+            "Palale",
+            "Quezon (Cabarawan)",
+            "R. Gerona (Butag)",
+            "Recto",
+            "Roxas (Busay)",
+            "Sagrada",
+            "San Francisco (Polot)",
+            "San Isidro (Cabugaan)",
+            "San Juan Bag-o",
+            "San Juan Daan",
+            "San Rafael (Togbongon)",
+            "San Ramon",
+            "San Vicente",
+            "Santa Remedios",
+            "Santa Teresita (Trece)",
+            "Sigad",
+            "Somagongsong",
+            "Tarhan",
+            "Taromata",
+            "Zone 1 (Ilawod)",
+            "Zone 2 (Sabang)",
+            "Zone 3 (Central)",
+            "Zone 4 (Central Business District)",
+            "Zone 5 (Canipaan)",
+            "Zone 6 (Baybay)",
+            "Zone 7 (Iraya)",
+            "Zone 8 (Loyo)"});
+            this.comboBoxAddress.Location = new System.Drawing.Point(203, 113);
+            this.comboBoxAddress.Name = "comboBoxAddress";
+            this.comboBoxAddress.Size = new System.Drawing.Size(215, 24);
+            this.comboBoxAddress.TabIndex = 159;
+            this.comboBoxAddress.SelectedIndexChanged += new System.EventHandler(this.comboBoxAddress_SelectedIndexChanged);
             // 
             // GenerateCalamityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 671);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBoxAddress);
+            this.Controls.Add(this.comboBoxAddress);
+            this.Controls.Add(this.comboBoxOccupation);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimePickerDateFrom);
@@ -396,14 +549,14 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePickerDateFrom;
-        private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label LblHeader;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxOccupation;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Selection;
         private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Occupation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn rsbsa_id;
+        private System.Windows.Forms.ComboBox comboBoxAddress;
     }
 }
