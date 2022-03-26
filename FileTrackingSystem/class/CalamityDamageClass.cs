@@ -5,21 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
-using System;
-using System.Collections.Generic;
 
 
 namespace FileTrackingSystem
 {
     class CalamityDamageClass : ConnectionClass
     {
-        public MySqlDataReader msdtr;
+        //public MySqlDataReader msdtr;
         public DataTable dtable = new DataTable();
+        public DataTable dtable2 = new DataTable();
+        public DataTable temp = new DataTable();
+
         public string message { get; set; }
         public string rsbsa_id { get; set; }
         public string full_name { get; set; }
         public string address { get; set; }
-
         public string occupation { get; set; }
         public string budget_from { get; set; }
         public string date_from { get; set; }
@@ -35,19 +35,46 @@ namespace FileTrackingSystem
         {
             con.Open();
             DateTime today = DateTime.Now;
-            string query = "";
-            if (!string.IsNullOrEmpty(occupation))
-            {
-                query = "SELECT * FROM `rsbsa_tb` WHERE livelihood='"+ occupation + "' AND status='Normal'";
-            }
-            else
-            {
-                query = "SELECT * FROM `rsbsa_tb` WHERE status='Normal'";
-            }
+            string query = "SELECT `id`, `rsbsa_id`, `budget_from`, `date_from`, `type_calamity`, `amount_paid`, `ctc_no`, `ctc_date_issued`, `ctc_place_issued`, `created_at`, `updated_at` FROM `calamity_damage_tb` WHERE date_from ='" + date_from + "'";
             MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();
             msda.Fill(dt);
-            dtable = dt;
+            dtable2 = dt;
+            if (dtable2.Rows.Count == 0)
+            {
+                string qry = "SELECT * FROM `rsbsa_tb` WHERE status='Normal'";
+                MySqlDataAdapter msda1 = new MySqlDataAdapter(qry, con);
+                DataTable dt1 = new DataTable();
+                msda1.Fill(dt1);
+                dtable = dt1;
+            }
+            else
+            {
+                foreach (DataRow item in dt.Rows)
+                {
+                    con.Close();
+                    con.Open();
+                    //string qry = "";
+                    //for (int i = 0; i < dtable2.Rows.Count; i++)
+                    //{
+                    //    for(int x = 0; x <= i; x++)
+                    //    {
+                    //        string temp = dtable2.Rows[i]["rsbsa_id"].ToString();
+                    //    }
+                    //    string exe = string.Join(",", temp);
+                    //    string[] strArray = { exe };
+                    //    string emplode = string.Join(",", strArray);
+                    //    message = ""+ dtable2.Rows[3]["rsbsa_id"].ToString();
+                    //    qry = "SELECT* FROM `rsbsa_tb` WHERE NOT id in ('" + emplode + "')";
+                    //}
+                    string qry = "SELECT * FROM `rsbsa_tb` WHERE status='Normal'";
+                    MySqlDataAdapter msda1 = new MySqlDataAdapter(qry, con);
+                    DataTable dt1 = new DataTable();
+                    msda1.Fill(dt1);
+                    dtable = dt1;
+                }
+            }
+
             con.Close();
         }
     
@@ -105,7 +132,7 @@ namespace FileTrackingSystem
             catch (Exception ex)
             {
                 message = "error" + ex.ToString();
-            }
+            } 
         }
 
         public void search(string cat)
@@ -203,6 +230,61 @@ namespace FileTrackingSystem
                 DataTable dt = new DataTable();
                 msda.Fill(dt);
                 dtable = dt;
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+         public void archive(int id)
+        {
+            try
+            {
+                con.Open();
+                DateTime updated_at = DateTime.Now;
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "UPDATE `calamity_damage_tb` SET `status`='Archive' WHERE id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                    cmd.Parameters.AddWithValue("@updated_at", updated_at);
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+        public void update(string id)
+        {
+            try
+            {
+                con.Open();
+                DateTime updated_at = DateTime.Now;
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "UPDATE `calamity_damage_tb` SET `file_name`= @file_name,`fname_extension`= @fname_extension,`category`= @category,`updated_at`= @updated_at WHERE id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                    cmd.Parameters.AddWithValue("@budget_from", budget_from);
+                    cmd.Parameters.AddWithValue("@date_from", date_from);
+                    cmd.Parameters.AddWithValue("@type_calamity", type_calamity);
+                    cmd.Parameters.AddWithValue("@amount_paid", amount_paid);
+                    cmd.Parameters.AddWithValue("@ctc_no", ctc_no);
+                    cmd.Parameters.AddWithValue("@ctc_date_issued", ctc_date_issued);
+                    cmd.Parameters.AddWithValue("@ctc_place_issued", ctc_place_issued);
+                    cmd.Parameters.AddWithValue("@updated_at", updated_at);
+                    cmd.ExecuteNonQuery();
+
+                    message = "Data Successfully Updated!";
+                }
+                con.Close();
             }
             catch (Exception ex)
             {

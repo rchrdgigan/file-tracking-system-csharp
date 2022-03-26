@@ -24,6 +24,7 @@ namespace FileTrackingSystem
         private static string _salfintrusion = "Salf intrusion";
         private static string _date_from;
         private static string _occupation;
+        private string[] arr = { };
 
         private string[] value = { _flood, _typhon, _drought, _ashfall, _salfintrusion };
 
@@ -60,6 +61,7 @@ namespace FileTrackingSystem
 
         private void loadData()
         {
+            MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cdc.listRSBSA();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.Rows.Clear();
@@ -108,9 +110,9 @@ namespace FileTrackingSystem
 
         private void GenerateCalamityForm_Load(object sender, EventArgs e)
         {
+            loadData();
             AddHeaderCheckBox();
             HeaderCheckbox.MouseClick += new MouseEventHandler(HeaderCheckBox_MouseClick);
-            loadData();
             TransitionsAPI.AnimateWindow(this.Handle, 100, TransitionsAPI.fadeIN);
 
             for (int i = 0; i < value.Length; i++)
@@ -243,6 +245,7 @@ namespace FileTrackingSystem
         {
             _date_from = dateTimePickerDateFrom.Value.ToString("yyyy-MM-dd");
             cdc.date_from = _date_from;
+            loadData();
         }
 
         private void comboBoxOccupation_SelectedIndexChanged(object sender, EventArgs e)
@@ -263,5 +266,6 @@ namespace FileTrackingSystem
             cdc.address = comboBoxAddress.Text;
             loadSearch();
         }
+
     }
 }

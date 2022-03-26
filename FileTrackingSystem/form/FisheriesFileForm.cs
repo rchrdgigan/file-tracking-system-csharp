@@ -280,7 +280,7 @@ namespace FileTrackingSystem
 
                 }
             }
-            catch (Exception ex)
+            catch
             {
 
             }
