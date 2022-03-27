@@ -61,7 +61,6 @@ namespace FileTrackingSystem
 
         private void loadData()
         {
-            MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cdc.listRSBSA();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.Rows.Clear();

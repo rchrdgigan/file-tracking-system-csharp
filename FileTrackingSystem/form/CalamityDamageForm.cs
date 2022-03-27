@@ -15,6 +15,9 @@ namespace FileTrackingSystem
         CalamityDamageClass cdc = new CalamityDamageClass();
 
         public static string _category;
+        private static string _id;
+        private static string cedula_date;
+        private static string date_from;
         private static string _flood = "Flood";
         private static string _typhon = "Typhoon";
         private static string _drought = "Drought";
@@ -120,6 +123,16 @@ namespace FileTrackingSystem
             textBoxFullName.Clear();
             textBoxAddress.Clear();
             textBoxOccupation.Clear();
+            comboBoxBudgetFrom.Text = "";
+            textBoxAmountPaid.Clear();
+            textBoxCNumber.Clear();
+            cedula_date = "";
+            textBoxCPlaceIssued.Clear();
+            comboBoxBudgetFrom.Text ="";
+            date_from = "";
+            dateTimePickerCDate.ResetText();
+            dateTimePickerDateFrom.ResetText();
+
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -190,6 +203,128 @@ namespace FileTrackingSystem
             string dts = dateTimePicker2.Value.ToString("yyyy-MM-dd");
             cdc.date_to = dts;
             loadSearch();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnIndex = dataGridView1.CurrentCell.ColumnIndex;
+            string columnName = dataGridView1.Columns[columnIndex].Name;
+            try
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                string data_id = row.Cells["CalamityID"].Value.ToString();
+
+                if (columnName == "colDel")
+                {
+                    DialogResult result = MessageBox.Show("Are you sure want to delete this data?", "Deleting Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        cdc.delete(int.Parse(data_id));
+                        loadDataCat();
+                        defaultDisplay();
+                        MessageBox.Show("Data successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (columnName == "colEdit")
+                {
+                    DialogResult result = MessageBox.Show("Are you sure want to edit/update this data?", "Editing Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        _id = data_id;
+                        button11.Enabled = true;
+                        buttonCancel.Enabled = true;
+                        foreach (DataGridViewRow item in dataGridView1.Rows)
+                        {
+                            //Move data to text input
+                            textBoxFullName.Text = item.Cells[3].Value.ToString();
+                            textBoxOccupation.Text = item.Cells[4].Value.ToString();
+                            textBoxAddress.Text = item.Cells[5].Value.ToString();
+                            textBoxAmountPaid.Text = item.Cells[6].Value.ToString();
+                            textBoxCNumber.Text = item.Cells[7].Value.ToString();
+                            dateTimePickerCDate.Text = item.Cells[8].Value.ToString();
+                            cedula_date = item.Cells[8].Value.ToString();
+                            textBoxCPlaceIssued.Text = item.Cells[9].Value.ToString();
+                            comboBoxBudgetFrom.Text = item.Cells[12].Value.ToString();
+                            dateTimePickerDateFrom.Text = item.Cells[13].Value.ToString();
+                            date_from = item.Cells[13].Value.ToString();
+                        }
+                    }
+                }
+                else if (columnName == "colArchive")
+                {
+                    DialogResult result = MessageBox.Show("Are you sure want to archive this data?", "Archive Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        cdc.archive(int.Parse(data_id));
+                        loadDataCat();
+                        defaultDisplay();
+                        MessageBox.Show("Data successfully archive!", "Archived Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch(Exception ex )
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dateTimePickerCDate_ValueChanged(object sender, EventArgs e)
+        {
+            string ctc_d = dateTimePickerCDate.Value.ToString("yyyy-MM-dd");
+            cedula_date = ctc_d;
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            defaultDisplay();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBoxAmountPaid.Text))
+            {
+                if (!string.IsNullOrEmpty(textBoxCNumber.Text))
+                {
+                    if (!string.IsNullOrEmpty(cedula_date))
+                    {
+                        if (!string.IsNullOrEmpty(comboBoxBudgetFrom.Text))
+                        {
+                            cdc.budget_from = comboBoxBudgetFrom.Text;
+                            cdc.amount_paid = textBoxAmountPaid.Text;
+                            cdc.ctc_no = textBoxCNumber.Text;
+                            cdc.ctc_date_issued = cedula_date;
+                            cdc.ctc_place_issued = textBoxCPlaceIssued.Text;
+                            cdc.date_from = date_from;
+                            cdc.update(_id);
+                            MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            defaultDisplay();
+                            loadData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Budget From is required!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cedula Date is required!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Cedula Number is required!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Amount Paid is required!");
+            }
+        }
+
+        private void dateTimePickerDateFrom_ValueChanged(object sender, EventArgs e)
+        {
+            string d_from = dateTimePickerCDate.Value.ToString("yyyy-MM-dd");
+            date_from = d_from;
         }
     }
 }

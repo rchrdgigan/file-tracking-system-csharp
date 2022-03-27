@@ -48,7 +48,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxBudgetFrom = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBoxCalamity = new System.Windows.Forms.ComboBox();
             this.dateTimePickerCDate = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -87,6 +86,7 @@
             this.DateFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CalamityType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CalamityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimePickerDateFrom = new System.Windows.Forms.DateTimePicker();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -293,9 +293,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.dateTimePickerDateFrom);
             this.groupBox1.Controls.Add(this.comboBoxBudgetFrom);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.comboBoxCalamity);
             this.groupBox1.Controls.Add(this.dateTimePickerCDate);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label10);
@@ -348,42 +348,23 @@
             this.label13.TabIndex = 37;
             this.label13.Text = "Budget From :";
             // 
-            // comboBoxCalamity
-            // 
-            this.comboBoxCalamity.AutoCompleteCustomSource.AddRange(new string[] {
-            "Flood",
-            "Typhoon",
-            "Drought",
-            "Ash Fall",
-            "Salf intrusion"});
-            this.comboBoxCalamity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBoxCalamity.FormattingEnabled = true;
-            this.comboBoxCalamity.Items.AddRange(new object[] {
-            "Flood",
-            "Typhoon",
-            "Drought",
-            "Ash Fall",
-            "Salf intrusion"});
-            this.comboBoxCalamity.Location = new System.Drawing.Point(625, 181);
-            this.comboBoxCalamity.Name = "comboBoxCalamity";
-            this.comboBoxCalamity.Size = new System.Drawing.Size(220, 24);
-            this.comboBoxCalamity.TabIndex = 36;
-            // 
             // dateTimePickerCDate
             // 
+            this.dateTimePickerCDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerCDate.Location = new System.Drawing.Point(369, 180);
             this.dateTimePickerCDate.Name = "dateTimePickerCDate";
             this.dateTimePickerCDate.Size = new System.Drawing.Size(220, 21);
             this.dateTimePickerCDate.TabIndex = 34;
+            this.dateTimePickerCDate.ValueChanged += new System.EventHandler(this.dateTimePickerCDate_ValueChanged);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(622, 163);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(105, 16);
+            this.label14.Size = new System.Drawing.Size(146, 16);
             this.label14.TabIndex = 33;
-            this.label14.Text = "Type of Calamity :";
+            this.label14.Text = "Date of Calamity Started:";
             // 
             // label10
             // 
@@ -420,7 +401,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(367, 160);
+            this.label9.Location = new System.Drawing.Point(366, 163);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(85, 16);
             this.label9.TabIndex = 25;
@@ -504,6 +485,7 @@
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // button9
             // 
@@ -554,6 +536,7 @@
             this.button11.Text = "Update";
             this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // label1
             // 
@@ -600,6 +583,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1081, 346);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // colDel
             // 
@@ -721,6 +705,15 @@
             this.CalamityID.ReadOnly = true;
             this.CalamityID.Visible = false;
             // 
+            // dateTimePickerDateFrom
+            // 
+            this.dateTimePickerDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDateFrom.Location = new System.Drawing.Point(625, 179);
+            this.dateTimePickerDateFrom.Name = "dateTimePickerDateFrom";
+            this.dateTimePickerDateFrom.Size = new System.Drawing.Size(220, 21);
+            this.dateTimePickerDateFrom.TabIndex = 39;
+            this.dateTimePickerDateFrom.ValueChanged += new System.EventHandler(this.dateTimePickerDateFrom_ValueChanged);
+            // 
             // CalamityDamageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -775,9 +768,7 @@
         private System.Windows.Forms.TextBox textBoxFullName;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBoxCalamity;
         private System.Windows.Forms.DateTimePicker dateTimePickerCDate;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBoxCNumber;
@@ -811,5 +802,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DateFrom;
         private System.Windows.Forms.DataGridViewTextBoxColumn CalamityType;
         private System.Windows.Forms.DataGridViewTextBoxColumn CalamityID;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDateFrom;
     }
 }
