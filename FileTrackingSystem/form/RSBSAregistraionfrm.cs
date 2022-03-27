@@ -12,6 +12,7 @@ namespace FileTrackingSystem
 {
     public partial class RSBSAregistraionfrm : Form
     {
+        User user = new User();
         VScrollBar vscrollbar = new VScrollBar();
         RSBSAClass rsbsa = new RSBSAClass();
 
@@ -382,6 +383,12 @@ namespace FileTrackingSystem
                                                                                                                             rsbsa.income_nonfarming = textBoxNonFarmingGAILY.Text;
                                                                                                                             if(UserControlRSBSA._methods == "Create")
                                                                                                                             {
+                                                                                                                                //History Log
+                                                                                                                                user.activity = "Add/Create RSBSA Data...Name: " + textBoxFirstName.Text + " " +textBoxSurname.Text;
+                                                                                                                                user.user_id = loginfrm._log_id;
+                                                                                                                                user.createLog();
+                                                                                                                                //End Log
+
                                                                                                                                 rsbsa.createRSBSA();
                                                                                                                                 MessageBox.Show("" + rsbsa.message, "Register Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                                                                                                 this.Close();
@@ -393,6 +400,12 @@ namespace FileTrackingSystem
                                                                                                                             }
                                                                                                                             else
                                                                                                                             {
+                                                                                                                                //History Log
+                                                                                                                                user.activity = "Update RSBSA Data...Name: " + textBoxFirstName.Text + " " + textBoxSurname.Text;
+                                                                                                                                user.user_id = loginfrm._log_id;
+                                                                                                                                user.createLog();
+                                                                                                                                //End Log
+
                                                                                                                                 rsbsa.updateRSBSA(labelId.Text);
                                                                                                                                 MessageBox.Show("" + rsbsa.message, "Update Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                                                                                                                 this.Close();

@@ -36,16 +36,13 @@
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBoxFillBudgetFrom = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.comboBoxCatFil = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePickerFilDate = new System.Windows.Forms.DateTimePicker();
             this.labelCatFil = new System.Windows.Forms.Label();
             this.textBoxFilFullName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerDateFrom = new System.Windows.Forms.DateTimePicker();
             this.comboBoxBudgetFrom = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dateTimePickerCDate = new System.Windows.Forms.DateTimePicker();
@@ -86,7 +83,6 @@
             this.DateFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CalamityType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CalamityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTimePickerDateFrom = new System.Windows.Forms.DateTimePicker();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -161,13 +157,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.comboBoxFillBudgetFrom);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.dateTimePicker2);
             this.panel2.Controls.Add(this.comboBoxCatFil);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.dateTimePickerFilDate);
             this.panel2.Controls.Add(this.labelCatFil);
             this.panel2.Controls.Add(this.textBoxFilFullName);
             this.panel2.Controls.Add(this.groupBox1);
@@ -189,29 +181,11 @@
             "Local Government Unit",
             "Department of Agriculture",
             "Bureau of Fisheries and Aquatic Resources"});
-            this.comboBoxFillBudgetFrom.Location = new System.Drawing.Point(133, 259);
+            this.comboBoxFillBudgetFrom.Location = new System.Drawing.Point(519, 232);
             this.comboBoxFillBudgetFrom.Name = "comboBoxFillBudgetFrom";
             this.comboBoxFillBudgetFrom.Size = new System.Drawing.Size(239, 24);
             this.comboBoxFillBudgetFrom.TabIndex = 36;
             this.comboBoxFillBudgetFrom.SelectedIndexChanged += new System.EventHandler(this.comboBoxFillBudgetFrom_SelectedIndexChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(708, 234);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 16);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "To:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(737, 231);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(202, 21);
-            this.dateTimePicker2.TabIndex = 22;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // comboBoxCatFil
             // 
@@ -229,7 +203,7 @@
             "Drought",
             "Ash Fall",
             "Salf intrusion"});
-            this.comboBoxCatFil.Location = new System.Drawing.Point(500, 259);
+            this.comboBoxCatFil.Location = new System.Drawing.Point(881, 231);
             this.comboBoxCatFil.Name = "comboBoxCatFil";
             this.comboBoxCatFil.Size = new System.Drawing.Size(203, 24);
             this.comboBoxCatFil.TabIndex = 21;
@@ -239,7 +213,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(5, 262);
+            this.label11.Location = new System.Drawing.Point(391, 235);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(122, 16);
             this.label11.TabIndex = 31;
@@ -254,28 +228,10 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Filter by Full Name:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(385, 235);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 16);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Filter by Date From:";
-            // 
-            // dateTimePickerFilDate
-            // 
-            this.dateTimePickerFilDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerFilDate.Location = new System.Drawing.Point(500, 231);
-            this.dateTimePickerFilDate.Name = "dateTimePickerFilDate";
-            this.dateTimePickerFilDate.Size = new System.Drawing.Size(202, 21);
-            this.dateTimePickerFilDate.TabIndex = 19;
-            this.dateTimePickerFilDate.ValueChanged += new System.EventHandler(this.dateTimePickerFilDate_ValueChanged);
-            // 
             // labelCatFil
             // 
             this.labelCatFil.AutoSize = true;
-            this.labelCatFil.Location = new System.Drawing.Point(385, 262);
+            this.labelCatFil.Location = new System.Drawing.Point(766, 234);
             this.labelCatFil.Name = "labelCatFil";
             this.labelCatFil.Size = new System.Drawing.Size(109, 16);
             this.labelCatFil.TabIndex = 18;
@@ -321,6 +277,15 @@
             this.groupBox1.Size = new System.Drawing.Size(1084, 225);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // dateTimePickerDateFrom
+            // 
+            this.dateTimePickerDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDateFrom.Location = new System.Drawing.Point(625, 179);
+            this.dateTimePickerDateFrom.Name = "dateTimePickerDateFrom";
+            this.dateTimePickerDateFrom.Size = new System.Drawing.Size(220, 21);
+            this.dateTimePickerDateFrom.TabIndex = 39;
+            this.dateTimePickerDateFrom.ValueChanged += new System.EventHandler(this.dateTimePickerDateFrom_ValueChanged);
             // 
             // comboBoxBudgetFrom
             // 
@@ -578,10 +543,10 @@
             this.DateFrom,
             this.CalamityType,
             this.CalamityID});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 289);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 262);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1081, 346);
+            this.dataGridView1.Size = new System.Drawing.Size(1081, 373);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -705,15 +670,6 @@
             this.CalamityID.ReadOnly = true;
             this.CalamityID.Visible = false;
             // 
-            // dateTimePickerDateFrom
-            // 
-            this.dateTimePickerDateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDateFrom.Location = new System.Drawing.Point(625, 179);
-            this.dateTimePickerDateFrom.Name = "dateTimePickerDateFrom";
-            this.dateTimePickerDateFrom.Size = new System.Drawing.Size(220, 21);
-            this.dateTimePickerDateFrom.TabIndex = 39;
-            this.dateTimePickerDateFrom.ValueChanged += new System.EventHandler(this.dateTimePickerDateFrom_ValueChanged);
-            // 
             // CalamityDamageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -754,8 +710,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox comboBoxCatFil;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFilDate;
         private System.Windows.Forms.Label labelCatFil;
         private System.Windows.Forms.TextBox textBoxFilFullName;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -781,8 +735,6 @@
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxOccupation;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox comboBoxFillBudgetFrom;
         private System.Windows.Forms.ComboBox comboBoxBudgetFrom;
         private System.Windows.Forms.Label label13;

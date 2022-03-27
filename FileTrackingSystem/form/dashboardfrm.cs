@@ -26,7 +26,6 @@ namespace FileTrackingSystem
 
         private void dashboardfrm_Load(object sender, EventArgs e)
         {
-            TransitionsAPI.AnimateWindow(this.Handle, 1000, TransitionsAPI.fadeIN);
             navpanel = panel1;
             contentpanel = showPanel;
             rsbsa_refesh = RSBSAbtn;
@@ -35,11 +34,16 @@ namespace FileTrackingSystem
             usernameLbl.Text = loginfrm._username;
             roleLbl.Text = loginfrm._role;
 
-            if(roleLbl.Text == "Staff")
+            if (roleLbl.Text == "Staff")
             {
                 budgetBtn.Hide();
                 managementBtn.Hide();
                 logBtn.Hide();
+                buttonArchive.Hide();
+            }
+            else
+            {
+                TransitionsAPI.AnimateWindow(this.Handle, 1000, TransitionsAPI.fadeIN);
             }
         }
 

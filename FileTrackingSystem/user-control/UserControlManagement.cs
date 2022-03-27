@@ -70,6 +70,12 @@ namespace FileTrackingSystem
                 }
                 else
                 {
+                    //History Log
+                    user.activity = "Delete account "+ textBoxUsername.Text +" in User Management...";
+                    user.user_id = loginfrm._log_id;
+                    user.createLog();
+                    //End Log
+
                     user.delUser(textBoxUsername.Text);
                     loadData();
                     MessageBox.Show("Account successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);

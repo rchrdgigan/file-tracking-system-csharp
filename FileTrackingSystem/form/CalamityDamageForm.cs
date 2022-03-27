@@ -18,17 +18,24 @@ namespace FileTrackingSystem
         private static string _id;
         private static string cedula_date;
         private static string date_from;
-        private static string _flood = "Flood";
-        private static string _typhon = "Typhoon";
-        private static string _drought = "Drought";
-        private static string _ashfall = "Ash Fall";
-        private static string _salfintrusion = "Salf intrusion";
 
-        private string[] value = { _flood, _typhon, _drought, _ashfall, _salfintrusion };
+        private string[] value = { "Flood", "Typhoon", "Drought", "Ash Fall", "Salf intrusion" };
 
         public CalamityDamageForm()
         {
             InitializeComponent();
+        }
+
+        private void clearFil()
+        {
+            textBoxFilFullName.Enabled = true;
+            textBoxFilFullName.Clear();
+            comboBoxFillBudgetFrom.ResetText();
+            comboBoxFillBudgetFrom.Enabled = true;
+            cdc.date_from = "";
+            cdc.date_to = "";
+            cdc.budget_from = "";
+            cdc.full_name = "";
         }
 
         private void loadSearch()
@@ -150,17 +157,17 @@ namespace FileTrackingSystem
             {
                 if (UserControlCalamityDamage.header_category == value[i])
                 {
+                    loadDataCat();
                     _category = value[i];
                     dataGridView1.Columns["CalamityType"].Visible = false;
-                    loadDataCat();
                 }
                 else if (UserControlCalamityDamage.header_category == "All Category")
                 {
+                    loadData();
                     _category = "";
                     comboBoxCatFil.Visible = true;
                     labelCatFil.Visible = true;
                     dataGridView1.Columns["colEdit"].Visible = false;
-                    loadData();
                 }
             }
         }
@@ -175,8 +182,20 @@ namespace FileTrackingSystem
 
         private void comboBoxFillBudgetFrom_SelectedIndexChanged(object sender, EventArgs e)
         {
+            textBoxFilFullName.Clear();
+            textBoxFilFullName.Enabled = false;
+            cdc.date_from = "";
+            cdc.date_to = "";
+            cdc.budget_from = "";
+
             cdc.budget_from = comboBoxFillBudgetFrom.Text;
             loadSearch();
+
+
+            if (comboBoxCatFil.Text == "")
+            {
+                clearFil();
+            }
         }
 
         private void comboBoxCatFil_SelectedIndexChanged(object sender, EventArgs e)
@@ -187,21 +206,42 @@ namespace FileTrackingSystem
 
         private void textBoxFilFullName_TextChanged(object sender, EventArgs e)
         {
+            comboBoxFillBudgetFrom.ResetText();
+            comboBoxFillBudgetFrom.Enabled = false;
+            cdc.date_from = "";
+            cdc.date_to = "";
+            cdc.budget_from = "";
+
             cdc.full_name = textBoxFilFullName.Text;
             loadSearch();
+
+            if (textBoxFilFullName.Text == "")
+            {
+                clearFil();
+            }
         }
 
         private void dateTimePickerFilDate_ValueChanged(object sender, EventArgs e)
         {
-            string dts = dateTimePickerFilDate.Value.ToString("yyyy-MM-dd");
-            cdc.date_from = dts;
+            textBoxFilFullName.Enabled = false;
+            textBoxFilFullName.Clear();
+            comboBoxFillBudgetFrom.Enabled = false;
+            comboBoxFillBudgetFrom.ResetText();
+            cdc.full_name = "";
+            cdc.budget_from = "";
+
+            cdc.date_from = date_from;
             loadSearch();
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-            string dts = dateTimePicker2.Value.ToString("yyyy-MM-dd");
-            cdc.date_to = dts;
+            textBoxFilFullName.Enabled = false;
+            textBoxFilFullName.Clear();
+            comboBoxFillBudgetFrom.Enabled = false;
+            comboBoxFillBudgetFrom.ResetText();
+            cdc.full_name = "";
+            cdc.budget_from = "";
             loadSearch();
         }
 
@@ -325,6 +365,11 @@ namespace FileTrackingSystem
         {
             string d_from = dateTimePickerCDate.Value.ToString("yyyy-MM-dd");
             date_from = d_from;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clearFil();
         }
     }
 }

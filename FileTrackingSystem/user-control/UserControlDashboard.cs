@@ -14,6 +14,7 @@ namespace FileTrackingSystem
     {
         User user = new User();
         RSBSAClass rsbsa = new RSBSAClass();
+        CalamityDamageClass cdc = new CalamityDamageClass();
 
         public UserControlDashboard()
         {
@@ -33,6 +34,10 @@ namespace FileTrackingSystem
 
             rsbsa.countFarmWorkers();
             labelFarmWor.Text = rsbsa.countFarmWor.ToString();
+
+            cdc.countCalamity();
+            label10.Text = cdc.count.ToString();
+
         }
     }
 }

@@ -18,6 +18,7 @@ namespace FileTrackingSystem
         public static string _username;
         public static string _role;
         public static string _fname;
+        public static string _log_id;
 
         public loginfrm()
         {
@@ -57,6 +58,7 @@ namespace FileTrackingSystem
                         _role = user.log_role;
                         _username = user.log_username;
                         _fname = user.fname;
+                        _log_id = user.log_id;
 
                         //to hide this login form
                         this.Hide();

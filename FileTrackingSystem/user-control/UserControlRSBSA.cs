@@ -12,6 +12,7 @@ namespace FileTrackingSystem
 {
     public partial class UserControlRSBSA : UserControl
     {
+        User user = new User();
         RSBSAClass rsbsa = new RSBSAClass();
         public static Button _refresh;
 
@@ -204,6 +205,12 @@ namespace FileTrackingSystem
                 DialogResult result = MessageBox.Show("Are you sure want to archive this Data?", "Archive Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
+                    //History Log
+                    user.activity = "Archive RSBSA Data...";
+                    user.user_id = loginfrm._log_id;
+                    user.createLog();
+                    //End Log
+
                     rsbsa.archiveRSBSA(SelectedIdLbl.Text);
                     loadData();
                     MessageBox.Show("RSBSA data successfully archived!", "Archive Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -240,6 +247,12 @@ namespace FileTrackingSystem
                 DialogResult result = MessageBox.Show("Are you sure want to delete this Data?", "Deleting Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
+                    //History Log
+                    user.activity = "Delete RSBSA Data...";
+                    user.user_id = loginfrm._log_id;
+                    user.createLog();
+                    //End Log
+
                     rsbsa.delRSBSA(SelectedIdLbl.Text);
                     loadData();
                     MessageBox.Show("RSBSA data successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dashboardfrm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonArchive = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RSBSAbtn = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonArchive);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.RSBSAbtn);
@@ -88,21 +88,21 @@
             this.panel1.Size = new System.Drawing.Size(203, 720);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // buttonArchive
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(6, 598);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 52);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "ARCHIVE HISTORY";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonArchive.FlatAppearance.BorderSize = 0;
+            this.buttonArchive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonArchive.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonArchive.Image = ((System.Drawing.Image)(resources.GetObject("buttonArchive.Image")));
+            this.buttonArchive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonArchive.Location = new System.Drawing.Point(6, 598);
+            this.buttonArchive.Name = "buttonArchive";
+            this.buttonArchive.Size = new System.Drawing.Size(197, 52);
+            this.buttonArchive.TabIndex = 16;
+            this.buttonArchive.Text = "ARCHIVE HISTORY";
+            this.buttonArchive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonArchive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonArchive.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
@@ -437,6 +437,6 @@
         private System.Windows.Forms.Button RSBSAbtn;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonArchive;
     }
 }

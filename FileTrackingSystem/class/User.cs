@@ -20,8 +20,13 @@ namespace FileTrackingSystem
         public string log_username { get; set; }
         public string log_password { get; set; }
         public string log_role { get; set; }
+        public string log_id { get; set; }
+
         public string message { get; set; }
         public Int32 count { get; set; }
+        public string user_id { get; set; }
+
+        public string activity { get; set; }
 
         //Validate email function
         public bool IsValidEmail(string email)
@@ -78,7 +83,6 @@ namespace FileTrackingSystem
                         cmd.Parameters.AddWithValue("@role", role);
                         cmd.Parameters.AddWithValue("@today", today);
                         cmd.ExecuteNonQuery();
-
                         message = "User Successfully Registered";
                     }
                 }
@@ -109,6 +113,7 @@ namespace FileTrackingSystem
 
                 while (msdtr.Read())
                 {
+                    log_id = msdtr.GetString("id");
                     log_role = msdtr.GetString("role");
                     fname = msdtr.GetString("fname");
                     check = true;
@@ -227,5 +232,33 @@ namespace FileTrackingSystem
                 message = "error" + ex.ToString();
             }
         }
+
+
+        //Add History Log in User Management
+        public void createLog()
+        {
+            try
+            {
+                con.Close();
+                con.Open();
+                DateTime today = DateTime.Now;
+                string time = DateTime.Now.ToString("h:mm:ss tt");
+                string query = "";
+                query = ("INSERT INTO `history_log_tb`(`id`, `user_id`, `activity`, `date`, `time`) VALUES(NULL, @user_id, @activity, @today, @time)"); 
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@user_id", user_id);
+                cmd.Parameters.AddWithValue("@activity", activity);
+                cmd.Parameters.AddWithValue("@today", today);
+                cmd.Parameters.AddWithValue("@time", time);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+
     }
 }
