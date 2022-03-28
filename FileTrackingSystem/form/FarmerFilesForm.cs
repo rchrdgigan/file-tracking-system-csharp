@@ -13,6 +13,7 @@ namespace FileTrackingSystem
 {
     public partial class FarmerFilesForm : Form
     {
+        User user = new User();
         FarmerClass fc = new FarmerClass();
         private static string file_name;
         private static string fname_without_extension;
@@ -141,6 +142,12 @@ namespace FileTrackingSystem
                     {
                         if (!File.Exists(destin_path + file_name))
                         {
+                            //History Log
+                            user.activity = "Created new farmers file in " + _category + " category...";
+                            user.user_id = loginfrm._log_id;
+                            user.createLog();
+                            //End Log
+
                             fc.file_name = textBoxFileName.Text;
                             fc.fname_extension = txtBoxChooseFile.Text;
                             fc.category = _category;
@@ -161,6 +168,12 @@ namespace FileTrackingSystem
                         {
                             if (!File.Exists(destin_path + file_name))
                             {
+                                //History Log
+                                user.activity = "Created new farmers file in " + comboBoxCat + " category...";
+                                user.user_id = loginfrm._log_id;
+                                user.createLog();
+                                //End Log
+
                                 fc.file_name = textBoxFileName.Text;
                                 fc.fname_extension = txtBoxChooseFile.Text;
                                 fc.category = comboBoxCat.Text;
@@ -220,6 +233,12 @@ namespace FileTrackingSystem
                         }
                         File.Delete(destin_path + file_exten);
                         MessageBox.Show("File successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //History Log
+                        user.activity = "Removed farmers file in " + _category + " category...";
+                        user.user_id = loginfrm._log_id;
+                        user.createLog();
+                        //End Log
                     }
                 }
                 else if (columnName == "colEdit")
@@ -251,7 +270,15 @@ namespace FileTrackingSystem
                         source_path = o.FileName;
                         File.Copy(destin_path + file_name, source_path, true);
                         MessageBox.Show("File successfully download!", "" + source_path, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //History Log
+                        user.activity = "Downloaded farmers file in " + _category + " category...";
+                        user.user_id = loginfrm._log_id;
+                        user.createLog();
+                        //End Log
                     }
+
+
                 }
                 else if (columnName == "colArchive")
                 {
@@ -278,6 +305,12 @@ namespace FileTrackingSystem
                         loadDataByCat();
                         defaultDisplay();
                         MessageBox.Show("File successfully archive!", "" + source, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //History Log
+                        user.activity = "Archived farmers file in " + _category + " category...";
+                        user.user_id = loginfrm._log_id;
+                        user.createLog();
+                        //End Log
                     }
 
                 }
@@ -301,6 +334,12 @@ namespace FileTrackingSystem
             {
                 if (!string.IsNullOrEmpty(textBoxFileName.Text))
                 {
+                    //History Log
+                    user.activity = "Updated farmers file in " + _category + " Category...";
+                    user.user_id = loginfrm._log_id;
+                    user.createLog();
+                    //End Log
+
                     fc.file_name = textBoxFileName.Text;
                     fc.fname_extension = txtBoxChooseFile.Text;
                     fc.category = _category;

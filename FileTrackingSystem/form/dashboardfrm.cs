@@ -18,6 +18,7 @@ namespace FileTrackingSystem
         public static Panel contentpanel;
         public static Button rsbsa_refesh;
         public static Button managementBtn_refesh;
+        User user = new User();
 
         public dashboardfrm()
         {
@@ -60,8 +61,13 @@ namespace FileTrackingSystem
                 this.Close();
                 loginfrm loginFrm = new loginfrm();
                 loginFrm.Show();
+                //History Log
+                user.activity = "Logout user account...";
+                user.user_id = loginfrm._log_id;
+                user.createLog();
+                //End Log
             }
-            
+
         }
 
         private void button7_Click(object sender, EventArgs e)

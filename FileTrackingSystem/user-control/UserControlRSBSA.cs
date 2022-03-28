@@ -206,7 +206,7 @@ namespace FileTrackingSystem
                 if (result == DialogResult.Yes)
                 {
                     //History Log
-                    user.activity = "Archive RSBSA Data...";
+                    user.activity = "Archived RSBSA Data...";
                     user.user_id = loginfrm._log_id;
                     user.createLog();
                     //End Log
@@ -248,7 +248,7 @@ namespace FileTrackingSystem
                 if (result == DialogResult.Yes)
                 {
                     //History Log
-                    user.activity = "Delete RSBSA Data...";
+                    user.activity = "Removed RSBSA Data...";
                     user.user_id = loginfrm._log_id;
                     user.createLog();
                     //End Log

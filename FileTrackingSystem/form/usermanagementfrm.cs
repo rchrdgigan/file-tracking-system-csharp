@@ -48,7 +48,7 @@ namespace FileTrackingSystem
                         {
                             MessageBox.Show("" + user.message, "Register Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             //History Log
-                            user.activity = "Added " + comboBoxRole.Text + " account in User Management...";
+                            user.activity = "Created " + comboBoxRole.Text + " account in User Management...";
                             user.user_id = loginfrm._log_id;
                             user.createLog();
                             //End Log

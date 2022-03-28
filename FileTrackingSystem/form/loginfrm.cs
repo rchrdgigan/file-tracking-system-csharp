@@ -59,6 +59,11 @@ namespace FileTrackingSystem
                         _username = user.log_username;
                         _fname = user.fname;
                         _log_id = user.log_id;
+                        //History Log
+                        user.activity = "Login user account...";
+                        user.user_id = user.log_id;
+                        user.createLog();
+                        //End Log
 
                         //to hide this login form
                         this.Hide();

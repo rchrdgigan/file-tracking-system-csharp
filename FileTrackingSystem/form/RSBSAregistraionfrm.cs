@@ -384,7 +384,7 @@ namespace FileTrackingSystem
                                                                                                                             if(UserControlRSBSA._methods == "Create")
                                                                                                                             {
                                                                                                                                 //History Log
-                                                                                                                                user.activity = "Add/Create RSBSA Data...Name: " + textBoxFirstName.Text + " " +textBoxSurname.Text;
+                                                                                                                                user.activity = "Created new RSBSA Data...Name: " + textBoxFirstName.Text + " " + textBoxSurname.Text;
                                                                                                                                 user.user_id = loginfrm._log_id;
                                                                                                                                 user.createLog();
                                                                                                                                 //End Log
@@ -401,7 +401,7 @@ namespace FileTrackingSystem
                                                                                                                             else
                                                                                                                             {
                                                                                                                                 //History Log
-                                                                                                                                user.activity = "Update RSBSA Data...Name: " + textBoxFirstName.Text + " " + textBoxSurname.Text;
+                                                                                                                                user.activity = "Updated RSBSA Data...Name: " + textBoxFirstName.Text + " " + textBoxSurname.Text;
                                                                                                                                 user.user_id = loginfrm._log_id;
                                                                                                                                 user.createLog();
                                                                                                                                 //End Log

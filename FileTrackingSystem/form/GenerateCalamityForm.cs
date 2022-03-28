@@ -15,6 +15,8 @@ namespace FileTrackingSystem
     {
         CalamityDamageClass cdc = new CalamityDamageClass();
         ConnectionClass cc = new ConnectionClass();
+        User user = new User();
+
 
         private static string category;
         private static string _flood = "Flood";
@@ -171,6 +173,12 @@ namespace FileTrackingSystem
                                     cdc.ctc_date_issued = "";
                                     cdc.ctc_place_issued = "";
                                     cdc.generateCalamityList();
+
+                                    //History Log
+                                    user.activity = "Generated calamity damage data in " + category + " category...Started calamity damage date: " + _date_from + "...";
+                                    user.user_id = loginfrm._log_id;
+                                    user.createLog();
+                                    //End Log
                                 }
                             }
                             MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -214,6 +222,12 @@ namespace FileTrackingSystem
                                     cdc.ctc_date_issued = "";
                                     cdc.ctc_place_issued = "";
                                     cdc.generateCalamityList();
+
+                                    //History Log
+                                    user.activity = "Generated calamity damage data in " + comboBoxTypesOfCalamity.Text + " category...Started calamity damage date: " + _date_from + "...";
+                                    user.user_id = loginfrm._log_id;
+                                    user.createLog();
+                                    //End Log
                                 }
                             }
                             MessageBox.Show("" + cdc.message, "Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);

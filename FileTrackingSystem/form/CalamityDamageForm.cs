@@ -13,6 +13,7 @@ namespace FileTrackingSystem
     public partial class CalamityDamageForm : Form
     {
         CalamityDamageClass cdc = new CalamityDamageClass();
+        User user = new User();
 
         public static string _category;
         private static string _id;
@@ -263,6 +264,12 @@ namespace FileTrackingSystem
                         loadDataCat();
                         defaultDisplay();
                         MessageBox.Show("Data successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //History Log
+                        user.activity = "Removed calamity damage data in " + _category + " category...";
+                        user.user_id = loginfrm._log_id;
+                        user.createLog();
+                        //End Log
                     }
                 }
                 else if (columnName == "colEdit")
@@ -299,6 +306,12 @@ namespace FileTrackingSystem
                         loadDataCat();
                         defaultDisplay();
                         MessageBox.Show("Data successfully archive!", "Archived Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //History Log
+                        user.activity = "Archived calamity damage data in " + _category + " category...";
+                        user.user_id = loginfrm._log_id;
+                        user.createLog();
+                        //End Log
                     }
                 }
             }
@@ -329,6 +342,12 @@ namespace FileTrackingSystem
                     {
                         if (!string.IsNullOrEmpty(comboBoxBudgetFrom.Text))
                         {
+                            //History Log
+                            user.activity = "Updated calamity damage data in " + _category + " category...";
+                            user.user_id = loginfrm._log_id;
+                            user.createLog();
+                            //End Log
+
                             cdc.budget_from = comboBoxBudgetFrom.Text;
                             cdc.amount_paid = textBoxAmountPaid.Text;
                             cdc.ctc_no = textBoxCNumber.Text;

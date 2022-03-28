@@ -12,9 +12,23 @@ namespace FileTrackingSystem
 {
     public partial class UserControlUserLogHistory : UserControl
     {
+        User user = new User();
+
         public UserControlUserLogHistory()
         {
             InitializeComponent();
+        }
+
+        private void loadData()
+        {
+            user.diplayHistoryLog();
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = user.dtable;
+        }
+
+        private void UserControlUserLogHistory_Load(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }

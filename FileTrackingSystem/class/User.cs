@@ -21,7 +21,7 @@ namespace FileTrackingSystem
         public string log_password { get; set; }
         public string log_role { get; set; }
         public string log_id { get; set; }
-
+        public long modifId { get; set; }
         public string message { get; set; }
         public Int32 count { get; set; }
         public string user_id { get; set; }
@@ -65,12 +65,12 @@ namespace FileTrackingSystem
                         if (roles == "")
                         {
                             role = "Staff";
-                            query = ("INSERT INTO `users_tb`(`id`, `fname`, `lname`, `email`, `contact`, `username`, `password`, `role`, `created_at`) VALUES (NULL,@fname,@lname,@email,@contact,@username,@password,@role,@today)");
+                            query = ("INSERT INTO `users_tb`(`fname`, `lname`, `email`, `contact`, `username`, `password`, `role`, `created_at`) VALUES (@fname,@lname,@email,@contact,@username,@password,@role,@today);");
                         }
                         else
                         {
                             role = roles;
-                            query = ("INSERT INTO `users_tb`(`id`, `fname`, `lname`, `email`, `contact`, `username`, `password`, `role`, `created_at`) VALUES (NULL,@fname,@lname,@email,@contact,@username,@password,@role,@today)");
+                            query = ("INSERT INTO `users_tb`(`fname`, `lname`, `email`, `contact`, `username`, `password`, `role`, `created_at`) VALUES (@fname,@lname,@email,@contact,@username,@password,@role,@today)");
                         }
                         MySqlCommand cmd = new MySqlCommand(query, con);
 
@@ -83,6 +83,7 @@ namespace FileTrackingSystem
                         cmd.Parameters.AddWithValue("@role", role);
                         cmd.Parameters.AddWithValue("@today", today);
                         cmd.ExecuteNonQuery();
+                        modifId = cmd.LastInsertedId;
                         message = "User Successfully Registered";
                     }
                 }
@@ -259,6 +260,39 @@ namespace FileTrackingSystem
             }
         }
 
+        //Display History log
+        public void diplayHistoryLog()
+        {
+            try
+            {
+                string query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id ORDER BY history_log_tb.id DESC");
+                MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                msda.Fill(dt);
+                dtable = dt;
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+        //Activity Display History log
+        public void seachHistoryLog()
+        {
+            try
+            {
+                string query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id ORDER BY history_log_tb.id DESC");
+                MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                msda.Fill(dt);
+                dtable = dt;
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
 
     }
 }

@@ -13,6 +13,8 @@ namespace FileTrackingSystem
 {
     public partial class FisheriesFileForm : Form
     {
+        User user = new User();
+
         FisheriesClass fc = new FisheriesClass();
         private static string file_name;
         private static string fname_without_extension;
@@ -138,6 +140,12 @@ namespace FileTrackingSystem
                     {
                         if (!File.Exists(destin_path + file_name))
                         {
+                            //History Log
+                            user.activity = "Created new fisheries file in " + _category + " category...";
+                            user.user_id = loginfrm._log_id;
+                            user.createLog();
+                            //End Log
+
                             fc.file_name = textBoxFileName.Text;
                             fc.fname_extension = txtBoxChooseFile.Text;
                             fc.category = _category;
@@ -158,6 +166,12 @@ namespace FileTrackingSystem
                         {
                             if (!File.Exists(destin_path + file_name))
                             {
+                                //History Log
+                                user.activity = "Created new fisheries file in " + comboBoxCat.Text + " category...";
+                                user.user_id = loginfrm._log_id;
+                                user.createLog();
+                                //End Log
+
                                 fc.file_name = textBoxFileName.Text;
                                 fc.fname_extension = txtBoxChooseFile.Text;
                                 fc.category = comboBoxCat.Text;
@@ -218,6 +232,12 @@ namespace FileTrackingSystem
                         }
                         File.Delete(destin_path + file_exten);
                         MessageBox.Show("File successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //History Log
+                        user.activity = "Removed fisheries file in " + comboBoxCat.Text + " category...";
+                        user.user_id = loginfrm._log_id;
+                        user.createLog();
+                        //End Log
                     }
                 }
                 else if (columnName == "colEdit")
@@ -276,6 +296,12 @@ namespace FileTrackingSystem
                         loadDataByCat();
                         defaultDisplay();
                         MessageBox.Show("File successfully archive!", "" + source, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //History Log
+                        user.activity = "Archived fisheries file in " + _category + " category...";
+                        user.user_id = loginfrm._log_id;
+                        user.createLog();
+                        //End Log
                     }
 
                 }
@@ -310,6 +336,12 @@ namespace FileTrackingSystem
             {
                 if (!string.IsNullOrEmpty(textBoxFileName.Text))
                 {
+                    //History Log
+                    user.activity = "Updated fisheries file in " + _category + " category...";
+                    user.user_id = loginfrm._log_id;
+                    user.createLog();
+                    //End Log
+
                     fc.file_name = textBoxFileName.Text;
                     fc.fname_extension = txtBoxChooseFile.Text;
                     fc.category = _category;

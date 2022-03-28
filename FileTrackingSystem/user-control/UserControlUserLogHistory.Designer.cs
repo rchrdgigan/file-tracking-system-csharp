@@ -41,12 +41,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -147,12 +147,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.Time,
+            this.Activity,
             this.FirstName,
             this.LastName,
-            this.Activity,
-            this.Role,
-            this.Date,
-            this.Time});
+            this.Role});
             this.dataGridView1.Location = new System.Drawing.Point(3, 79);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -182,6 +182,30 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker2.TabIndex = 153;
             // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "date";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.Width = 90;
+            // 
+            // Time
+            // 
+            this.Time.DataPropertyName = "time";
+            this.Time.HeaderText = "Time";
+            this.Time.Name = "Time";
+            this.Time.ReadOnly = true;
+            this.Time.Width = 90;
+            // 
+            // Activity
+            // 
+            this.Activity.DataPropertyName = "activity";
+            this.Activity.HeaderText = "Activity";
+            this.Activity.Name = "Activity";
+            this.Activity.ReadOnly = true;
+            this.Activity.Width = 350;
+            // 
             // FirstName
             // 
             this.FirstName.DataPropertyName = "fname";
@@ -198,36 +222,13 @@
             this.LastName.ReadOnly = true;
             this.LastName.Width = 150;
             // 
-            // Activity
-            // 
-            this.Activity.DataPropertyName = "username";
-            this.Activity.HeaderText = "Activity";
-            this.Activity.Name = "Activity";
-            this.Activity.ReadOnly = true;
-            this.Activity.Width = 250;
-            // 
             // Role
             // 
             this.Role.DataPropertyName = "role";
             this.Role.HeaderText = "Role";
             this.Role.Name = "Role";
             this.Role.ReadOnly = true;
-            this.Role.Width = 90;
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "created_at";
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            this.Date.Width = 130;
-            // 
-            // Time
-            // 
-            this.Time.HeaderText = "Time";
-            this.Time.Name = "Time";
-            this.Time.ReadOnly = true;
-            this.Time.Width = 130;
+            this.Role.Width = 70;
             // 
             // UserControlUserLogHistory
             // 
@@ -245,6 +246,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "UserControlUserLogHistory";
             this.Size = new System.Drawing.Size(947, 678);
+            this.Load += new System.EventHandler(this.UserControlUserLogHistory_Load);
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).EndInit();
@@ -270,11 +272,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Activity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Activity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
     }
 }

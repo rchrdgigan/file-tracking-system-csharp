@@ -71,7 +71,7 @@ namespace FileTrackingSystem
                 else
                 {
                     //History Log
-                    user.activity = "Delete account "+ textBoxUsername.Text +" in User Management...";
+                    user.activity = "Removed account in User Management..";
                     user.user_id = loginfrm._log_id;
                     user.createLog();
                     //End Log
@@ -107,6 +107,12 @@ namespace FileTrackingSystem
                 }
                 else
                 {
+                    //History Log
+                    user.activity = "Archived account in User Management..";
+                    user.user_id = loginfrm._log_id;
+                    user.createLog();
+                    //End Log
+
                     user.archive(textBoxUsername.Text);
                     loadData();
                     MessageBox.Show("Account successfully archived!", "Archive Data", MessageBoxButtons.OK, MessageBoxIcon.Information);

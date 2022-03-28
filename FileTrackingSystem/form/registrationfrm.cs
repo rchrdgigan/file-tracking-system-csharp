@@ -53,6 +53,12 @@ namespace FileTrackingSystem
                     user.create(roles);
                     if (user.message != "User Already Exist!")
                     {
+                        //History Log
+                        user.activity = "Created own Staff account in user registration...";
+                        user.user_id = user.modifId.ToString();
+                        user.createLog();
+                        //End Log
+
                         MessageBox.Show("" + user.message, "Register Succeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         lf.Show();
                         this.Close();
