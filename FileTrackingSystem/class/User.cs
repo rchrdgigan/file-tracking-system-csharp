@@ -27,6 +27,8 @@ namespace FileTrackingSystem
         public string user_id { get; set; }
 
         public string activity { get; set; }
+        public string date_from { get; set; }
+        public string date_to { get; set; }
 
         //Validate email function
         public bool IsValidEmail(string email)
@@ -282,7 +284,27 @@ namespace FileTrackingSystem
         {
             try
             {
-                string query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id ORDER BY history_log_tb.id DESC");
+                string query = "";
+                if (date_from != "" && date_to != "")
+                {
+                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHERE history_log_tb.date BETWEEN '"+ date_from +"' AND '"+ date_to +"' ORDER BY history_log_tb.id DESC");
+                }
+                else if(fname != "" && activity != "")
+                {
+                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHERE users_tb.fname LIKE '%" + fname + "%' AND  history_log_tb.activity LIKE '%" + activity + "%' ORDER BY history_log_tb.id DESC");
+                }
+                else if (fname != "")
+                {
+                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHERE users_tb.fname LIKE '%" + fname + "%' ORDER BY history_log_tb.id DESC");
+                }
+                else if (activity != "")
+                {
+                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHEREhistory_log_tb.activity LIKE '%" + activity + "%' ORDER BY history_log_tb.id DESC");
+                }
+                else
+                {
+                   query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id ORDER BY history_log_tb.id DESC");
+                }
                 MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
                 DataTable dt = new DataTable();
                 msda.Fill(dt);

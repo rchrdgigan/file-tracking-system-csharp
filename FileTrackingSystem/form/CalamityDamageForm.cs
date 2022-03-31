@@ -158,14 +158,14 @@ namespace FileTrackingSystem
             {
                 if (UserControlCalamityDamage.header_category == value[i])
                 {
-                    loadDataCat();
                     _category = value[i];
+                    loadDataCat();
                     dataGridView1.Columns["CalamityType"].Visible = false;
                 }
                 else if (UserControlCalamityDamage.header_category == "All Category")
                 {
-                    loadData();
                     _category = "";
+                    loadData();
                     comboBoxCatFil.Visible = true;
                     labelCatFil.Visible = true;
                     dataGridView1.Columns["colEdit"].Visible = false;

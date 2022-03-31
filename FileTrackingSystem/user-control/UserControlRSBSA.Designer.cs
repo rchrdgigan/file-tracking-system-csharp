@@ -172,6 +172,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(18, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(908, 527);
             this.dataGridView1.TabIndex = 143;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -190,6 +191,7 @@
             this.Surname.HeaderText = "Surname";
             this.Surname.Name = "Surname";
             this.Surname.ReadOnly = true;
+            this.Surname.Width = 150;
             // 
             // fname
             // 
@@ -197,6 +199,7 @@
             this.fname.HeaderText = "Fist Name ";
             this.fname.Name = "fname";
             this.fname.ReadOnly = true;
+            this.fname.Width = 150;
             // 
             // mname
             // 
@@ -204,6 +207,7 @@
             this.mname.HeaderText = "Middle Name";
             this.mname.Name = "mname";
             this.mname.ReadOnly = true;
+            this.mname.Width = 120;
             // 
             // sex
             // 
@@ -218,6 +222,7 @@
             this.purok.HeaderText = "Lot / BLDG. No. / Purok";
             this.purok.Name = "purok";
             this.purok.ReadOnly = true;
+            this.purok.Width = 160;
             // 
             // street
             // 
