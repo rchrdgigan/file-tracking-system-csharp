@@ -99,7 +99,7 @@
             this.buttonArchive.Name = "buttonArchive";
             this.buttonArchive.Size = new System.Drawing.Size(197, 52);
             this.buttonArchive.TabIndex = 16;
-            this.buttonArchive.Text = "ARCHIVE HISTORY";
+            this.buttonArchive.Text = "ARCHIVED HISTORY";
             this.buttonArchive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArchive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonArchive.UseVisualStyleBackColor = true;

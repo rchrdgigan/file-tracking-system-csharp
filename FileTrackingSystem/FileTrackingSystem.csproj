@@ -154,6 +154,12 @@
     <Compile Include="user-control\UserControlUserLogHistory.Designer.cs">
       <DependentUpon>UserControlUserLogHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="user-control\UserControlArchiveHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user-control\UserControlArchiveHistory.Designer.cs">
+      <DependentUpon>UserControlArchiveHistory.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="form\CalamityDamageForm.resx">
       <DependentUpon>CalamityDamageForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="user-control\UserControlUserLogHistory.resx">
       <DependentUpon>UserControlUserLogHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user-control\UserControlArchiveHistory.resx">
+      <DependentUpon>UserControlArchiveHistory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

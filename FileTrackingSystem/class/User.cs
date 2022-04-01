@@ -285,13 +285,9 @@ namespace FileTrackingSystem
             try
             {
                 string query = "";
-                if (date_from != "" && date_to != "")
+                if (!string.IsNullOrEmpty(fname) || !string.IsNullOrEmpty(activity))
                 {
-                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHERE history_log_tb.date BETWEEN '"+ date_from +"' AND '"+ date_to +"' ORDER BY history_log_tb.id DESC");
-                }
-                else if(fname != "" && activity != "")
-                {
-                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHERE users_tb.fname LIKE '%" + fname + "%' AND  history_log_tb.activity LIKE '%" + activity + "%' ORDER BY history_log_tb.id DESC");
+                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHERE users_tb.fname LIKE '%" + fname + "%' AND history_log_tb.activity LIKE '%" + activity + "%' ORDER BY history_log_tb.id DESC");
                 }
                 else if (fname != "")
                 {
@@ -299,7 +295,11 @@ namespace FileTrackingSystem
                 }
                 else if (activity != "")
                 {
-                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHEREhistory_log_tb.activity LIKE '%" + activity + "%' ORDER BY history_log_tb.id DESC");
+                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHERE history_log_tb.activity LIKE '%" + activity + "%' ORDER BY history_log_tb.id DESC");
+                }
+                else if (date_from != "" || date_to != "")
+                {
+                    query = ("SELECT history_log_tb.id, history_log_tb.date, history_log_tb.time, history_log_tb.activity, users_tb.fname, users_tb.lname, users_tb.role FROM history_log_tb LEFT JOIN users_tb ON history_log_tb.user_id = users_tb.id WHERE history_log_tb.date BETWEEN '" + date_from + "' AND '" + date_to + "' ORDER BY history_log_tb.id DESC");
                 }
                 else
                 {
