@@ -160,5 +160,16 @@ namespace FileTrackingSystem
             showPanel.Controls.Add(ulh);
             ulh.BringToFront();
         }
+
+        private void buttonArchive_Click(object sender, EventArgs e)
+        {
+            panelMark.Visible = true;
+            panelMark.Top = buttonArchive.Top;
+            panelMark.Height = buttonArchive.Height;
+
+            UserControlArchiveHistory arch_his = new UserControlArchiveHistory();
+            showPanel.Controls.Add(arch_his);
+            arch_his.BringToFront();
+        }
     }
 }

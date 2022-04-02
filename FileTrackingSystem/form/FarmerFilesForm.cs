@@ -295,7 +295,7 @@ namespace FileTrackingSystem
                                 source_path = value_archive_path[i];
                             }
                         }
-                        string fw = DateTime.Now.ToString("MM-dd-yyyy Hmmss-") + file_name;
+                        string fw = DateTime.Now.ToString("MM-dd-yyyy Hmmss-") + file_exten;
                         string source = source_path + fw;
                         string fwe = Path.GetFileNameWithoutExtension(source);
                         File.Move(destin_path + file_exten, source);

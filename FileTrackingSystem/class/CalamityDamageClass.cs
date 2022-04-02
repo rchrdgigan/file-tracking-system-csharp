@@ -198,7 +198,7 @@ namespace FileTrackingSystem
             }
         }
 
-         public void archive(int id)
+        public void archive(int id)
         {
             try
             {
@@ -289,6 +289,30 @@ namespace FileTrackingSystem
                 }
                 con.Close();
 
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+
+        public void unarchive(int id)
+        {
+            try
+            {
+                con.Open();
+                DateTime updated_at = DateTime.Now;
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "UPDATE `calamity_damage_tb` SET `status`='Normal' WHERE id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                    cmd.Parameters.AddWithValue("@updated_at", updated_at);
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
             }
             catch (Exception ex)
             {

@@ -208,5 +208,34 @@ namespace FileTrackingSystem
             }
         }
 
+        public void archiveList(string category)
+        {
+            string query = "";
+            if (category == "Capture Fishery")
+            {
+                query = ("SELECT * FROM fisheries_files_tb WHERE category='Capture Fishery' AND status='Archive' ORDER BY id DESC");
+            }
+            else if (category == "Mariculture Fishing")
+            {
+                query = ("SELECT * FROM fisheries_files_tb WHERE category='Mariculture Fishing' AND status='Archive' ORDER BY id DESC");
+            }
+            else if (category == "Illegal Fishing")
+            {
+                query = ("SELECT * FROM fisheries_files_tb WHERE category='Illegal Fishing' AND status='Archive' ORDER BY id DESC");
+            }
+            else if (category == "Coastal Resources")
+            {
+                query = ("SELECT * FROM fisheries_files_tb WHERE category='Coastal Resources' AND status='Archive' ORDER BY id DESC");
+            }
+            else
+            {
+                query = ("SELECT * FROM fisheries_files_tb WHERE status='Archive' ORDER BY id DESC");
+            }
+            MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            msda.Fill(dt);
+            dtable = dt;
+        }
+
     }
 }

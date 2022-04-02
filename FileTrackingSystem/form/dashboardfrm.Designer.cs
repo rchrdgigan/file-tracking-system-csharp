@@ -103,6 +103,7 @@
             this.buttonArchive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonArchive.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonArchive.UseVisualStyleBackColor = true;
+            this.buttonArchive.Click += new System.EventHandler(this.buttonArchive_Click);
             // 
             // pictureBox4
             // 

@@ -82,6 +82,11 @@ namespace FileTrackingSystem
             buttonCancel.Enabled = false;
             textBoxFileName.Clear();
             txtBoxChooseFile.Clear();
+            file_name = "";
+            fname_without_extension = "";
+            source_path = "";
+            destin_path = "";
+            up_id = "";
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
@@ -286,7 +291,7 @@ namespace FileTrackingSystem
                                 source_path = value_archive_path[i];
                             }
                         }
-                        string fw = DateTime.Now.ToString("MM-dd-yyyy Hmmss-") + file_name;
+                        string fw = DateTime.Now.ToString("MM-dd-yyyy Hmmss-") + file_exten;
                         string source = source_path + fw;
                         string fwe = Path.GetFileNameWithoutExtension(source);
                         File.Move(destin_path + file_exten, source);

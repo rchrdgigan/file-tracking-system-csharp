@@ -205,5 +205,35 @@ namespace FileTrackingSystem
                 message = "error" + ex.ToString();
             }
         }
+
+        public void archiveList(string category)
+        {
+            string query = "";
+            if (category == "Masterlist of Rice Farmers")
+            {
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Masterlist of Rice Farmers' AND status='Archive' ORDER BY id DESC");
+            }
+            else if (category == "Hybrid Users")
+            {
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Hybrid Users' AND status='Archive' ORDER BY id DESC");
+            }
+            else if (category == "Certified Seeds User")
+            {
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Certified Seeds User' AND status='Archive' ORDER BY id DESC");
+            }
+            else if (category == "Fertilizer Users")
+            {
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Fertilizer Users' AND status='Archive' ORDER BY id DESC");
+            }
+            else
+            {
+                query = ("SELECT * FROM farmers_files_tb WHERE status='Normal' ORDER BY id DESC");
+            }
+            MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            msda.Fill(dt);
+            dtable = dt;
+        }
+
     }
 }

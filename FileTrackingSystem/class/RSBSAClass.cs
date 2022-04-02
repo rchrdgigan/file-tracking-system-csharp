@@ -512,5 +512,36 @@ namespace FileTrackingSystem
                 message = "error" + ex.ToString();
             }
         }
+
+        public void showArchive()
+        {
+            string query = ("SELECT * FROM rsbsa_tb WHERE status='Archive' ORDER BY id DESC");
+            MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            msda.Fill(dt);
+            dtable = dt;
+        }
+
+        //Archive function of RSBSA
+        public void unarchiveRSBSA(string id)
+        {
+            try
+            {
+                con.Open();
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "UPDATE `rsbsa_tb` SET `status`='Normal' WHERE id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
     }
 }
