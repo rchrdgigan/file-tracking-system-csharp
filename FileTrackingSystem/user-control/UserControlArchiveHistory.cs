@@ -18,6 +18,8 @@ namespace FileTrackingSystem
         FarmerClass far = new FarmerClass();
         FisheriesClass fsh = new FisheriesClass();
         CalamityDamageClass cdc = new CalamityDamageClass();
+        User uc = new User();
+
 
         private string far_cat = "";
         private string fsh_cat = "";
@@ -120,6 +122,7 @@ namespace FileTrackingSystem
                 dataGridView9.DataSource = fsh.dtable;
             }
 
+            //show list of archived calamity damage data
             cdc.archiveList(cal_cat);
             if(cal_cat == "Flood")
             {
@@ -236,6 +239,11 @@ namespace FileTrackingSystem
                     dataGridView14.Rows[n].Cells[14].Value = item[0];
                 }
             }
+
+            //show archived user account
+            user.listArchivedUser();
+            dataGridView15.AutoGenerateColumns = false;
+            dataGridView15.DataSource = user.dtable;
         }
 
         private void selectDelOrDL()
@@ -675,6 +683,55 @@ namespace FileTrackingSystem
             data_id = row.Cells["salf_id"].Value.ToString();
 
             calDelOrUnarchive();
+        }
+
+        private void dataGridView15_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnIndex = dataGridView15.CurrentCell.ColumnIndex;
+            string columnName = dataGridView15.Columns[columnIndex].Name;
+            try
+            {
+                DataGridViewRow row = this.dataGridView15.Rows[e.RowIndex];
+                string username = row.Cells["Username"].Value.ToString();
+
+                if (columnName == "colDel")
+                {
+                    DialogResult result = MessageBox.Show("Are you sure want to delete this file?", "Deleting Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        user.delUser(username);
+                        loadDataArchive();
+                        MessageBox.Show("Successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //History Log
+                        user.activity = "Delete archived User account data...";
+                        user.user_id = loginfrm._log_id;
+                        user.createLog();
+                        //End Log
+                    }
+                }
+                else if (columnName == "colUnArchived")
+                {
+                    DialogResult result = MessageBox.Show("Are you sure want to unarchive this data?", "Unarchive Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        user.unarchive(username);
+                        loadDataArchive();
+                        MessageBox.Show("Successfully unarchive!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //History Log
+                        user.activity = "Unarchive User account data...";
+                        user.user_id = loginfrm._log_id;
+                        user.createLog();
+                        //End Log
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

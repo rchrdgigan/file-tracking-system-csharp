@@ -213,15 +213,6 @@
             this.pictureBox43 = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.dataGridView15 = new System.Windows.Forms.DataGridView();
-            this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colUnArchived = new System.Windows.Forms.DataGridViewImageColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel16 = new System.Windows.Forms.Panel();
             this.labelCountUser = new System.Windows.Forms.Label();
             this.pictureBox44 = new System.Windows.Forms.PictureBox();
@@ -303,6 +294,15 @@
             this.dataGridViewTextBoxColumn87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salf_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colUnArchived = new System.Windows.Forms.DataGridViewImageColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -2543,75 +2543,7 @@
             this.dataGridView15.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView15.Size = new System.Drawing.Size(922, 545);
             this.dataGridView15.TabIndex = 140;
-            // 
-            // colDelete
-            // 
-            this.colDelete.HeaderText = "Delete";
-            this.colDelete.Name = "colDelete";
-            this.colDelete.ReadOnly = true;
-            this.colDelete.Width = 50;
-            // 
-            // colUnArchived
-            // 
-            this.colUnArchived.HeaderText = "Unarchive";
-            this.colUnArchived.Name = "colUnArchived";
-            this.colUnArchived.ReadOnly = true;
-            this.colUnArchived.Width = 50;
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "fname";
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            this.FirstName.Width = 120;
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "lname";
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            this.LastName.Width = 120;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 200;
-            // 
-            // Contact
-            // 
-            this.Contact.DataPropertyName = "contact";
-            this.Contact.HeaderText = "Contact Number";
-            this.Contact.Name = "Contact";
-            this.Contact.ReadOnly = true;
-            this.Contact.Width = 150;
-            // 
-            // Username
-            // 
-            this.Username.DataPropertyName = "username";
-            this.Username.HeaderText = "Username";
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            // 
-            // Role
-            // 
-            this.Role.DataPropertyName = "role";
-            this.Role.HeaderText = "Role";
-            this.Role.Name = "Role";
-            this.Role.ReadOnly = true;
-            this.Role.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn90
-            // 
-            this.dataGridViewTextBoxColumn90.DataPropertyName = "created_at";
-            this.dataGridViewTextBoxColumn90.HeaderText = "Created At";
-            this.dataGridViewTextBoxColumn90.Name = "dataGridViewTextBoxColumn90";
-            this.dataGridViewTextBoxColumn90.ReadOnly = true;
-            this.dataGridViewTextBoxColumn90.Width = 120;
+            this.dataGridView15.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView15_CellClick);
             // 
             // panel16
             // 
@@ -3239,6 +3171,77 @@
             this.salf_id.ReadOnly = true;
             this.salf_id.Visible = false;
             // 
+            // colDelete
+            // 
+            this.colDelete.HeaderText = "Delete";
+            this.colDelete.Image = ((System.Drawing.Image)(resources.GetObject("colDelete.Image")));
+            this.colDelete.Name = "colDelete";
+            this.colDelete.ReadOnly = true;
+            this.colDelete.Width = 50;
+            // 
+            // colUnArchived
+            // 
+            this.colUnArchived.HeaderText = "Unarchive";
+            this.colUnArchived.Image = ((System.Drawing.Image)(resources.GetObject("colUnArchived.Image")));
+            this.colUnArchived.Name = "colUnArchived";
+            this.colUnArchived.ReadOnly = true;
+            this.colUnArchived.Width = 50;
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "fname";
+            this.FirstName.HeaderText = "First Name";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            this.FirstName.Width = 120;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "lname";
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            this.LastName.Width = 120;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 200;
+            // 
+            // Contact
+            // 
+            this.Contact.DataPropertyName = "contact";
+            this.Contact.HeaderText = "Contact Number";
+            this.Contact.Name = "Contact";
+            this.Contact.ReadOnly = true;
+            this.Contact.Width = 150;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "username";
+            this.Username.HeaderText = "Username";
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            // 
+            // Role
+            // 
+            this.Role.DataPropertyName = "role";
+            this.Role.HeaderText = "Role";
+            this.Role.Name = "Role";
+            this.Role.ReadOnly = true;
+            this.Role.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn90
+            // 
+            this.dataGridViewTextBoxColumn90.DataPropertyName = "created_at";
+            this.dataGridViewTextBoxColumn90.HeaderText = "Created At";
+            this.dataGridViewTextBoxColumn90.Name = "dataGridViewTextBoxColumn90";
+            this.dataGridViewTextBoxColumn90.ReadOnly = true;
+            this.dataGridViewTextBoxColumn90.Width = 120;
+            // 
             // UserControlArchiveHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -3493,15 +3496,6 @@
         internal System.Windows.Forms.Label label16;
         internal System.Windows.Forms.PictureBox pictureBox46;
         private System.Windows.Forms.DataGridView dataGridView15;
-        private System.Windows.Forms.DataGridViewImageColumn colDelete;
-        private System.Windows.Forms.DataGridViewImageColumn colUnArchived;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn90;
         private System.Windows.Forms.DataGridViewTextBoxColumn rsbsa_id;
         private System.Windows.Forms.DataGridViewImageColumn colDel;
         private System.Windows.Forms.DataGridViewImageColumn colUnarchive;
@@ -3647,5 +3641,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn87;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn88;
         private System.Windows.Forms.DataGridViewTextBoxColumn salf_id;
+        private System.Windows.Forms.DataGridViewImageColumn colDelete;
+        private System.Windows.Forms.DataGridViewImageColumn colUnArchived;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Contact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn90;
     }
 }

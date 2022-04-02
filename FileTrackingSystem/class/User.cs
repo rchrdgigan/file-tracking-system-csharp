@@ -316,5 +316,35 @@ namespace FileTrackingSystem
             }
         }
 
+        public void listArchivedUser()
+        {
+            string query = ("SELECT * FROM users_tb WHERE status='Archive' ORDER BY id DESC");
+            MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            msda.Fill(dt);
+            dtable = dt;
+        }
+
+        public void unarchive(string uname)
+        {
+            try
+            {
+                con.Open();
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "UPDATE `users_tb` SET `status`='Normal' WHERE username=@uname";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@uname", MySqlDbType.VarChar).Value = uname;
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
     }
 }
