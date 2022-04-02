@@ -178,21 +178,6 @@
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPageFlood = new System.Windows.Forms.TabPage();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn23 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colArchive = new System.Windows.Forms.DataGridViewImageColumn();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Occupation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CTCNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CTCDateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CTCPlaceIssued = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BudjetFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CalamityType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CalamityID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
@@ -200,21 +185,6 @@
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.tabPageTyphoon = new System.Windows.Forms.TabPage();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn24 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn26 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
@@ -222,21 +192,6 @@
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.tabPageDrought = new System.Windows.Forms.TabPage();
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn27 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn29 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
@@ -244,21 +199,6 @@
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
             this.tabPageAsh = new System.Windows.Forms.TabPage();
             this.dataGridView13 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn30 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn32 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
             this.pictureBox39 = new System.Windows.Forms.PictureBox();
@@ -266,21 +206,6 @@
             this.pictureBox40 = new System.Windows.Forms.PictureBox();
             this.tabPageSalt = new System.Windows.Forms.TabPage();
             this.dataGridView14 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn33 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn35 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn86 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn89 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel15 = new System.Windows.Forms.Panel();
             this.pictureBox41 = new System.Windows.Forms.PictureBox();
             this.pictureBox42 = new System.Windows.Forms.PictureBox();
@@ -303,6 +228,81 @@
             this.pictureBox45 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox46 = new System.Windows.Forms.PictureBox();
+            this.flood_del = new System.Windows.Forms.DataGridViewImageColumn();
+            this.flood_arc = new System.Windows.Forms.DataGridViewImageColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Occupation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTCNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTCDateCreate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTCPlaceIssued = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BudjetFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CalamityType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flood_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typhoon_del = new System.Windows.Forms.DataGridViewImageColumn();
+            this.typhoon_arc = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typhoon_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drought_del = new System.Windows.Forms.DataGridViewImageColumn();
+            this.drought_arc = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn54 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn55 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drought_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ash_del = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ash_arc = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ash_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salf_del = new System.Windows.Forms.DataGridViewImageColumn();
+            this.salf_arc = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn86 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salf_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRefresh)).BeginInit();
@@ -842,7 +842,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox4.Location = new System.Drawing.Point(336, 5);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 24);
@@ -867,7 +867,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label1.Location = new System.Drawing.Point(29, 8);
+            this.label1.Location = new System.Drawing.Point(363, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 19);
             this.label1.TabIndex = 35;
@@ -994,7 +994,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox8.Location = new System.Drawing.Point(336, 5);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(31, 24);
@@ -1019,7 +1019,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label4.Location = new System.Drawing.Point(29, 8);
+            this.label4.Location = new System.Drawing.Point(363, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 19);
             this.label4.TabIndex = 35;
@@ -1146,7 +1146,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox11.Location = new System.Drawing.Point(336, 5);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(31, 24);
@@ -1171,7 +1171,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label5.Location = new System.Drawing.Point(29, 8);
+            this.label5.Location = new System.Drawing.Point(363, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(198, 19);
             this.label5.TabIndex = 35;
@@ -1298,7 +1298,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox14.Location = new System.Drawing.Point(336, 5);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(31, 24);
@@ -1323,7 +1323,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label6.Location = new System.Drawing.Point(29, 8);
+            this.label6.Location = new System.Drawing.Point(363, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(198, 19);
             this.label6.TabIndex = 35;
@@ -1474,7 +1474,7 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox17.Location = new System.Drawing.Point(336, 5);
             this.pictureBox17.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(31, 24);
@@ -1499,7 +1499,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label7.Location = new System.Drawing.Point(29, 8);
+            this.label7.Location = new System.Drawing.Point(363, 7);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(198, 19);
             this.label7.TabIndex = 35;
@@ -1626,7 +1626,7 @@
             // pictureBox20
             // 
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox20.Location = new System.Drawing.Point(336, 5);
             this.pictureBox20.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(31, 24);
@@ -1651,7 +1651,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label8.Location = new System.Drawing.Point(29, 8);
+            this.label8.Location = new System.Drawing.Point(363, 7);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(198, 19);
             this.label8.TabIndex = 35;
@@ -1778,7 +1778,7 @@
             // pictureBox23
             // 
             this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox23.Location = new System.Drawing.Point(336, 5);
             this.pictureBox23.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(31, 24);
@@ -1803,7 +1803,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label9.Location = new System.Drawing.Point(29, 8);
+            this.label9.Location = new System.Drawing.Point(363, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(198, 19);
             this.label9.TabIndex = 35;
@@ -1930,7 +1930,7 @@
             // pictureBox26
             // 
             this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
-            this.pictureBox26.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox26.Location = new System.Drawing.Point(336, 5);
             this.pictureBox26.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(31, 24);
@@ -1955,7 +1955,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label10.Location = new System.Drawing.Point(29, 8);
+            this.label10.Location = new System.Drawing.Point(363, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(198, 19);
             this.label10.TabIndex = 35;
@@ -2018,8 +2018,8 @@
             this.dataGridView10.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn23,
-            this.colArchive,
+            this.flood_del,
+            this.flood_arc,
             this.FullName,
             this.Occupation,
             this.Address,
@@ -2032,123 +2032,13 @@
             this.BudjetFrom,
             this.DateFrom,
             this.CalamityType,
-            this.CalamityID});
+            this.flood_id});
             this.dataGridView10.Location = new System.Drawing.Point(6, 45);
             this.dataGridView10.Name = "dataGridView10";
             this.dataGridView10.ReadOnly = true;
             this.dataGridView10.Size = new System.Drawing.Size(901, 503);
             this.dataGridView10.TabIndex = 140;
-            // 
-            // dataGridViewImageColumn23
-            // 
-            this.dataGridViewImageColumn23.HeaderText = "Delete";
-            this.dataGridViewImageColumn23.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn23.Image")));
-            this.dataGridViewImageColumn23.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn23.Name = "dataGridViewImageColumn23";
-            this.dataGridViewImageColumn23.ReadOnly = true;
-            this.dataGridViewImageColumn23.Width = 40;
-            // 
-            // colArchive
-            // 
-            this.colArchive.HeaderText = "Unarchive";
-            this.colArchive.Image = ((System.Drawing.Image)(resources.GetObject("colArchive.Image")));
-            this.colArchive.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.colArchive.Name = "colArchive";
-            this.colArchive.ReadOnly = true;
-            this.colArchive.Width = 40;
-            // 
-            // FullName
-            // 
-            this.FullName.HeaderText = "Full Name";
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            // 
-            // Occupation
-            // 
-            this.Occupation.HeaderText = "Occupation";
-            this.Occupation.Name = "Occupation";
-            this.Occupation.ReadOnly = true;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Address";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            // 
-            // AmountPaid
-            // 
-            this.AmountPaid.HeaderText = "Amount Paid";
-            this.AmountPaid.Name = "AmountPaid";
-            this.AmountPaid.ReadOnly = true;
-            this.AmountPaid.Width = 150;
-            // 
-            // CTCNumber
-            // 
-            this.CTCNumber.HeaderText = "Cedula Number";
-            this.CTCNumber.Name = "CTCNumber";
-            this.CTCNumber.ReadOnly = true;
-            this.CTCNumber.Width = 150;
-            // 
-            // CTCDateCreate
-            // 
-            this.CTCDateCreate.HeaderText = "Cedula Date Created";
-            this.CTCDateCreate.Name = "CTCDateCreate";
-            this.CTCDateCreate.ReadOnly = true;
-            this.CTCDateCreate.Width = 160;
-            // 
-            // CTCPlaceIssued
-            // 
-            this.CTCPlaceIssued.HeaderText = "Cedula Place Issued";
-            this.CTCPlaceIssued.Name = "CTCPlaceIssued";
-            this.CTCPlaceIssued.ReadOnly = true;
-            this.CTCPlaceIssued.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.DataPropertyName = "created_at";
-            this.dataGridViewTextBoxColumn36.HeaderText = "Created Date";
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            this.dataGridViewTextBoxColumn36.ReadOnly = true;
-            this.dataGridViewTextBoxColumn36.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "updated_at";
-            this.dataGridViewTextBoxColumn37.HeaderText = "Updated Date";
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            this.dataGridViewTextBoxColumn37.ReadOnly = true;
-            this.dataGridViewTextBoxColumn37.Width = 120;
-            // 
-            // BudjetFrom
-            // 
-            this.BudjetFrom.DataPropertyName = "budget_from";
-            this.BudjetFrom.HeaderText = "Budget From";
-            this.BudjetFrom.Name = "BudjetFrom";
-            this.BudjetFrom.ReadOnly = true;
-            this.BudjetFrom.Width = 250;
-            // 
-            // DateFrom
-            // 
-            this.DateFrom.HeaderText = "Started Calamity Damage";
-            this.DateFrom.Name = "DateFrom";
-            this.DateFrom.ReadOnly = true;
-            this.DateFrom.Width = 200;
-            // 
-            // CalamityType
-            // 
-            this.CalamityType.DataPropertyName = "calamity_type";
-            this.CalamityType.HeaderText = "Calamity Types";
-            this.CalamityType.Name = "CalamityType";
-            this.CalamityType.ReadOnly = true;
-            this.CalamityType.Width = 150;
-            // 
-            // CalamityID
-            // 
-            this.CalamityID.DataPropertyName = "id";
-            this.CalamityID.HeaderText = "Calamity ID";
-            this.CalamityID.Name = "CalamityID";
-            this.CalamityID.ReadOnly = true;
-            this.CalamityID.Visible = false;
+            this.dataGridView10.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView10_CellClick);
             // 
             // panel11
             // 
@@ -2167,7 +2057,7 @@
             // pictureBox29
             // 
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox29.Location = new System.Drawing.Point(358, 5);
             this.pictureBox29.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(31, 24);
@@ -2192,7 +2082,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label11.Location = new System.Drawing.Point(29, 8);
+            this.label11.Location = new System.Drawing.Point(385, 7);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(143, 19);
             this.label11.TabIndex = 35;
@@ -2230,8 +2120,8 @@
             this.dataGridView11.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView11.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn24,
-            this.dataGridViewImageColumn26,
+            this.typhoon_del,
+            this.typhoon_arc,
             this.dataGridViewTextBoxColumn38,
             this.dataGridViewTextBoxColumn39,
             this.dataGridViewTextBoxColumn40,
@@ -2244,123 +2134,13 @@
             this.dataGridViewTextBoxColumn47,
             this.dataGridViewTextBoxColumn48,
             this.dataGridViewTextBoxColumn49,
-            this.dataGridViewTextBoxColumn50});
+            this.typhoon_id});
             this.dataGridView11.Location = new System.Drawing.Point(6, 45);
             this.dataGridView11.Name = "dataGridView11";
             this.dataGridView11.ReadOnly = true;
             this.dataGridView11.Size = new System.Drawing.Size(901, 503);
             this.dataGridView11.TabIndex = 142;
-            // 
-            // dataGridViewImageColumn24
-            // 
-            this.dataGridViewImageColumn24.HeaderText = "Delete";
-            this.dataGridViewImageColumn24.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn24.Image")));
-            this.dataGridViewImageColumn24.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn24.Name = "dataGridViewImageColumn24";
-            this.dataGridViewImageColumn24.ReadOnly = true;
-            this.dataGridViewImageColumn24.Width = 40;
-            // 
-            // dataGridViewImageColumn26
-            // 
-            this.dataGridViewImageColumn26.HeaderText = "Unarchive";
-            this.dataGridViewImageColumn26.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn26.Image")));
-            this.dataGridViewImageColumn26.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn26.Name = "dataGridViewImageColumn26";
-            this.dataGridViewImageColumn26.ReadOnly = true;
-            this.dataGridViewImageColumn26.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.HeaderText = "Full Name";
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            this.dataGridViewTextBoxColumn38.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.HeaderText = "Occupation";
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            this.dataGridViewTextBoxColumn39.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            this.dataGridViewTextBoxColumn40.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.HeaderText = "Amount Paid";
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            this.dataGridViewTextBoxColumn41.ReadOnly = true;
-            this.dataGridViewTextBoxColumn41.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            this.dataGridViewTextBoxColumn42.HeaderText = "Cedula Number";
-            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
-            this.dataGridViewTextBoxColumn42.ReadOnly = true;
-            this.dataGridViewTextBoxColumn42.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this.dataGridViewTextBoxColumn43.HeaderText = "Cedula Date Created";
-            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
-            this.dataGridViewTextBoxColumn43.ReadOnly = true;
-            this.dataGridViewTextBoxColumn43.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this.dataGridViewTextBoxColumn44.HeaderText = "Cedula Place Issued";
-            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
-            this.dataGridViewTextBoxColumn44.ReadOnly = true;
-            this.dataGridViewTextBoxColumn44.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            this.dataGridViewTextBoxColumn45.DataPropertyName = "created_at";
-            this.dataGridViewTextBoxColumn45.HeaderText = "Created Date";
-            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
-            this.dataGridViewTextBoxColumn45.ReadOnly = true;
-            this.dataGridViewTextBoxColumn45.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn46
-            // 
-            this.dataGridViewTextBoxColumn46.DataPropertyName = "updated_at";
-            this.dataGridViewTextBoxColumn46.HeaderText = "Updated Date";
-            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
-            this.dataGridViewTextBoxColumn46.ReadOnly = true;
-            this.dataGridViewTextBoxColumn46.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn47
-            // 
-            this.dataGridViewTextBoxColumn47.DataPropertyName = "budget_from";
-            this.dataGridViewTextBoxColumn47.HeaderText = "Budget From";
-            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
-            this.dataGridViewTextBoxColumn47.ReadOnly = true;
-            this.dataGridViewTextBoxColumn47.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn48
-            // 
-            this.dataGridViewTextBoxColumn48.HeaderText = "Started Calamity Damage";
-            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
-            this.dataGridViewTextBoxColumn48.ReadOnly = true;
-            this.dataGridViewTextBoxColumn48.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn49
-            // 
-            this.dataGridViewTextBoxColumn49.DataPropertyName = "calamity_type";
-            this.dataGridViewTextBoxColumn49.HeaderText = "Calamity Types";
-            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
-            this.dataGridViewTextBoxColumn49.ReadOnly = true;
-            this.dataGridViewTextBoxColumn49.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn50
-            // 
-            this.dataGridViewTextBoxColumn50.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn50.HeaderText = "Calamity ID";
-            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
-            this.dataGridViewTextBoxColumn50.ReadOnly = true;
-            this.dataGridViewTextBoxColumn50.Visible = false;
+            this.dataGridView11.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView11_CellClick);
             // 
             // panel12
             // 
@@ -2379,7 +2159,7 @@
             // pictureBox32
             // 
             this.pictureBox32.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox32.Image")));
-            this.pictureBox32.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox32.Location = new System.Drawing.Point(348, 5);
             this.pictureBox32.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(31, 24);
@@ -2404,7 +2184,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label12.Location = new System.Drawing.Point(29, 8);
+            this.label12.Location = new System.Drawing.Point(375, 7);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(166, 19);
             this.label12.TabIndex = 35;
@@ -2442,8 +2222,8 @@
             this.dataGridView12.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn27,
-            this.dataGridViewImageColumn29,
+            this.drought_del,
+            this.drought_arc,
             this.dataGridViewTextBoxColumn51,
             this.dataGridViewTextBoxColumn52,
             this.dataGridViewTextBoxColumn53,
@@ -2456,123 +2236,13 @@
             this.dataGridViewTextBoxColumn60,
             this.dataGridViewTextBoxColumn61,
             this.dataGridViewTextBoxColumn62,
-            this.dataGridViewTextBoxColumn63});
+            this.drought_id});
             this.dataGridView12.Location = new System.Drawing.Point(6, 45);
             this.dataGridView12.Name = "dataGridView12";
             this.dataGridView12.ReadOnly = true;
             this.dataGridView12.Size = new System.Drawing.Size(901, 503);
             this.dataGridView12.TabIndex = 143;
-            // 
-            // dataGridViewImageColumn27
-            // 
-            this.dataGridViewImageColumn27.HeaderText = "Delete";
-            this.dataGridViewImageColumn27.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn27.Image")));
-            this.dataGridViewImageColumn27.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn27.Name = "dataGridViewImageColumn27";
-            this.dataGridViewImageColumn27.ReadOnly = true;
-            this.dataGridViewImageColumn27.Width = 40;
-            // 
-            // dataGridViewImageColumn29
-            // 
-            this.dataGridViewImageColumn29.HeaderText = "Unarchive";
-            this.dataGridViewImageColumn29.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn29.Image")));
-            this.dataGridViewImageColumn29.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn29.Name = "dataGridViewImageColumn29";
-            this.dataGridViewImageColumn29.ReadOnly = true;
-            this.dataGridViewImageColumn29.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn51
-            // 
-            this.dataGridViewTextBoxColumn51.HeaderText = "Full Name";
-            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
-            this.dataGridViewTextBoxColumn51.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn52
-            // 
-            this.dataGridViewTextBoxColumn52.HeaderText = "Occupation";
-            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
-            this.dataGridViewTextBoxColumn52.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn53
-            // 
-            this.dataGridViewTextBoxColumn53.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
-            this.dataGridViewTextBoxColumn53.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn54
-            // 
-            this.dataGridViewTextBoxColumn54.HeaderText = "Amount Paid";
-            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
-            this.dataGridViewTextBoxColumn54.ReadOnly = true;
-            this.dataGridViewTextBoxColumn54.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn55
-            // 
-            this.dataGridViewTextBoxColumn55.HeaderText = "Cedula Number";
-            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
-            this.dataGridViewTextBoxColumn55.ReadOnly = true;
-            this.dataGridViewTextBoxColumn55.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn56
-            // 
-            this.dataGridViewTextBoxColumn56.HeaderText = "Cedula Date Created";
-            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
-            this.dataGridViewTextBoxColumn56.ReadOnly = true;
-            this.dataGridViewTextBoxColumn56.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn57
-            // 
-            this.dataGridViewTextBoxColumn57.HeaderText = "Cedula Place Issued";
-            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
-            this.dataGridViewTextBoxColumn57.ReadOnly = true;
-            this.dataGridViewTextBoxColumn57.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn58
-            // 
-            this.dataGridViewTextBoxColumn58.DataPropertyName = "created_at";
-            this.dataGridViewTextBoxColumn58.HeaderText = "Created Date";
-            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
-            this.dataGridViewTextBoxColumn58.ReadOnly = true;
-            this.dataGridViewTextBoxColumn58.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn59
-            // 
-            this.dataGridViewTextBoxColumn59.DataPropertyName = "updated_at";
-            this.dataGridViewTextBoxColumn59.HeaderText = "Updated Date";
-            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
-            this.dataGridViewTextBoxColumn59.ReadOnly = true;
-            this.dataGridViewTextBoxColumn59.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn60
-            // 
-            this.dataGridViewTextBoxColumn60.DataPropertyName = "budget_from";
-            this.dataGridViewTextBoxColumn60.HeaderText = "Budget From";
-            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
-            this.dataGridViewTextBoxColumn60.ReadOnly = true;
-            this.dataGridViewTextBoxColumn60.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn61
-            // 
-            this.dataGridViewTextBoxColumn61.HeaderText = "Started Calamity Damage";
-            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
-            this.dataGridViewTextBoxColumn61.ReadOnly = true;
-            this.dataGridViewTextBoxColumn61.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn62
-            // 
-            this.dataGridViewTextBoxColumn62.DataPropertyName = "calamity_type";
-            this.dataGridViewTextBoxColumn62.HeaderText = "Calamity Types";
-            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
-            this.dataGridViewTextBoxColumn62.ReadOnly = true;
-            this.dataGridViewTextBoxColumn62.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn63
-            // 
-            this.dataGridViewTextBoxColumn63.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn63.HeaderText = "Calamity ID";
-            this.dataGridViewTextBoxColumn63.Name = "dataGridViewTextBoxColumn63";
-            this.dataGridViewTextBoxColumn63.ReadOnly = true;
-            this.dataGridViewTextBoxColumn63.Visible = false;
+            this.dataGridView12.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView12_CellClick);
             // 
             // panel13
             // 
@@ -2591,7 +2261,7 @@
             // pictureBox35
             // 
             this.pictureBox35.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox35.Image")));
-            this.pictureBox35.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox35.Location = new System.Drawing.Point(349, 5);
             this.pictureBox35.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(31, 24);
@@ -2616,7 +2286,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label13.Location = new System.Drawing.Point(29, 8);
+            this.label13.Location = new System.Drawing.Point(376, 7);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(165, 19);
             this.label13.TabIndex = 35;
@@ -2654,8 +2324,8 @@
             this.dataGridView13.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn30,
-            this.dataGridViewImageColumn32,
+            this.ash_del,
+            this.ash_arc,
             this.dataGridViewTextBoxColumn64,
             this.dataGridViewTextBoxColumn65,
             this.dataGridViewTextBoxColumn66,
@@ -2668,123 +2338,13 @@
             this.dataGridViewTextBoxColumn73,
             this.dataGridViewTextBoxColumn74,
             this.dataGridViewTextBoxColumn75,
-            this.dataGridViewTextBoxColumn76});
+            this.ash_id});
             this.dataGridView13.Location = new System.Drawing.Point(6, 45);
             this.dataGridView13.Name = "dataGridView13";
             this.dataGridView13.ReadOnly = true;
             this.dataGridView13.Size = new System.Drawing.Size(901, 503);
             this.dataGridView13.TabIndex = 144;
-            // 
-            // dataGridViewImageColumn30
-            // 
-            this.dataGridViewImageColumn30.HeaderText = "Delete";
-            this.dataGridViewImageColumn30.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn30.Image")));
-            this.dataGridViewImageColumn30.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn30.Name = "dataGridViewImageColumn30";
-            this.dataGridViewImageColumn30.ReadOnly = true;
-            this.dataGridViewImageColumn30.Width = 40;
-            // 
-            // dataGridViewImageColumn32
-            // 
-            this.dataGridViewImageColumn32.HeaderText = "Unarchive";
-            this.dataGridViewImageColumn32.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn32.Image")));
-            this.dataGridViewImageColumn32.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn32.Name = "dataGridViewImageColumn32";
-            this.dataGridViewImageColumn32.ReadOnly = true;
-            this.dataGridViewImageColumn32.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn64
-            // 
-            this.dataGridViewTextBoxColumn64.HeaderText = "Full Name";
-            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
-            this.dataGridViewTextBoxColumn64.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn65
-            // 
-            this.dataGridViewTextBoxColumn65.HeaderText = "Occupation";
-            this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
-            this.dataGridViewTextBoxColumn65.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn66
-            // 
-            this.dataGridViewTextBoxColumn66.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
-            this.dataGridViewTextBoxColumn66.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn67
-            // 
-            this.dataGridViewTextBoxColumn67.HeaderText = "Amount Paid";
-            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
-            this.dataGridViewTextBoxColumn67.ReadOnly = true;
-            this.dataGridViewTextBoxColumn67.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn68
-            // 
-            this.dataGridViewTextBoxColumn68.HeaderText = "Cedula Number";
-            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
-            this.dataGridViewTextBoxColumn68.ReadOnly = true;
-            this.dataGridViewTextBoxColumn68.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn69
-            // 
-            this.dataGridViewTextBoxColumn69.HeaderText = "Cedula Date Created";
-            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
-            this.dataGridViewTextBoxColumn69.ReadOnly = true;
-            this.dataGridViewTextBoxColumn69.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn70
-            // 
-            this.dataGridViewTextBoxColumn70.HeaderText = "Cedula Place Issued";
-            this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
-            this.dataGridViewTextBoxColumn70.ReadOnly = true;
-            this.dataGridViewTextBoxColumn70.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn71
-            // 
-            this.dataGridViewTextBoxColumn71.DataPropertyName = "created_at";
-            this.dataGridViewTextBoxColumn71.HeaderText = "Created Date";
-            this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
-            this.dataGridViewTextBoxColumn71.ReadOnly = true;
-            this.dataGridViewTextBoxColumn71.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn72
-            // 
-            this.dataGridViewTextBoxColumn72.DataPropertyName = "updated_at";
-            this.dataGridViewTextBoxColumn72.HeaderText = "Updated Date";
-            this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
-            this.dataGridViewTextBoxColumn72.ReadOnly = true;
-            this.dataGridViewTextBoxColumn72.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn73
-            // 
-            this.dataGridViewTextBoxColumn73.DataPropertyName = "budget_from";
-            this.dataGridViewTextBoxColumn73.HeaderText = "Budget From";
-            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
-            this.dataGridViewTextBoxColumn73.ReadOnly = true;
-            this.dataGridViewTextBoxColumn73.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn74
-            // 
-            this.dataGridViewTextBoxColumn74.HeaderText = "Started Calamity Damage";
-            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
-            this.dataGridViewTextBoxColumn74.ReadOnly = true;
-            this.dataGridViewTextBoxColumn74.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn75
-            // 
-            this.dataGridViewTextBoxColumn75.DataPropertyName = "calamity_type";
-            this.dataGridViewTextBoxColumn75.HeaderText = "Calamity Types";
-            this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
-            this.dataGridViewTextBoxColumn75.ReadOnly = true;
-            this.dataGridViewTextBoxColumn75.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn76
-            // 
-            this.dataGridViewTextBoxColumn76.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn76.HeaderText = "Calamity ID";
-            this.dataGridViewTextBoxColumn76.Name = "dataGridViewTextBoxColumn76";
-            this.dataGridViewTextBoxColumn76.ReadOnly = true;
-            this.dataGridViewTextBoxColumn76.Visible = false;
+            this.dataGridView13.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView13_CellClick);
             // 
             // panel14
             // 
@@ -2803,7 +2363,7 @@
             // pictureBox38
             // 
             this.pictureBox38.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox38.Image")));
-            this.pictureBox38.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox38.Location = new System.Drawing.Point(350, 5);
             this.pictureBox38.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox38.Name = "pictureBox38";
             this.pictureBox38.Size = new System.Drawing.Size(31, 24);
@@ -2828,7 +2388,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label14.Location = new System.Drawing.Point(29, 8);
+            this.label14.Location = new System.Drawing.Point(377, 7);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(160, 19);
             this.label14.TabIndex = 35;
@@ -2866,8 +2426,8 @@
             this.dataGridView14.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView14.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn33,
-            this.dataGridViewImageColumn35,
+            this.salf_del,
+            this.salf_arc,
             this.dataGridViewTextBoxColumn77,
             this.dataGridViewTextBoxColumn78,
             this.dataGridViewTextBoxColumn79,
@@ -2880,123 +2440,13 @@
             this.dataGridViewTextBoxColumn86,
             this.dataGridViewTextBoxColumn87,
             this.dataGridViewTextBoxColumn88,
-            this.dataGridViewTextBoxColumn89});
+            this.salf_id});
             this.dataGridView14.Location = new System.Drawing.Point(6, 45);
             this.dataGridView14.Name = "dataGridView14";
             this.dataGridView14.ReadOnly = true;
             this.dataGridView14.Size = new System.Drawing.Size(901, 503);
             this.dataGridView14.TabIndex = 144;
-            // 
-            // dataGridViewImageColumn33
-            // 
-            this.dataGridViewImageColumn33.HeaderText = "Delete";
-            this.dataGridViewImageColumn33.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn33.Image")));
-            this.dataGridViewImageColumn33.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn33.Name = "dataGridViewImageColumn33";
-            this.dataGridViewImageColumn33.ReadOnly = true;
-            this.dataGridViewImageColumn33.Width = 40;
-            // 
-            // dataGridViewImageColumn35
-            // 
-            this.dataGridViewImageColumn35.HeaderText = "Unarchive";
-            this.dataGridViewImageColumn35.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn35.Image")));
-            this.dataGridViewImageColumn35.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn35.Name = "dataGridViewImageColumn35";
-            this.dataGridViewImageColumn35.ReadOnly = true;
-            this.dataGridViewImageColumn35.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn77
-            // 
-            this.dataGridViewTextBoxColumn77.HeaderText = "Full Name";
-            this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
-            this.dataGridViewTextBoxColumn77.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn78
-            // 
-            this.dataGridViewTextBoxColumn78.HeaderText = "Occupation";
-            this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
-            this.dataGridViewTextBoxColumn78.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn79
-            // 
-            this.dataGridViewTextBoxColumn79.HeaderText = "Address";
-            this.dataGridViewTextBoxColumn79.Name = "dataGridViewTextBoxColumn79";
-            this.dataGridViewTextBoxColumn79.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn80
-            // 
-            this.dataGridViewTextBoxColumn80.HeaderText = "Amount Paid";
-            this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
-            this.dataGridViewTextBoxColumn80.ReadOnly = true;
-            this.dataGridViewTextBoxColumn80.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn81
-            // 
-            this.dataGridViewTextBoxColumn81.HeaderText = "Cedula Number";
-            this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
-            this.dataGridViewTextBoxColumn81.ReadOnly = true;
-            this.dataGridViewTextBoxColumn81.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn82
-            // 
-            this.dataGridViewTextBoxColumn82.HeaderText = "Cedula Date Created";
-            this.dataGridViewTextBoxColumn82.Name = "dataGridViewTextBoxColumn82";
-            this.dataGridViewTextBoxColumn82.ReadOnly = true;
-            this.dataGridViewTextBoxColumn82.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn83
-            // 
-            this.dataGridViewTextBoxColumn83.HeaderText = "Cedula Place Issued";
-            this.dataGridViewTextBoxColumn83.Name = "dataGridViewTextBoxColumn83";
-            this.dataGridViewTextBoxColumn83.ReadOnly = true;
-            this.dataGridViewTextBoxColumn83.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn84
-            // 
-            this.dataGridViewTextBoxColumn84.DataPropertyName = "created_at";
-            this.dataGridViewTextBoxColumn84.HeaderText = "Created Date";
-            this.dataGridViewTextBoxColumn84.Name = "dataGridViewTextBoxColumn84";
-            this.dataGridViewTextBoxColumn84.ReadOnly = true;
-            this.dataGridViewTextBoxColumn84.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn85
-            // 
-            this.dataGridViewTextBoxColumn85.DataPropertyName = "updated_at";
-            this.dataGridViewTextBoxColumn85.HeaderText = "Updated Date";
-            this.dataGridViewTextBoxColumn85.Name = "dataGridViewTextBoxColumn85";
-            this.dataGridViewTextBoxColumn85.ReadOnly = true;
-            this.dataGridViewTextBoxColumn85.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn86
-            // 
-            this.dataGridViewTextBoxColumn86.DataPropertyName = "budget_from";
-            this.dataGridViewTextBoxColumn86.HeaderText = "Budget From";
-            this.dataGridViewTextBoxColumn86.Name = "dataGridViewTextBoxColumn86";
-            this.dataGridViewTextBoxColumn86.ReadOnly = true;
-            this.dataGridViewTextBoxColumn86.Width = 250;
-            // 
-            // dataGridViewTextBoxColumn87
-            // 
-            this.dataGridViewTextBoxColumn87.HeaderText = "Started Calamity Damage";
-            this.dataGridViewTextBoxColumn87.Name = "dataGridViewTextBoxColumn87";
-            this.dataGridViewTextBoxColumn87.ReadOnly = true;
-            this.dataGridViewTextBoxColumn87.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn88
-            // 
-            this.dataGridViewTextBoxColumn88.DataPropertyName = "calamity_type";
-            this.dataGridViewTextBoxColumn88.HeaderText = "Calamity Types";
-            this.dataGridViewTextBoxColumn88.Name = "dataGridViewTextBoxColumn88";
-            this.dataGridViewTextBoxColumn88.ReadOnly = true;
-            this.dataGridViewTextBoxColumn88.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn89
-            // 
-            this.dataGridViewTextBoxColumn89.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn89.HeaderText = "Calamity ID";
-            this.dataGridViewTextBoxColumn89.Name = "dataGridViewTextBoxColumn89";
-            this.dataGridViewTextBoxColumn89.ReadOnly = true;
-            this.dataGridViewTextBoxColumn89.Visible = false;
+            this.dataGridView14.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView14_CellClick);
             // 
             // panel15
             // 
@@ -3015,7 +2465,7 @@
             // pictureBox41
             // 
             this.pictureBox41.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox41.Image")));
-            this.pictureBox41.Location = new System.Drawing.Point(2, 6);
+            this.pictureBox41.Location = new System.Drawing.Point(316, 5);
             this.pictureBox41.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox41.Name = "pictureBox41";
             this.pictureBox41.Size = new System.Drawing.Size(31, 24);
@@ -3040,7 +2490,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label15.Location = new System.Drawing.Point(29, 8);
+            this.label15.Location = new System.Drawing.Point(343, 7);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(208, 19);
             this.label15.TabIndex = 35;
@@ -3167,10 +2617,10 @@
             // 
             this.panel16.BackColor = System.Drawing.SystemColors.Control;
             this.panel16.Controls.Add(this.labelCountUser);
-            this.panel16.Controls.Add(this.pictureBox44);
             this.panel16.Controls.Add(this.pictureBox45);
             this.panel16.Controls.Add(this.label16);
             this.panel16.Controls.Add(this.pictureBox46);
+            this.panel16.Controls.Add(this.pictureBox44);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel16.Location = new System.Drawing.Point(3, 3);
             this.panel16.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -3190,7 +2640,7 @@
             // pictureBox44
             // 
             this.pictureBox44.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox44.Image")));
-            this.pictureBox44.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox44.Location = new System.Drawing.Point(336, 5);
             this.pictureBox44.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.pictureBox44.Name = "pictureBox44";
             this.pictureBox44.Size = new System.Drawing.Size(33, 24);
@@ -3215,11 +2665,11 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(48)))), ((int)(((byte)(67)))));
-            this.label16.Location = new System.Drawing.Point(38, 8);
+            this.label16.Location = new System.Drawing.Point(365, 7);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(160, 19);
+            this.label16.Size = new System.Drawing.Size(156, 19);
             this.label16.TabIndex = 35;
-            this.label16.Text = "USER MANAGEMENT";
+            this.label16.Text = "USER ARCHIVED LIST";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox46
@@ -3233,6 +2683,561 @@
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox46.TabIndex = 34;
             this.pictureBox46.TabStop = false;
+            // 
+            // flood_del
+            // 
+            this.flood_del.HeaderText = "Delete";
+            this.flood_del.Image = ((System.Drawing.Image)(resources.GetObject("flood_del.Image")));
+            this.flood_del.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.flood_del.Name = "flood_del";
+            this.flood_del.ReadOnly = true;
+            this.flood_del.Width = 40;
+            // 
+            // flood_arc
+            // 
+            this.flood_arc.HeaderText = "Unarchive";
+            this.flood_arc.Image = ((System.Drawing.Image)(resources.GetObject("flood_arc.Image")));
+            this.flood_arc.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.flood_arc.Name = "flood_arc";
+            this.flood_arc.ReadOnly = true;
+            this.flood_arc.Width = 40;
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "Full Name";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            // 
+            // Occupation
+            // 
+            this.Occupation.HeaderText = "Occupation";
+            this.Occupation.Name = "Occupation";
+            this.Occupation.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "Address";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
+            // AmountPaid
+            // 
+            this.AmountPaid.HeaderText = "Amount Paid";
+            this.AmountPaid.Name = "AmountPaid";
+            this.AmountPaid.ReadOnly = true;
+            this.AmountPaid.Width = 150;
+            // 
+            // CTCNumber
+            // 
+            this.CTCNumber.HeaderText = "Cedula Number";
+            this.CTCNumber.Name = "CTCNumber";
+            this.CTCNumber.ReadOnly = true;
+            this.CTCNumber.Width = 150;
+            // 
+            // CTCDateCreate
+            // 
+            this.CTCDateCreate.HeaderText = "Cedula Date Created";
+            this.CTCDateCreate.Name = "CTCDateCreate";
+            this.CTCDateCreate.ReadOnly = true;
+            this.CTCDateCreate.Width = 160;
+            // 
+            // CTCPlaceIssued
+            // 
+            this.CTCPlaceIssued.HeaderText = "Cedula Place Issued";
+            this.CTCPlaceIssued.Name = "CTCPlaceIssued";
+            this.CTCPlaceIssued.ReadOnly = true;
+            this.CTCPlaceIssued.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "created_at";
+            this.dataGridViewTextBoxColumn36.HeaderText = "Created Date";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            this.dataGridViewTextBoxColumn36.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "updated_at";
+            this.dataGridViewTextBoxColumn37.HeaderText = "Updated Date";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            this.dataGridViewTextBoxColumn37.Width = 120;
+            // 
+            // BudjetFrom
+            // 
+            this.BudjetFrom.DataPropertyName = "budget_from";
+            this.BudjetFrom.HeaderText = "Budget From";
+            this.BudjetFrom.Name = "BudjetFrom";
+            this.BudjetFrom.ReadOnly = true;
+            this.BudjetFrom.Width = 250;
+            // 
+            // DateFrom
+            // 
+            this.DateFrom.HeaderText = "Started Calamity Damage";
+            this.DateFrom.Name = "DateFrom";
+            this.DateFrom.ReadOnly = true;
+            this.DateFrom.Width = 200;
+            // 
+            // CalamityType
+            // 
+            this.CalamityType.DataPropertyName = "calamity_type";
+            this.CalamityType.HeaderText = "Calamity Types";
+            this.CalamityType.Name = "CalamityType";
+            this.CalamityType.ReadOnly = true;
+            this.CalamityType.Width = 150;
+            // 
+            // flood_id
+            // 
+            this.flood_id.DataPropertyName = "id";
+            this.flood_id.HeaderText = "Calamity ID";
+            this.flood_id.Name = "flood_id";
+            this.flood_id.ReadOnly = true;
+            this.flood_id.Visible = false;
+            // 
+            // typhoon_del
+            // 
+            this.typhoon_del.HeaderText = "Delete";
+            this.typhoon_del.Image = ((System.Drawing.Image)(resources.GetObject("typhoon_del.Image")));
+            this.typhoon_del.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.typhoon_del.Name = "typhoon_del";
+            this.typhoon_del.ReadOnly = true;
+            this.typhoon_del.Width = 40;
+            // 
+            // typhoon_arc
+            // 
+            this.typhoon_arc.HeaderText = "Unarchive";
+            this.typhoon_arc.Image = ((System.Drawing.Image)(resources.GetObject("typhoon_arc.Image")));
+            this.typhoon_arc.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.typhoon_arc.Name = "typhoon_arc";
+            this.typhoon_arc.ReadOnly = true;
+            this.typhoon_arc.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.HeaderText = "Full Name";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            this.dataGridViewTextBoxColumn38.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.HeaderText = "Occupation";
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            this.dataGridViewTextBoxColumn39.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.HeaderText = "Amount Paid";
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            this.dataGridViewTextBoxColumn41.ReadOnly = true;
+            this.dataGridViewTextBoxColumn41.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.HeaderText = "Cedula Number";
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            this.dataGridViewTextBoxColumn42.ReadOnly = true;
+            this.dataGridViewTextBoxColumn42.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.HeaderText = "Cedula Date Created";
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            this.dataGridViewTextBoxColumn43.ReadOnly = true;
+            this.dataGridViewTextBoxColumn43.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.HeaderText = "Cedula Place Issued";
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            this.dataGridViewTextBoxColumn44.ReadOnly = true;
+            this.dataGridViewTextBoxColumn44.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "created_at";
+            this.dataGridViewTextBoxColumn45.HeaderText = "Created Date";
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            this.dataGridViewTextBoxColumn45.ReadOnly = true;
+            this.dataGridViewTextBoxColumn45.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "updated_at";
+            this.dataGridViewTextBoxColumn46.HeaderText = "Updated Date";
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
+            this.dataGridViewTextBoxColumn46.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "budget_from";
+            this.dataGridViewTextBoxColumn47.HeaderText = "Budget From";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            this.dataGridViewTextBoxColumn47.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.HeaderText = "Started Calamity Damage";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            this.dataGridViewTextBoxColumn48.ReadOnly = true;
+            this.dataGridViewTextBoxColumn48.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "calamity_type";
+            this.dataGridViewTextBoxColumn49.HeaderText = "Calamity Types";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            this.dataGridViewTextBoxColumn49.ReadOnly = true;
+            this.dataGridViewTextBoxColumn49.Width = 150;
+            // 
+            // typhoon_id
+            // 
+            this.typhoon_id.DataPropertyName = "id";
+            this.typhoon_id.HeaderText = "Calamity ID";
+            this.typhoon_id.Name = "typhoon_id";
+            this.typhoon_id.ReadOnly = true;
+            this.typhoon_id.Visible = false;
+            // 
+            // drought_del
+            // 
+            this.drought_del.HeaderText = "Delete";
+            this.drought_del.Image = ((System.Drawing.Image)(resources.GetObject("drought_del.Image")));
+            this.drought_del.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.drought_del.Name = "drought_del";
+            this.drought_del.ReadOnly = true;
+            this.drought_del.Width = 40;
+            // 
+            // drought_arc
+            // 
+            this.drought_arc.HeaderText = "Unarchive";
+            this.drought_arc.Image = ((System.Drawing.Image)(resources.GetObject("drought_arc.Image")));
+            this.drought_arc.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.drought_arc.Name = "drought_arc";
+            this.drought_arc.ReadOnly = true;
+            this.drought_arc.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            this.dataGridViewTextBoxColumn51.HeaderText = "Full Name";
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            this.dataGridViewTextBoxColumn51.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn52
+            // 
+            this.dataGridViewTextBoxColumn52.HeaderText = "Occupation";
+            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
+            this.dataGridViewTextBoxColumn52.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn53
+            // 
+            this.dataGridViewTextBoxColumn53.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
+            this.dataGridViewTextBoxColumn53.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn54
+            // 
+            this.dataGridViewTextBoxColumn54.HeaderText = "Amount Paid";
+            this.dataGridViewTextBoxColumn54.Name = "dataGridViewTextBoxColumn54";
+            this.dataGridViewTextBoxColumn54.ReadOnly = true;
+            this.dataGridViewTextBoxColumn54.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn55
+            // 
+            this.dataGridViewTextBoxColumn55.HeaderText = "Cedula Number";
+            this.dataGridViewTextBoxColumn55.Name = "dataGridViewTextBoxColumn55";
+            this.dataGridViewTextBoxColumn55.ReadOnly = true;
+            this.dataGridViewTextBoxColumn55.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn56
+            // 
+            this.dataGridViewTextBoxColumn56.HeaderText = "Cedula Date Created";
+            this.dataGridViewTextBoxColumn56.Name = "dataGridViewTextBoxColumn56";
+            this.dataGridViewTextBoxColumn56.ReadOnly = true;
+            this.dataGridViewTextBoxColumn56.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn57
+            // 
+            this.dataGridViewTextBoxColumn57.HeaderText = "Cedula Place Issued";
+            this.dataGridViewTextBoxColumn57.Name = "dataGridViewTextBoxColumn57";
+            this.dataGridViewTextBoxColumn57.ReadOnly = true;
+            this.dataGridViewTextBoxColumn57.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn58
+            // 
+            this.dataGridViewTextBoxColumn58.DataPropertyName = "created_at";
+            this.dataGridViewTextBoxColumn58.HeaderText = "Created Date";
+            this.dataGridViewTextBoxColumn58.Name = "dataGridViewTextBoxColumn58";
+            this.dataGridViewTextBoxColumn58.ReadOnly = true;
+            this.dataGridViewTextBoxColumn58.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn59
+            // 
+            this.dataGridViewTextBoxColumn59.DataPropertyName = "updated_at";
+            this.dataGridViewTextBoxColumn59.HeaderText = "Updated Date";
+            this.dataGridViewTextBoxColumn59.Name = "dataGridViewTextBoxColumn59";
+            this.dataGridViewTextBoxColumn59.ReadOnly = true;
+            this.dataGridViewTextBoxColumn59.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn60
+            // 
+            this.dataGridViewTextBoxColumn60.DataPropertyName = "budget_from";
+            this.dataGridViewTextBoxColumn60.HeaderText = "Budget From";
+            this.dataGridViewTextBoxColumn60.Name = "dataGridViewTextBoxColumn60";
+            this.dataGridViewTextBoxColumn60.ReadOnly = true;
+            this.dataGridViewTextBoxColumn60.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn61
+            // 
+            this.dataGridViewTextBoxColumn61.HeaderText = "Started Calamity Damage";
+            this.dataGridViewTextBoxColumn61.Name = "dataGridViewTextBoxColumn61";
+            this.dataGridViewTextBoxColumn61.ReadOnly = true;
+            this.dataGridViewTextBoxColumn61.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn62
+            // 
+            this.dataGridViewTextBoxColumn62.DataPropertyName = "calamity_type";
+            this.dataGridViewTextBoxColumn62.HeaderText = "Calamity Types";
+            this.dataGridViewTextBoxColumn62.Name = "dataGridViewTextBoxColumn62";
+            this.dataGridViewTextBoxColumn62.ReadOnly = true;
+            this.dataGridViewTextBoxColumn62.Width = 150;
+            // 
+            // drought_id
+            // 
+            this.drought_id.DataPropertyName = "id";
+            this.drought_id.HeaderText = "Calamity ID";
+            this.drought_id.Name = "drought_id";
+            this.drought_id.ReadOnly = true;
+            this.drought_id.Visible = false;
+            // 
+            // ash_del
+            // 
+            this.ash_del.HeaderText = "Delete";
+            this.ash_del.Image = ((System.Drawing.Image)(resources.GetObject("ash_del.Image")));
+            this.ash_del.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ash_del.Name = "ash_del";
+            this.ash_del.ReadOnly = true;
+            this.ash_del.Width = 40;
+            // 
+            // ash_arc
+            // 
+            this.ash_arc.HeaderText = "Unarchive";
+            this.ash_arc.Image = ((System.Drawing.Image)(resources.GetObject("ash_arc.Image")));
+            this.ash_arc.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ash_arc.Name = "ash_arc";
+            this.ash_arc.ReadOnly = true;
+            this.ash_arc.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn64
+            // 
+            this.dataGridViewTextBoxColumn64.HeaderText = "Full Name";
+            this.dataGridViewTextBoxColumn64.Name = "dataGridViewTextBoxColumn64";
+            this.dataGridViewTextBoxColumn64.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn65
+            // 
+            this.dataGridViewTextBoxColumn65.HeaderText = "Occupation";
+            this.dataGridViewTextBoxColumn65.Name = "dataGridViewTextBoxColumn65";
+            this.dataGridViewTextBoxColumn65.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn66
+            // 
+            this.dataGridViewTextBoxColumn66.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn66.Name = "dataGridViewTextBoxColumn66";
+            this.dataGridViewTextBoxColumn66.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn67
+            // 
+            this.dataGridViewTextBoxColumn67.HeaderText = "Amount Paid";
+            this.dataGridViewTextBoxColumn67.Name = "dataGridViewTextBoxColumn67";
+            this.dataGridViewTextBoxColumn67.ReadOnly = true;
+            this.dataGridViewTextBoxColumn67.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn68
+            // 
+            this.dataGridViewTextBoxColumn68.HeaderText = "Cedula Number";
+            this.dataGridViewTextBoxColumn68.Name = "dataGridViewTextBoxColumn68";
+            this.dataGridViewTextBoxColumn68.ReadOnly = true;
+            this.dataGridViewTextBoxColumn68.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn69
+            // 
+            this.dataGridViewTextBoxColumn69.HeaderText = "Cedula Date Created";
+            this.dataGridViewTextBoxColumn69.Name = "dataGridViewTextBoxColumn69";
+            this.dataGridViewTextBoxColumn69.ReadOnly = true;
+            this.dataGridViewTextBoxColumn69.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn70
+            // 
+            this.dataGridViewTextBoxColumn70.HeaderText = "Cedula Place Issued";
+            this.dataGridViewTextBoxColumn70.Name = "dataGridViewTextBoxColumn70";
+            this.dataGridViewTextBoxColumn70.ReadOnly = true;
+            this.dataGridViewTextBoxColumn70.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn71
+            // 
+            this.dataGridViewTextBoxColumn71.DataPropertyName = "created_at";
+            this.dataGridViewTextBoxColumn71.HeaderText = "Created Date";
+            this.dataGridViewTextBoxColumn71.Name = "dataGridViewTextBoxColumn71";
+            this.dataGridViewTextBoxColumn71.ReadOnly = true;
+            this.dataGridViewTextBoxColumn71.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn72
+            // 
+            this.dataGridViewTextBoxColumn72.DataPropertyName = "updated_at";
+            this.dataGridViewTextBoxColumn72.HeaderText = "Updated Date";
+            this.dataGridViewTextBoxColumn72.Name = "dataGridViewTextBoxColumn72";
+            this.dataGridViewTextBoxColumn72.ReadOnly = true;
+            this.dataGridViewTextBoxColumn72.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn73
+            // 
+            this.dataGridViewTextBoxColumn73.DataPropertyName = "budget_from";
+            this.dataGridViewTextBoxColumn73.HeaderText = "Budget From";
+            this.dataGridViewTextBoxColumn73.Name = "dataGridViewTextBoxColumn73";
+            this.dataGridViewTextBoxColumn73.ReadOnly = true;
+            this.dataGridViewTextBoxColumn73.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn74
+            // 
+            this.dataGridViewTextBoxColumn74.HeaderText = "Started Calamity Damage";
+            this.dataGridViewTextBoxColumn74.Name = "dataGridViewTextBoxColumn74";
+            this.dataGridViewTextBoxColumn74.ReadOnly = true;
+            this.dataGridViewTextBoxColumn74.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn75
+            // 
+            this.dataGridViewTextBoxColumn75.DataPropertyName = "calamity_type";
+            this.dataGridViewTextBoxColumn75.HeaderText = "Calamity Types";
+            this.dataGridViewTextBoxColumn75.Name = "dataGridViewTextBoxColumn75";
+            this.dataGridViewTextBoxColumn75.ReadOnly = true;
+            this.dataGridViewTextBoxColumn75.Width = 150;
+            // 
+            // ash_id
+            // 
+            this.ash_id.DataPropertyName = "id";
+            this.ash_id.HeaderText = "Calamity ID";
+            this.ash_id.Name = "ash_id";
+            this.ash_id.ReadOnly = true;
+            this.ash_id.Visible = false;
+            // 
+            // salf_del
+            // 
+            this.salf_del.HeaderText = "Delete";
+            this.salf_del.Image = ((System.Drawing.Image)(resources.GetObject("salf_del.Image")));
+            this.salf_del.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.salf_del.Name = "salf_del";
+            this.salf_del.ReadOnly = true;
+            this.salf_del.Width = 40;
+            // 
+            // salf_arc
+            // 
+            this.salf_arc.HeaderText = "Unarchive";
+            this.salf_arc.Image = ((System.Drawing.Image)(resources.GetObject("salf_arc.Image")));
+            this.salf_arc.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.salf_arc.Name = "salf_arc";
+            this.salf_arc.ReadOnly = true;
+            this.salf_arc.Width = 40;
+            // 
+            // dataGridViewTextBoxColumn77
+            // 
+            this.dataGridViewTextBoxColumn77.HeaderText = "Full Name";
+            this.dataGridViewTextBoxColumn77.Name = "dataGridViewTextBoxColumn77";
+            this.dataGridViewTextBoxColumn77.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn78
+            // 
+            this.dataGridViewTextBoxColumn78.HeaderText = "Occupation";
+            this.dataGridViewTextBoxColumn78.Name = "dataGridViewTextBoxColumn78";
+            this.dataGridViewTextBoxColumn78.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn79
+            // 
+            this.dataGridViewTextBoxColumn79.HeaderText = "Address";
+            this.dataGridViewTextBoxColumn79.Name = "dataGridViewTextBoxColumn79";
+            this.dataGridViewTextBoxColumn79.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn80
+            // 
+            this.dataGridViewTextBoxColumn80.HeaderText = "Amount Paid";
+            this.dataGridViewTextBoxColumn80.Name = "dataGridViewTextBoxColumn80";
+            this.dataGridViewTextBoxColumn80.ReadOnly = true;
+            this.dataGridViewTextBoxColumn80.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn81
+            // 
+            this.dataGridViewTextBoxColumn81.HeaderText = "Cedula Number";
+            this.dataGridViewTextBoxColumn81.Name = "dataGridViewTextBoxColumn81";
+            this.dataGridViewTextBoxColumn81.ReadOnly = true;
+            this.dataGridViewTextBoxColumn81.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn82
+            // 
+            this.dataGridViewTextBoxColumn82.HeaderText = "Cedula Date Created";
+            this.dataGridViewTextBoxColumn82.Name = "dataGridViewTextBoxColumn82";
+            this.dataGridViewTextBoxColumn82.ReadOnly = true;
+            this.dataGridViewTextBoxColumn82.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn83
+            // 
+            this.dataGridViewTextBoxColumn83.HeaderText = "Cedula Place Issued";
+            this.dataGridViewTextBoxColumn83.Name = "dataGridViewTextBoxColumn83";
+            this.dataGridViewTextBoxColumn83.ReadOnly = true;
+            this.dataGridViewTextBoxColumn83.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn84
+            // 
+            this.dataGridViewTextBoxColumn84.DataPropertyName = "created_at";
+            this.dataGridViewTextBoxColumn84.HeaderText = "Created Date";
+            this.dataGridViewTextBoxColumn84.Name = "dataGridViewTextBoxColumn84";
+            this.dataGridViewTextBoxColumn84.ReadOnly = true;
+            this.dataGridViewTextBoxColumn84.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn85
+            // 
+            this.dataGridViewTextBoxColumn85.DataPropertyName = "updated_at";
+            this.dataGridViewTextBoxColumn85.HeaderText = "Updated Date";
+            this.dataGridViewTextBoxColumn85.Name = "dataGridViewTextBoxColumn85";
+            this.dataGridViewTextBoxColumn85.ReadOnly = true;
+            this.dataGridViewTextBoxColumn85.Width = 120;
+            // 
+            // dataGridViewTextBoxColumn86
+            // 
+            this.dataGridViewTextBoxColumn86.DataPropertyName = "budget_from";
+            this.dataGridViewTextBoxColumn86.HeaderText = "Budget From";
+            this.dataGridViewTextBoxColumn86.Name = "dataGridViewTextBoxColumn86";
+            this.dataGridViewTextBoxColumn86.ReadOnly = true;
+            this.dataGridViewTextBoxColumn86.Width = 250;
+            // 
+            // dataGridViewTextBoxColumn87
+            // 
+            this.dataGridViewTextBoxColumn87.HeaderText = "Started Calamity Damage";
+            this.dataGridViewTextBoxColumn87.Name = "dataGridViewTextBoxColumn87";
+            this.dataGridViewTextBoxColumn87.ReadOnly = true;
+            this.dataGridViewTextBoxColumn87.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn88
+            // 
+            this.dataGridViewTextBoxColumn88.DataPropertyName = "calamity_type";
+            this.dataGridViewTextBoxColumn88.HeaderText = "Calamity Types";
+            this.dataGridViewTextBoxColumn88.Name = "dataGridViewTextBoxColumn88";
+            this.dataGridViewTextBoxColumn88.ReadOnly = true;
+            this.dataGridViewTextBoxColumn88.Width = 150;
+            // 
+            // salf_id
+            // 
+            this.salf_id.DataPropertyName = "id";
+            this.salf_id.HeaderText = "Calamity ID";
+            this.salf_id.Name = "salf_id";
+            this.salf_id.ReadOnly = true;
+            this.salf_id.Visible = false;
             // 
             // UserControlArchiveHistory
             // 
@@ -3477,85 +3482,10 @@
         internal System.Windows.Forms.Label label15;
         internal System.Windows.Forms.PictureBox pictureBox43;
         private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn23;
-        private System.Windows.Forms.DataGridViewImageColumn colArchive;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Occupation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AmountPaid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CTCNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CTCDateCreate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CTCPlaceIssued;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BudjetFrom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateFrom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CalamityType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CalamityID;
         private System.Windows.Forms.DataGridView dataGridView11;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn24;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
         private System.Windows.Forms.DataGridView dataGridView12;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn27;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn53;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn54;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn55;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn56;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn57;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn58;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn59;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn60;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn61;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn62;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn63;
         private System.Windows.Forms.DataGridView dataGridView13;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn30;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn64;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn65;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn66;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn67;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn68;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn69;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn70;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn71;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn72;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn73;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn74;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn75;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn76;
         private System.Windows.Forms.DataGridView dataGridView14;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn33;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn77;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn78;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn79;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn80;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn81;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn82;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn83;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn84;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn85;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn86;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn87;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn88;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn89;
         internal System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label labelCountUser;
         internal System.Windows.Forms.PictureBox pictureBox44;
@@ -3642,5 +3572,80 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewImageColumn flood_del;
+        private System.Windows.Forms.DataGridViewImageColumn flood_arc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Occupation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AmountPaid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTCNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTCDateCreate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTCPlaceIssued;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BudjetFrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateFrom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CalamityType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn flood_id;
+        private System.Windows.Forms.DataGridViewImageColumn typhoon_del;
+        private System.Windows.Forms.DataGridViewImageColumn typhoon_arc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typhoon_id;
+        private System.Windows.Forms.DataGridViewImageColumn drought_del;
+        private System.Windows.Forms.DataGridViewImageColumn drought_arc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn53;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn54;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn55;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn56;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn57;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn58;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn59;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn60;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn61;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn62;
+        private System.Windows.Forms.DataGridViewTextBoxColumn drought_id;
+        private System.Windows.Forms.DataGridViewImageColumn ash_del;
+        private System.Windows.Forms.DataGridViewImageColumn ash_arc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn64;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn65;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn66;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn67;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn68;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn69;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn70;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn71;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn72;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn73;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn74;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn75;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ash_id;
+        private System.Windows.Forms.DataGridViewImageColumn salf_del;
+        private System.Windows.Forms.DataGridViewImageColumn salf_arc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn77;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn78;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn79;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn80;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn81;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn82;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn83;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn84;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn85;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn86;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn87;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn88;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salf_id;
     }
 }

@@ -100,7 +100,7 @@ namespace FileTrackingSystem
                 DateTime updated_at = DateTime.Now;
                 using (var cmd = new MySqlCommand())
                 {
-                    cmd.CommandText = "UPDATE `fisheries_files_tb` SET `file_name`=@file_name, `fname_extension`=@fname_extension, `updated_at`=@updated_at, `status`='Archive' WHERE id=@id";
+                    cmd.CommandText = "UPDATE `fisheries_files_tb` SET `file_name` = @file_name, `fname_extension` = @fname_extension, `updated_at` = @updated_at, `status`='Archive' WHERE id=@id";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
                     cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
@@ -213,23 +213,23 @@ namespace FileTrackingSystem
             string query = "";
             if (category == "Capture Fishery")
             {
-                query = ("SELECT * FROM fisheries_files_tb WHERE category='Capture Fishery' AND status='Archive' ORDER BY id DESC");
+                query = ("SELECT * FROM fisheries_files_tb WHERE category='Capture Fishery' AND status='Archive' ORDER BY updated_at DESC");
             }
             else if (category == "Mariculture Fishing")
             {
-                query = ("SELECT * FROM fisheries_files_tb WHERE category='Mariculture Fishing' AND status='Archive' ORDER BY id DESC");
+                query = ("SELECT * FROM fisheries_files_tb WHERE category='Mariculture Fishing' AND status='Archive' ORDER BY updated_at DESC");
             }
             else if (category == "Illegal Fishing")
             {
-                query = ("SELECT * FROM fisheries_files_tb WHERE category='Illegal Fishing' AND status='Archive' ORDER BY id DESC");
+                query = ("SELECT * FROM fisheries_files_tb WHERE category='Illegal Fishing' AND status='Archive' ORDER BY updated_at DESC");
             }
             else if (category == "Coastal Resources")
             {
-                query = ("SELECT * FROM fisheries_files_tb WHERE category='Coastal Resources' AND status='Archive' ORDER BY id DESC");
+                query = ("SELECT * FROM fisheries_files_tb WHERE category='Coastal Resources' AND status='Archive' ORDER BY updated_at DESC");
             }
             else
             {
-                query = ("SELECT * FROM fisheries_files_tb WHERE status='Archive' ORDER BY id DESC");
+                query = ("SELECT * FROM fisheries_files_tb WHERE status='Archive' ORDER BY updated_at DESC");
             }
             MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();

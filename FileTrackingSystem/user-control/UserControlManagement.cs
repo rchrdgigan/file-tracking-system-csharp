@@ -60,16 +60,17 @@ namespace FileTrackingSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure want to delete this user account?", "Deleting Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            //To Do Delete
+            if (textBoxUsername.Text == "")
             {
-                //To Do Delete
-                if (textBoxUsername.Text == "")
+                MessageBox.Show("Please select an specific data to delete!", "Deleting Data?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure want to delete this user account?", "Deleting Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Please select an specific data to delete!", "Deleting Data?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
+
                     //History Log
                     user.activity = "Removed account in User Management..";
                     user.user_id = loginfrm._log_id;

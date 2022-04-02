@@ -126,7 +126,7 @@ namespace FileTrackingSystem
                 DateTime updated_at = DateTime.Now;
                 using (var cmd = new MySqlCommand())
                 {
-                    cmd.CommandText = "UPDATE `farmers_files_tb` SET `file_name`=@file_name, `fname_extension`=@fname_extension, `updated_at`=@updated_at, `status`='Archive' WHERE id=@id";
+                    cmd.CommandText = "UPDATE `farmers_files_tb` SET `file_name` = @file_name, `fname_extension` = @fname_extension, `updated_at`= @updated_at, `status`='Archive' WHERE id=@id";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
                     cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
@@ -211,23 +211,23 @@ namespace FileTrackingSystem
             string query = "";
             if (category == "Masterlist of Rice Farmers")
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE category='Masterlist of Rice Farmers' AND status='Archive' ORDER BY id DESC");
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Masterlist of Rice Farmers' AND status='Archive' ORDER BY updated_at DESC");
             }
             else if (category == "Hybrid Users")
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE category='Hybrid Users' AND status='Archive' ORDER BY id DESC");
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Hybrid Users' AND status='Archive' ORDER BY updated_at DESC");
             }
             else if (category == "Certified Seeds User")
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE category='Certified Seeds User' AND status='Archive' ORDER BY id DESC");
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Certified Seeds User' AND status='Archive' ORDER BY updated_at DESC");
             }
             else if (category == "Fertilizer Users")
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE category='Fertilizer Users' AND status='Archive' ORDER BY id DESC");
+                query = ("SELECT * FROM farmers_files_tb WHERE category='Fertilizer Users' AND status='Archive' ORDER BY updated_at DESC");
             }
             else
             {
-                query = ("SELECT * FROM farmers_files_tb WHERE status='Normal' ORDER BY id DESC");
+                query = ("SELECT * FROM farmers_files_tb WHERE status='Normal' ORDER BY updated_at DESC");
             }
             MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
             DataTable dt = new DataTable();

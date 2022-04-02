@@ -17,7 +17,7 @@ namespace FileTrackingSystem
         User user = new User();
         FarmerClass far = new FarmerClass();
         FisheriesClass fsh = new FisheriesClass();
-
+        CalamityDamageClass cdc = new CalamityDamageClass();
 
         private string far_cat = "";
         private string fsh_cat = "";
@@ -56,6 +56,11 @@ namespace FileTrackingSystem
         private string[] fsh_id = { "cf_id", "cr_id", "if_id", "mf_id" };
         private string[] fsh_col_dl = { "cf_download", "cr_download", "if_download", "mf_download" };
         private string[] fsh_col_del = { "cf_del", "cr_del", "if_del", "mf_del" };
+
+        private string[] cal_category = { "Flood", "Typhoon", "Drought", "Ash Fall", "Salf intrusion" };
+        private string[] cal_col_del = { "flood_del", "typhoon_del", "drought_del", "ash_del", "salf_del" };
+        private string[] cal_col_arc = { "flood_arc", "typhoon_arc", "drought_arc", "ash_arc", "salf_arc" };
+
 
         public UserControlArchiveHistory()
         {
@@ -113,6 +118,123 @@ namespace FileTrackingSystem
             {
                 dataGridView9.AutoGenerateColumns = false;
                 dataGridView9.DataSource = fsh.dtable;
+            }
+
+            cdc.archiveList(cal_cat);
+            if(cal_cat == "Flood")
+            {
+                dataGridView10.AutoGenerateColumns = false;
+                dataGridView10.Rows.Clear();
+                foreach (DataRow item in cdc.dtable.Rows)
+                {
+                    int n = dataGridView10.Rows.Add();
+                    var fullName = item[1].ToString() + " " + item[2].ToString() + " " + item[3].ToString() + " " + item[4].ToString();
+                    dataGridView10.Rows[n].Cells[2].Value = fullName;
+                    dataGridView10.Rows[n].Cells[3].Value = item[5];
+                    dataGridView10.Rows[n].Cells[4].Value = item[6];
+                    dataGridView10.Rows[n].Cells[5].Value = item[7];
+                    dataGridView10.Rows[n].Cells[6].Value = item[8];
+                    dataGridView10.Rows[n].Cells[7].Value = item[9];
+                    dataGridView10.Rows[n].Cells[8].Value = item[10];
+                    dataGridView10.Rows[n].Cells[9].Value = item[11];
+                    dataGridView10.Rows[n].Cells[10].Value = item[12];
+                    dataGridView10.Rows[n].Cells[11].Value = item[13];
+                    dataGridView10.Rows[n].Cells[12].Value = item[14];
+                    dataGridView10.Rows[n].Cells[13].Value = item[15];
+                    dataGridView10.Rows[n].Cells[14].Value = item[0];
+                }
+            }
+            else if (cal_cat == "Typhoon")
+            {
+                dataGridView11.AutoGenerateColumns = false;
+                dataGridView11.Rows.Clear();
+                foreach (DataRow item in cdc.dtable.Rows)
+                {
+                    int n = dataGridView11.Rows.Add();
+                    var fullName = item[1].ToString() + " " + item[2].ToString() + " " + item[3].ToString() + " " + item[4].ToString();
+                    dataGridView11.Rows[n].Cells[2].Value = fullName;
+                    dataGridView11.Rows[n].Cells[3].Value = item[5];
+                    dataGridView11.Rows[n].Cells[4].Value = item[6];
+                    dataGridView11.Rows[n].Cells[5].Value = item[7];
+                    dataGridView11.Rows[n].Cells[6].Value = item[8];
+                    dataGridView11.Rows[n].Cells[7].Value = item[9];
+                    dataGridView11.Rows[n].Cells[8].Value = item[10];
+                    dataGridView11.Rows[n].Cells[9].Value = item[11];
+                    dataGridView11.Rows[n].Cells[10].Value = item[12];
+                    dataGridView11.Rows[n].Cells[11].Value = item[13];
+                    dataGridView11.Rows[n].Cells[12].Value = item[14];
+                    dataGridView11.Rows[n].Cells[13].Value = item[15];
+                    dataGridView11.Rows[n].Cells[14].Value = item[0];
+                }
+            }
+            else if (cal_cat == "Drought")
+            {
+                dataGridView12.AutoGenerateColumns = false;
+                dataGridView12.Rows.Clear();
+                foreach (DataRow item in cdc.dtable.Rows)
+                {
+                    int n = dataGridView12.Rows.Add();
+                    var fullName = item[1].ToString() + " " + item[2].ToString() + " " + item[3].ToString() + " " + item[4].ToString();
+                    dataGridView12.Rows[n].Cells[2].Value = fullName;
+                    dataGridView12.Rows[n].Cells[3].Value = item[5];
+                    dataGridView12.Rows[n].Cells[4].Value = item[6];
+                    dataGridView12.Rows[n].Cells[5].Value = item[7];
+                    dataGridView12.Rows[n].Cells[6].Value = item[8];
+                    dataGridView12.Rows[n].Cells[7].Value = item[9];
+                    dataGridView12.Rows[n].Cells[8].Value = item[10];
+                    dataGridView12.Rows[n].Cells[9].Value = item[11];
+                    dataGridView12.Rows[n].Cells[10].Value = item[12];
+                    dataGridView12.Rows[n].Cells[11].Value = item[13];
+                    dataGridView12.Rows[n].Cells[12].Value = item[14];
+                    dataGridView12.Rows[n].Cells[13].Value = item[15];
+                    dataGridView12.Rows[n].Cells[14].Value = item[0];
+                }
+            }
+            else if (cal_cat == "Ash Fall")
+            {
+                dataGridView13.AutoGenerateColumns = false;
+                dataGridView13.Rows.Clear();
+                foreach (DataRow item in cdc.dtable.Rows)
+                {
+                    int n = dataGridView13.Rows.Add();
+                    var fullName = item[1].ToString() + " " + item[2].ToString() + " " + item[3].ToString() + " " + item[4].ToString();
+                    dataGridView13.Rows[n].Cells[2].Value = fullName;
+                    dataGridView13.Rows[n].Cells[3].Value = item[5];
+                    dataGridView13.Rows[n].Cells[4].Value = item[6];
+                    dataGridView13.Rows[n].Cells[5].Value = item[7];
+                    dataGridView13.Rows[n].Cells[6].Value = item[8];
+                    dataGridView13.Rows[n].Cells[7].Value = item[9];
+                    dataGridView13.Rows[n].Cells[8].Value = item[10];
+                    dataGridView13.Rows[n].Cells[9].Value = item[11];
+                    dataGridView13.Rows[n].Cells[10].Value = item[12];
+                    dataGridView13.Rows[n].Cells[11].Value = item[13];
+                    dataGridView13.Rows[n].Cells[12].Value = item[14];
+                    dataGridView13.Rows[n].Cells[13].Value = item[15];
+                    dataGridView13.Rows[n].Cells[14].Value = item[0];
+                }
+            }
+            else if (cal_cat == "Salf intrusion")
+            {
+                dataGridView14.AutoGenerateColumns = false;
+                dataGridView14.Rows.Clear();
+                foreach (DataRow item in cdc.dtable.Rows)
+                {
+                    int n = dataGridView14.Rows.Add();
+                    var fullName = item[1].ToString() + " " + item[2].ToString() + " " + item[3].ToString() + " " + item[4].ToString();
+                    dataGridView14.Rows[n].Cells[2].Value = fullName;
+                    dataGridView14.Rows[n].Cells[3].Value = item[5];
+                    dataGridView14.Rows[n].Cells[4].Value = item[6];
+                    dataGridView14.Rows[n].Cells[5].Value = item[7];
+                    dataGridView14.Rows[n].Cells[6].Value = item[8];
+                    dataGridView14.Rows[n].Cells[7].Value = item[9];
+                    dataGridView14.Rows[n].Cells[8].Value = item[10];
+                    dataGridView14.Rows[n].Cells[9].Value = item[11];
+                    dataGridView14.Rows[n].Cells[10].Value = item[12];
+                    dataGridView14.Rows[n].Cells[11].Value = item[13];
+                    dataGridView14.Rows[n].Cells[12].Value = item[14];
+                    dataGridView14.Rows[n].Cells[13].Value = item[15];
+                    dataGridView14.Rows[n].Cells[14].Value = item[0];
+                }
             }
         }
 
@@ -210,6 +332,53 @@ namespace FileTrackingSystem
 
                             //History Log
                             user.activity = "Downloaded fisheries file archived in " + fsh_cat + " category...";
+                            user.user_id = loginfrm._log_id;
+                            user.createLog();
+                            //End Log
+                        }
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void calDelOrUnarchive()
+        {
+            try
+            {
+                for (int x = 0; x < cal_category.Length; x++)
+                {
+                    if (columnName == cal_col_del[x])
+                    {
+                        DialogResult result = MessageBox.Show("Are you sure want to delete this data?", "Deleting Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            cdc.delete(int.Parse(data_id));
+                            loadDataArchive();
+                            MessageBox.Show("Data was successfully deleted!", "Deleted Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            //History Log
+                            user.activity = "Removed  calamity damaged archived data in " + cal_cat + " category...";
+                            user.user_id = loginfrm._log_id;
+                            user.createLog();
+                            //End Log
+                        }
+                    }
+                    else if (columnName == cal_col_arc[x])
+                    {
+                        DialogResult result = MessageBox.Show("Are you sure want to unarchive this data?", "Unarchive Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            cdc.unarchived(data_id);
+                            loadDataArchive();
+                            MessageBox.Show("Successfully unarchived!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            //History Log
+                            user.activity = "Unarchive calamity damaged data in " + cal_cat + " category...";
                             user.user_id = loginfrm._log_id;
                             user.createLog();
                             //End Log
@@ -451,6 +620,61 @@ namespace FileTrackingSystem
             file_exten = row.Cells["cr_fwe"].Value.ToString();
 
             fshDelOrDL();
+        }
+
+        private void dataGridView10_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnIndex = dataGridView10.CurrentCell.ColumnIndex;
+            columnName = dataGridView10.Columns[columnIndex].Name;
+
+            DataGridViewRow row = this.dataGridView10.Rows[e.RowIndex];
+            data_id = row.Cells["flood_id"].Value.ToString();
+
+            calDelOrUnarchive();
+        }
+
+        private void dataGridView11_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnIndex = dataGridView11.CurrentCell.ColumnIndex;
+            columnName = dataGridView11.Columns[columnIndex].Name;
+
+            DataGridViewRow row = this.dataGridView11.Rows[e.RowIndex];
+            data_id = row.Cells["typhoon_id"].Value.ToString();
+
+            calDelOrUnarchive();
+        }
+
+        private void dataGridView12_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnIndex = dataGridView12.CurrentCell.ColumnIndex;
+            columnName = dataGridView12.Columns[columnIndex].Name;
+
+            DataGridViewRow row = this.dataGridView12.Rows[e.RowIndex];
+            data_id = row.Cells["drought_id"].Value.ToString();
+
+            calDelOrUnarchive();
+        }
+
+        private void dataGridView13_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnIndex = dataGridView13.CurrentCell.ColumnIndex;
+            columnName = dataGridView13.Columns[columnIndex].Name;
+
+            DataGridViewRow row = this.dataGridView13.Rows[e.RowIndex];
+            data_id = row.Cells["ash_id"].Value.ToString();
+
+            calDelOrUnarchive();
+        }
+
+        private void dataGridView14_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnIndex = dataGridView14.CurrentCell.ColumnIndex;
+            columnName = dataGridView14.Columns[columnIndex].Name;
+
+            DataGridViewRow row = this.dataGridView14.Rows[e.RowIndex];
+            data_id = row.Cells["salf_id"].Value.ToString();
+
+            calDelOrUnarchive();
         }
     }
 }

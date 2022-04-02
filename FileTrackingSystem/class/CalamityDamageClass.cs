@@ -206,7 +206,7 @@ namespace FileTrackingSystem
                 DateTime updated_at = DateTime.Now;
                 using (var cmd = new MySqlCommand())
                 {
-                    cmd.CommandText = "UPDATE `calamity_damage_tb` SET `status`='Archive' WHERE id=@id";
+                    cmd.CommandText = "UPDATE `calamity_damage_tb` SET `updated_at` = @updated_at , `status` = 'Archive' WHERE id = @id";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
                     cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
@@ -306,6 +306,46 @@ namespace FileTrackingSystem
                 using (var cmd = new MySqlCommand())
                 {
                     cmd.CommandText = "UPDATE `calamity_damage_tb` SET `status`='Normal' WHERE id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                    cmd.Parameters.AddWithValue("@updated_at", updated_at);
+                    cmd.ExecuteNonQuery();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                message = "error" + ex.ToString();
+            }
+        }
+
+        public void archiveList(string cat)
+        {
+            string query = "";
+            if (!string.IsNullOrEmpty(cat))
+            {
+                query = "SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity, calamity_damage_tb.status FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.type_calamity='" + cat + "' AND calamity_damage_tb.status='Archive' ORDER BY calamity_damage_tb.updated_at DESC";
+            }
+            else
+            {
+                query = "SELECT calamity_damage_tb.id, rsbsa_tb.fname, rsbsa_tb.mname, rsbsa_tb.surname, rsbsa_tb.extension, rsbsa_tb.livelihood, rsbsa_tb.brgy, calamity_damage_tb.amount_paid, calamity_damage_tb.ctc_no, calamity_damage_tb.ctc_date_issued, calamity_damage_tb.ctc_place_issued, calamity_damage_tb.created_at, calamity_damage_tb.updated_at, calamity_damage_tb.budget_from, calamity_damage_tb.date_from, calamity_damage_tb.type_calamity, calamity_damage_tb.status FROM rsbsa_tb LEFT JOIN calamity_damage_tb ON rsbsa_tb.id = calamity_damage_tb.rsbsa_id WHERE calamity_damage_tb.status='Archive' ORDER BY calamity_damage_tb.updated_at DESC";
+            }
+            MySqlDataAdapter msda = new MySqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            msda.Fill(dt);
+            dtable = dt;
+        }
+
+        public void unarchived(string id)
+        {
+            try
+            {
+                con.Open();
+                DateTime updated_at = DateTime.Now;
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "UPDATE `calamity_damage_tb` SET `updated_at` = @updated_at , `status` = 'Normal' WHERE id = @id";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con;
                     cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
