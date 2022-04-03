@@ -98,15 +98,15 @@ namespace FileTrackingSystem
 
         private void archiveBtn_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure want to archive this user account?", "Archive Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            //To Do Archive
+            if (textBoxUsername.Text == "")
             {
-                //To Do Delete
-                if (textBoxUsername.Text == "")
-                {
-                    MessageBox.Show("Please select an specific data to archived!", "Archive Data?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
+                MessageBox.Show("Please select an specific data to archived!", "Archive Data?", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("Are you sure want to archive this user account?", "Archive Data", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
                 {
                     //History Log
                     user.activity = "Archived account in User Management..";

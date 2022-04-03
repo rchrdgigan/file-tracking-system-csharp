@@ -78,6 +78,12 @@ namespace FileTrackingSystem
             DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
+                //History Log
+                user.activity = "Closed the application...";
+                user.user_id = loginfrm._log_id;
+                user.createLog();
+                //End Log
+
                 // Close the Application
                 Application.Exit();
             }
